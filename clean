@@ -1,0 +1,22 @@
+#!/bin/bash
+# Removes unwanted files from current and daughter directories
+
+EXT="*.aux *.log *.syn* *.spl *~ *.nav *.out *.snm *.toc *.600pk *.tfm *.1"
+EXT="${EXT} *.t1 *Notes.bib *.pyc *.nmr *.d"
+
+function cleanUp {
+  CURDIR="~/${PWD:16}"
+  #CURDIR=${PWD##*/}
+  #CURDIR=${PWD}
+  for FILE in $(ls ${EXT} 2>/dev/null); do
+    echo "${CURDIR}/${FILE}"
+    rm -f $FILE
+  done
+}
+
+cleanUp
+for DIR in $(find . -mindepth 1 -type d); do
+  cd "$DIR" 2>/dev/null
+  cleanUp
+  cd - >/dev/null
+done

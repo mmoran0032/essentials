@@ -1,0 +1,10 @@
+Installed (in order) for python3:
+  cython
+  glances
+  numpy
+  scipy
+  sympy
+  pandas *
+  pymc *
+  scikit-learn *
+  matplotlib

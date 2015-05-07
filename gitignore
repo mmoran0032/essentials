@@ -1,0 +1,13 @@
+*.pyc
+
+*~
+
+*.aux
+*.bbl
+*.log
+*.syntec.gz
+*.spl
+*.toc
+*.nav
+*.out
+*.snm

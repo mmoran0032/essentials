@@ -1,0 +1,24 @@
+# General tweaks
+alias bc="bc -l"
+alias date="date --iso-8601=seconds"
+alias df="df -H"
+alias glances="glances --disable-diskio"
+alias go="xdg-open"
+alias ls="ls --color=auto -Gh"
+alias ps="ps -Ac"
+alias rm="rm -i"
+alias hide="set +o history"
+alias show="set -o history"
+
+# Programming Help
+alias ti="~/bin/python/timeit.py"
+alias root="root -l"
+alias rs="Rscript"
+
+# Application help
+alias fskype="env PUlSE_LATENCY_MSEC=30 skype"
+alias windows="rdesktop isnap-srv2.phys.nd.edu -u mmoran9 -d adnd"
+
+# LaTeX compilation help
+alias pdf="pdflatex -file-line-error -halt-on-error"
+alias qpdf="pdflatex -file-line-error -halt-on-error $1 > /dev/null"
