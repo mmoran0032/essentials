@@ -27,6 +27,13 @@ SOURCES
   scipy         git@github.com:scipy/scipy.git
   sympy         git@github.com:sympy/sympy.git
 
+GLANCES INSTALLATION
+Unlike all of the other packages, install this using python2.7 and do not
+install for just the user, i.e.
+  sudo python2.7 setup.py install
+This will allow the colored output which, for whatever reason, does not work
+when installing for the user (or both?). Currently, no temperature output.
+
 ROOT INSTALLATION
 Default to using the fixed location and sourcing thisroot.sh to adjust paths
 
