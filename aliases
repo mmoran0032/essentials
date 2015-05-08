@@ -12,13 +12,10 @@ alias show="set -o history"
 
 # Programming Help
 alias ti="~/bin/python/timeit.py"
-alias root="root -l"
 alias rs="Rscript"
 
-# Application help
-alias fskype="env PUlSE_LATENCY_MSEC=30 skype"
-alias windows="rdesktop isnap-srv2.phys.nd.edu -u mmoran9 -d adnd"
-
-# LaTeX compilation help
+# Research related
+alias nslwin="rdesktop isnap-srv2.phys.nd.edu -u mmoran9 -d adnd"
 alias pdf="pdflatex -file-line-error -halt-on-error"
 alias qpdf="pdflatex -file-line-error -halt-on-error $1 > /dev/null"
+alias root="root -l"
