@@ -4,7 +4,8 @@ Installed (in order) for python3:
   numpy
   scipy
   sympy
-  pandas *
-  pymc *
-  scikit-learn *
+  pandas
   matplotlib
+  pymc
+  scikit-learn
+  root
