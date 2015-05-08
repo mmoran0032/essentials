@@ -29,6 +29,16 @@ Projects not listed can be installed at any time
 ROOT INSTALLATION
 Default to using the fixed location and sourcing thisroot.sh to adjust paths
 
+Currently, ROOT defaults to using python (i.e. python2.7) for all linking,
+and ROOT can only be imported in python, not python3. I don't think this
+will be an issue for me, especially with my move away from physics and into
+the numpy/scipy/matplotlib regime, but it would be nice to test things out
+in python3 anyway. Plus, I can't combine numpy/scipy with ROOT, since those
+are compiled for python3 (and work fine right now, so I don't want to mess
+with it). Like I said, maybe not a big issue, depending on what happens with
+the STG detector stuff. Maybe it will just end up being my own personal
+analysis code.
+
   TESTING FOR PYTHON3 SUPPORT
   Temporarily remove symbolic links in /usr/bin and replace them
     cd /usr/bin; su
