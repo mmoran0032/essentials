@@ -12,7 +12,6 @@ function truncate {
 
 PROMPT_COMMAND=truncate
 export PS1="\[\033[1;32m\][\[\033[1;30m\]\u@\h\[\033[m\] \[\033[1;31m\]\${newPWD}\[\033[1;32m\]]\[\033[m\] "
-eval "$(dircolors ~/.colors-ls)"
 
 # making sure vim works well
 export EDITOR=/usr/bin/vim
@@ -27,4 +26,7 @@ export HISTSIZE=5000
 
 export PATH=${PATH}:/usr/local/bin:/home/mikemoran/.local/bin
 
+# sourcing
 . ~/.aliases
+eval "$(dircolors ~/.colors-ls)"
+. /opt/root/bin/thisroot.sh
