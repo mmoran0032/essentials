@@ -39,20 +39,26 @@ with it). Like I said, maybe not a big issue, depending on what happens with
 the STG detector stuff. Maybe it will just end up being my own personal
 analysis code.
 
+Tried the following on 2015-05-08 (12:35) with a clean root source directory
+and it didn't work. I introduced another error, so I think I'm just going to have to live with it.
+
   TESTING FOR PYTHON3 SUPPORT
   Temporarily remove symbolic links in /usr/bin and replace them
-    cd /usr/bin; su
-    rm python
-    rm python-config
-    ln -s python3.4 python
-    ln -s python3.4-config python-config
+    cd /usr/bin
+    sudo rm python
+    sudo rm python-config
+    sudo ln -s python3.4 python
+    sudo ln -s python3.4-config python-config
+
+  CREATE LINK TO SHARED LIBRARY
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libpython3.4m.so /usr/lib/libpython3.4.so
 
   CONFIGURE
     cd /opt/root
-    ./configure linuxx8664gcc --with-python-incdir="/usr/include/python3.4" --with-python-libdir="/usr/lib/python3.4"
+    ./configure linuxx8664gcc
 
   RESET SYMBOLIC LINKS
-    rm python
-    rm python-config
-    ln -s python2.7 python
-    ln -s python2.7-config python-config
+    sudo rm python
+    sudo rm python-config
+    sudo ln -s python2.7 python
+    sudo ln -s python2.7-config python-config
