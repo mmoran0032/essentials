@@ -1,11 +1,27 @@
-Installed (in order) for python3:
+cython        git@github.com:cython/cython.git
+git           git@github.com:git/git.git
+glances       git@github.com:nicolargo/glances
+google        [install from website]
+matplotlib    git@github.com:matplotlib/matplotlib.git
+mdPresent     git@github.com:mmoran0032/mdPresent.git
+numpy         git@github.com:numpy/numpy
+pandas        git@github.com:pydata/pandas
+pymc          git@github.com:pymc-devs/pymc.git
+rftg-0.9.4    [install from website]
+root          git@github.com:root-mirror/root
+scikit-learn  git@github.com:scikit-learn/scikit-learn
+scipy         git@github.com:scipy/scipy.git
+sympy         git@github.com:sympy/sympy.git
+
+INSTALLATION ORDER
+Projects not listed can be installed at any time
+  git
   cython
-  glances
   numpy
   scipy
   sympy
-  pandas
   matplotlib
+  pandas
   pymc
   scikit-learn
   root
