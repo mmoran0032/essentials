@@ -8,6 +8,10 @@ set mouse=a
 set syntax=on
 filetype on
 
+"Sets filetypes for other extensions
+au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.py3 set filetype=python
+
 "Removes trailing whitespace from entire file
 command Rtw %s/\s\+$//e
 
@@ -21,7 +25,6 @@ set shiftwidth=2
 set foldmethod=indent
 set foldlevel=99
 
-au BufRead,BufNewFile *.md set filetype=markdown
 
 set expandtab
 autocmd FileType make setlocal noexpandtab

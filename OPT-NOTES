@@ -10,6 +10,7 @@ Projects not listed can be installed at any time
   pymc
   scikit-learn
   root (see below)
+  seaborn
 
 SOURCES
   cython        git@github.com:cython/cython.git
@@ -25,6 +26,8 @@ SOURCES
   root          git@github.com:root-mirror/root
   scikit-learn  git@github.com:scikit-learn/scikit-learn
   scipy         git@github.com:scipy/scipy.git
+  seaborn       git@github.com:mwaskom/seaborn.git
+  sublimeText2  [install from website]
   sympy         git@github.com:sympy/sympy.git
 
 GLANCES INSTALLATION
