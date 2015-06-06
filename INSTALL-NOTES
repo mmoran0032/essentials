@@ -1,0 +1,16 @@
+REQURED PACKAGES
+For compiling sources and general command line development, you need these
+packages. All are installed via apt-get
+
+  build-essential
+  vim
+  git
+  libssl-dev
+  libcurl4-openssl-dev
+  libexpat1-dev
+  libpython-dev
+  libpython3-dev
+  texlive-full (this takes a few hours...)
+  asciidoc
+  xmlto
+  docbook2x
