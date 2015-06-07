@@ -1,17 +1,33 @@
 REQURED PACKAGES
 For compiling sources and general command line development, you need these
-packages. All are installed via apt-get
+packages. All are installed via apt-get.
 
   build-essential
   vim
   git
+GIT
   libssl-dev
   libcurl4-openssl-dev
   libexpat1-dev
-  libpython-dev
-  libpython3-dev
   texlive-full (this takes a few hours...)
   asciidoc
   xmlto
   docbook2x
-  python-wxgtk2.8
+PYTHON
+  libpython3-dev
+  python3-setuptools
+  python3-psutil
+MATPLOTLIB
+  libpng12-dev
+  libfreetype6-dev
+  python3-dateutil
+  python3-pyparsing
+  python3-cairo-dev *
+  libffi-dev *
+SCIPY
+  gfortran
+  liblapack-dev
+ROOT
+  libxpm-dev
+OTHERS
+  libgtk2.0-dev

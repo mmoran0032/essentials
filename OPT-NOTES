@@ -37,11 +37,11 @@ Install all packages as just a local install through
   python3 setup.py install --user
 
 GLANCES INSTALLATION
-Unlike all of the other packages, install this using python2.7 and do not
-install for just the user, i.e.
-  sudo python2.7 setup.py install
+Unlike all of the other packages, do not install for just the user, i.e.
+  sudo python3 setup.py install
 This will allow the colored output which, for whatever reason, does not work
-when installing for the user. Currently, no temperature output.
+when installing for the user. Currently, no temperature output even though
+`sesnors` actually shows those temperatures fine.
 
 ROOT INSTALLATION
 Default to using the fixed location and sourcing thisroot.sh to adjust paths
