@@ -4,6 +4,7 @@ Projects not listed can be installed at any time
   cython
   numpy
   scipy
+  mpmath
   sympy
   matplotlib
   pandas
@@ -19,6 +20,7 @@ SOURCES
   google        [install from website]
   matplotlib    git@github.com:matplotlib/matplotlib.git
   mdPresent     git@github.com:mmoran0032/mdPresent.git
+  mpmath        git@github.com:fredrik-johansson/mpmath.git
   numpy         git@github.com:numpy/numpy
   pandas        git@github.com:pydata/pandas
   pymc          git@github.com:pymc-devs/pymc.git

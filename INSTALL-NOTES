@@ -14,3 +14,4 @@ packages. All are installed via apt-get
   asciidoc
   xmlto
   docbook2x
+  python-wxgtk2.8
