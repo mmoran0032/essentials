@@ -24,6 +24,8 @@ MATPLOTLIB
   python3-pyparsing
   python3-cairo-dev *
   libffi-dev *
+  python3-tk
+  tk-dev
 SCIPY
   gfortran
   liblapack-dev

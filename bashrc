@@ -24,7 +24,7 @@ export HISTIGNORE="&:[ ]*:exit:hide"
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M: "
 export HISTSIZE=5000
 
-export PATH=${PATH}:/usr/local/bin:/home/mikemoran/.local/bin
+export PATH=/home/mikemoran/bin:${PATH}:/usr/local/bin:/home/mikemoran/.local/bin
 
 # sourcing
 . ~/.aliases

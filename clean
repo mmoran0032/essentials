@@ -12,6 +12,10 @@ function cleanUp {
     echo "${CURDIR}/${FILE}"
     rm -f $FILE
   done
+  if [ -e "__pycache__" ]; then
+    echo "${CURDIR}/__pycache__"
+    rm -rf __pycache__
+  fi
 }
 
 cleanUp

@@ -17,6 +17,7 @@ alias rs="Rscript"
 
 # Research related
 alias nslwin="rdesktop isnap-srv2.phys.nd.edu -u mmoran9 -d adnd"
+alias win="rdesktop 129.74.140.172 -u mmoran"
 alias pdf="pdflatex -file-line-error -halt-on-error"
 alias qpdf="pdflatex -file-line-error -halt-on-error $1 > /dev/null"
 alias root="root -l"
