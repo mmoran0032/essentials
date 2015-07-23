@@ -1,0 +1,29 @@
+{
+	"auto_complete": false,
+	"color_scheme": "Packages/Python 3/Gloom.tmTheme",
+	"caret_style": "solid",
+	"wide_caret": true,
+
+	"highlight_line": true,
+  "draw_minimap_border": false,
+  "always_show_minimap_viewport": true,
+
+  "file_exclude_patterns": [".*", "*.pyc", "*.pyo", "*.exe", "*.o", "*.lib",
+                            "*.so", "*.dylib", "*.sublime-*", "__pycache__"],
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"sublimelinter": false,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+  "draw_white_space": "none",
+  "draw_indent_guides": false,
+
+  "scroll_past_end": false,
+	"word_wrap": true,
+
+  "rulers": [80],
+
+  "font_face": "Monospace"
+}
