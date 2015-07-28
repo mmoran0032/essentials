@@ -123,10 +123,11 @@ completely switched over (except for one case, below).
 ROOT
 ----
 
-ROOT, the data analysis framework developed at CERN, is annoying. It only works
-with Python 2.X right now, and I tried to get it to work with 3.X with a
-completely fresh install of everything to no avail. As such, it can only be
-imported when using `python` to start a program, not `python3`.
+ROOT (`git@github.com:root-mirror/root`), the data analysis framework developed
+at CERN, is annoying. It only works with Python 2.X right now, and I tried to
+get it to work with 3.X with a completely fresh install of everything to no
+avail. As such, it can only be imported when using `python` to start a program,
+not `python3`.
 
 Since I will no longer (hopefully) be in the academic run-around when I
 graduate, this should not be a problem and I won't be doing any work with ROOT.
