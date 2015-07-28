@@ -1,4 +1,6 @@
 MEANINGFUL NAMES
+----------------
+
   Use intention-revealing names
   Avoid disinformation, encodings, mental mappings
   Make meaningful distinctions
@@ -7,6 +9,8 @@ MEANINGFUL NAMES
   Don't be cute or use puns
 
 FUNCTIONS
+---------
+
   Should be small, do one thing, and contain one level of abstraction
   Use descriptive names
   Have few (or no) arguments
@@ -15,38 +19,54 @@ FUNCTIONS
   Don't repeat
 
 COMMENTS
+--------
+
   Explain yourself in code, not comments
   When used, should be informative and well-written
 
 FORMATTING
-  Follow he "newspaper" metaphor (main points at top, details at bottom)
+----------
+
+  Follow the "newspaper" metaphor (main points at top, details at bottom)
   Related items should be vertically close and ordered
   If on a team, set and follow team rules
 
 OBJECTS AND DATA STRUCTURES
+---------------------------
+
   Express data in abstract terms (hide implementation)
   Law of Demeter: a method f of a class C should only call the methods of
     C, an object created by f, an object passed as an argument to f, and an
     object held in an instance variable of C
 
 ERROR HANDLING
+--------------
+
   Use exceptions instead of return codes
   Don't return or pass null
 
 UNIT TESTS
+----------
+
   Write unit tests before production code
   Keep tests clean and well maintained
   Use a single concept and one assert per test
   Tests should be Fast, Independent, Repeatable, Self-Validating, and Timely
 
 CLASSES
+-------
+
   Should be organized, small, and handle a single responsibility
   Aim for high cohesion (variables used in a majority of functions)
 
 SYSTEMS
+-------
+
   Separate constructing a system from using it
 
 EMERGENCE
+---------
+
   Design must produce a system that acts as intended
   Must be refactored to clean up
   Remove duplication
@@ -54,11 +74,15 @@ EMERGENCE
   Minimize the number of classes and methods
 
 SUCCESSIVE REFINEMENT
+---------------------
+
   Write code and clean it up
   Maintaining tests help ensure refactoring didn't break the code
   Make edits incrementally, and test frequently
 
 WHY CODE SHOULD CHANGE
+----------------------
+
   COMMENTS
     C1: Inappropriate information
     C2: Obsolete comment
