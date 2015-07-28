@@ -119,3 +119,36 @@ For all of the packages above, just compile and install them using
 ```
 from within the directory in question. Note the `python3` part, since I've
 completely switched over (except for one case, below).
+
+ROOT
+----
+
+ROOT, the data analysis framework developed at CERN, is annoying. It only works
+with Python 2.X right now, and I tried to get it to work with 3.X with a
+completely fresh install of everything to no avail. As such, it can only be
+imported when using `python` to start a program, not `python3`.
+
+Since I will no longer (hopefully) be in the academic run-around when I
+graduate, this should not be a problem and I won't be doing any work with ROOT.
+For now though, I have to deal with it (and I know enough about it currently
+that it is not too bad).
+
+Just like with the Python stuff above, this is a "local" install. I put that in
+quotes only because it's a little different, since I'm sourcing the compiled
+location in my `.bashrc` to make it work. This follows the "fixed location
+install" on the ROOT website. Run the following:
+```
+    ./configure linuxx8664gcc
+    make -j 9
+    . bin/thisroot.sh
+```
+
+The last line is only if you want to start working with it right now. Otherwise,
+you'll source that location with your next Terminal.
+
+The only idea I have right now is, if I'm working with ROOT objects and *really*
+want to change them over into Python ones, I can also compile `numpy` for
+Python 2.X, write a script that converts ROOT files to numpy arrays, write those
+arrays to a file, then use my Python 3.X code to do more processing. That isn't
+the best solution, so I think I'll just stick with the 2.X full route with the
+ROOT internals taking place of the SciPy/etc. routines.
