@@ -9,11 +9,9 @@
   "always_show_minimap_viewport": true,
 
   "file_exclude_patterns": [".*", "*.pyc", "*.pyo", "*.exe", "*.o", "*.lib",
-                            "*.so", "*.dylib", "*.sublime-*", "__pycache__"],
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
+                            "*.so", "*.dylib"],
+  "ignored_packages": ["Vintage"],
+  
   "sublimelinter": false,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,

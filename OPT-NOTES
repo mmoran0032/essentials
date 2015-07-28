@@ -29,7 +29,7 @@ SOURCES
   scikit-learn  git@github.com:scikit-learn/scikit-learn
   scipy         git@github.com:scipy/scipy.git
   seaborn       git@github.com:mwaskom/seaborn.git
-  sublimeText2  [install from website]
+  sublime_text  [install from website]
   sympy         git@github.com:sympy/sympy.git
 
 PYTHON PACKAGES
@@ -42,6 +42,11 @@ Unlike all of the other packages, do not install for just the user, i.e.
 This will allow the colored output which, for whatever reason, does not work
 when installing for the user. Currently, no temperature output even though
 `sesnors` actually shows those temperatures fine.
+
+SUBLIME TEXT
+Since the user preferences file is here, you need to make a symbolic link (in
+either direction) so that it is updated in future installs.
+  ln -s Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 
 ROOT INSTALLATION
 Default to using the fixed location and sourcing thisroot.sh to adjust paths
