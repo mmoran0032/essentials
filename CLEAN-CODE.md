@@ -1,40 +1,50 @@
 MEANINGFUL NAMES
 ----------------
 
-  Use intention-revealing names
-  Avoid disinformation, encodings, mental mappings
-  Make meaningful distinctions
-  Use pronounceable/searchable names
-  Class names are nouns, method names are verbs
-  Don't be cute or use puns
+  Use intention-revealing, descriptive names that make meaningful distinctions.
+
+  Avoid disinformation, encodings, and mental mappings.
+  
+  Use pronounceable/searchable names.
+  
+  Use nouns for class names and verbs for method names.
+  
+  Don't be cute or use puns.
 
 FUNCTIONS
 ---------
 
-  Should be small, do one thing, and contain one level of abstraction
-  Use descriptive names
-  Have few (or no) arguments
-  Have no side effects
-  Use exceptions instead of error codes
-  Don't repeat
+  Should be small, do one thing, and contain one level of abstraction.
+  
+  SHould have few (or no) arguments.
+  
+  Have no side effects.
+  
+  Use exceptions instead of error codes.
+  
+  Don't repeat in multiple places.
 
 COMMENTS
 --------
 
-  Explain yourself in code, not comments
-  When used, should be informative and well-written
+  Explain yourself in code, not comments.
+  
+  When used, comments should be informative and well-written.
 
 FORMATTING
 ----------
 
   Follow the "newspaper" metaphor (main points at top, details at bottom)
+  
   Related items should be vertically close and ordered
+  
   If on a team, set and follow team rules
 
 OBJECTS AND DATA STRUCTURES
 ---------------------------
 
   Express data in abstract terms (hide implementation)
+  
   Law of Demeter: a method f of a class C should only call the methods of
     C, an object created by f, an object passed as an argument to f, and an
     object held in an instance variable of C
@@ -43,20 +53,25 @@ ERROR HANDLING
 --------------
 
   Use exceptions instead of return codes
+  
   Don't return or pass null
 
 UNIT TESTS
 ----------
 
   Write unit tests before production code
+  
   Keep tests clean and well maintained
+  
   Use a single concept and one assert per test
+  
   Tests should be Fast, Independent, Repeatable, Self-Validating, and Timely
 
 CLASSES
 -------
 
   Should be organized, small, and handle a single responsibility
+  
   Aim for high cohesion (variables used in a majority of functions)
 
 SYSTEMS
@@ -68,16 +83,22 @@ EMERGENCE
 ---------
 
   Design must produce a system that acts as intended
+  
   Must be refactored to clean up
+  
   Remove duplication
+  
   Be expressive
+  
   Minimize the number of classes and methods
 
 SUCCESSIVE REFINEMENT
 ---------------------
 
   Write code and clean it up
+  
   Maintaining tests help ensure refactoring didn't break the code
+  
   Make edits incrementally, and test frequently
 
 WHY CODE SHOULD CHANGE
@@ -89,9 +110,11 @@ WHY CODE SHOULD CHANGE
     C3: Redundant comment
     C4: Poorly-written comment
     C5: Commented-out code removed
+  
   ENVIRONMENT
     E1: Build requires more than one step
     E2: Tests require more than one step
+  
   FUNCTIONS
     F1: Too many arguments
     F2: Remove output arguments
@@ -99,6 +122,7 @@ WHY CODE SHOULD CHANGE
     F4: Remove dead (no longer used) function
     F5: Should only do one thing
     F6: Should contain only one level of abstraction
+  
   GENERAL
     G1: Multiple languages in one source file
     G2: Obvious behavior is unimplemented
@@ -134,6 +158,7 @@ WHY CODE SHOULD CHANGE
     G33: Encapsulate boundary conditions
     G35: Keep configurable data at high levels
     G36: Avoid transitive navigation
+  
   NAMES
     N1: Choose descriptive names
     N2: Choose names at the appropriate level of abstraction
@@ -142,6 +167,7 @@ WHY CODE SHOULD CHANGE
     N5: Length of name should reflect length of scope
     N6: Avoid encodings
     N7: Names should describe side-effects
+  
   TESTS
     T1: Have sufficient tests
     T2: Use a coverage tool
