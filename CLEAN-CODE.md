@@ -1,35 +1,35 @@
 MEANINGFUL NAMES
 ----------------
 
-  Use intention-revealing, descriptive names that make meaningful distinctions.
+- Use intention-revealing, descriptive names that make meaningful distinctions.
 
-  Avoid disinformation, encodings, and mental mappings.
-  
-  Use pronounceable/searchable names.
-  
-  Use nouns for class names and verbs for method names.
-  
-  Don't be cute or use puns.
+- Avoid disinformation, encodings, and mental mappings.
+
+- Use pronounceable/searchable names.
+
+- Use nouns for class names and verbs for method names.
+
+- Don't be cute or use puns.
 
 FUNCTIONS
 ---------
 
-  Should be small, do one thing, and contain one level of abstraction.
-  
-  SHould have few (or no) arguments.
-  
-  Have no side effects.
-  
-  Use exceptions instead of error codes.
-  
-  Don't repeat in multiple places.
+- Should be small, do one thing, and contain one level of abstraction.
+
+- SHould have few (or no) arguments.
+
+- Have no side effects.
+
+- Use exceptions instead of error codes.
+
+- Don't repeat in multiple places.
 
 COMMENTS
 --------
 
-  Explain yourself in code, not comments.
-  
-  When used, comments should be informative and well-written.
+- Explain yourself in code, not comments.
+
+- When used, comments should be informative and well-written.
 
 FORMATTING
 ----------
