@@ -1,18 +1,29 @@
-MEANINGFUL NAMES
+CLEAN CODE
+==========
+
+Following the principles set up in *Clean Code* (Robert C. Martin, Pearson
+Education, 2009), this is my list of what make my code clean. For the most part,
+it is section titles from the book, but with my own personal take on them. Ideas
+from the book that I've never needed to worry about (e.g. "Using Puns") are left
+out of the lists. Things that don't (at least, currently) pertain to what type
+of programs I write are likewise excluded.
+
+These are my personal guidelines.
+
+Meaningful Names
 ----------------
 
-- Use intention-revealing, descriptive names that make meaningful distinctions.
+- Use intention-revealing, descriptive names that make meaningful distinctions
+  between themselves and others
 
 - Avoid disinformation, encodings, and mental mappings.
 
-- Use pronounceable/searchable names.
+- Use pronounceable and searchable names.
 
 - Use nouns for class names and verbs for method names.
 
-- Don't be cute or use puns.
 
-
-FUNCTIONS
+Functions
 ---------
 
 - Should be small, do one thing, and contain one level of abstraction.
@@ -26,7 +37,7 @@ FUNCTIONS
 - Don't repeat in multiple places.
 
 
-COMMENTS
+Comments
 --------
 
 - Explain yourself in code, not comments.
@@ -34,7 +45,7 @@ COMMENTS
 - When used, comments should be informative and well-written.
 
 
-FORMATTING
+Formatting
 ----------
 
 - Follow the "newspaper" metaphor (main points at top, details at bottom)
@@ -44,7 +55,7 @@ FORMATTING
 - If on a team, set and follow team rules
 
 
-OBJECTS AND DATA STRUCTURES
+Objects and Data Structures
 ---------------------------
 
 - Express data in abstract terms (hide implementation)
@@ -54,7 +65,7 @@ OBJECTS AND DATA STRUCTURES
   an object held in an instance variable of *C*
 
 
-ERROR HANDLING
+Error Handling
 --------------
 
 - Use exceptions instead of return codes
@@ -62,7 +73,7 @@ ERROR HANDLING
 - Don't return or pass null
 
 
-UNIT TESTS
+Unit Tests
 ----------
 
 - Write unit tests before production code
@@ -75,7 +86,7 @@ UNIT TESTS
   (FIRST principle)
 
 
-CLASSES
+Classes
 -------
 
 - Should be organized, small, and handle a single responsibility
@@ -83,13 +94,13 @@ CLASSES
 - Aim for high cohesion (variables used in a majority of functions)
 
 
-SYSTEMS
+Systems
 -------
 
 - Separate constructing a system from using it
 
 
-EMERGENCE
+Emergence
 ---------
 
 - Design must produce a system that acts as intended
@@ -103,7 +114,7 @@ EMERGENCE
 - Minimize the number of classes and methods
 
 
-SUCCESSIVE REFINEMENT
+Successive Refinement
 ---------------------
 
 - Write code and clean it up
@@ -113,7 +124,7 @@ SUCCESSIVE REFINEMENT
 - Make edits incrementally, and test frequently
 
 
-WHY CODE SHOULD CHANGE
+Why Code Should Change
 ----------------------
 
   COMMENTS
