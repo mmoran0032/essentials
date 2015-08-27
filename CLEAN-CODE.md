@@ -10,47 +10,47 @@ of programs I write are likewise excluded.
 
 These are my personal guidelines.
 
+
 Meaningful Names
 ----------------
 
 - Use intention-revealing, descriptive names that make meaningful distinctions
   between themselves and others
 
-- Avoid disinformation, encodings, and mental mappings.
+- Avoid disinformation, encodings, and mental mappings
 
-- Use pronounceable and searchable names.
+- Use pronounceable and searchable names
 
-- Use nouns for class names and verbs for method names.
+- Use nouns for class names and verbs for method names
 
 
 Functions
 ---------
 
-- Should be small, do one thing, and contain one level of abstraction.
+- Should be small, do one thing, and contain one level of abstraction
 
-- Should have few (or no) arguments.
+- Should have few (or no) arguments
 
-- Have no side effects.
+- Have no side effects
 
-- Use exceptions instead of error codes.
-
-- Don't repeat in multiple places.
+- Don't repeat yourself in multiple places
 
 
 Comments
 --------
 
-- Explain yourself in code, not comments.
+- Explain yourself in code, not comments
 
-- When used, comments should be informative and well-written.
+- When used, comments should be informative and well-written
 
 
 Formatting
 ----------
 
-- Follow the "newspaper" metaphor (main points at top, details at bottom)
+- Follow the "newspaper" metaphor: main points at the top and details at the
+  bottom of the file/class
 
-- Related items should be vertically close and ordered
+- Related items should be vertically close and ordered properly
 
 - If on a team, set and follow team rules
 
@@ -58,7 +58,7 @@ Formatting
 Objects and Data Structures
 ---------------------------
 
-- Express data in abstract terms (hide implementation)
+- Express data in abstract terms such that the implementation is hidden
 
 - **Law of Demeter:** a method *f* of a class *C* should only call the methods
   of *C*, an object created by *f*, an object passed as an argument to *f*, and
@@ -68,7 +68,7 @@ Objects and Data Structures
 Error Handling
 --------------
 
-- Use exceptions instead of return codes
+- Use exceptions instead of error/return codes
 
 - Don't return or pass null
 
@@ -76,7 +76,7 @@ Error Handling
 Unit Tests
 ----------
 
-- Write unit tests before production code
+- Write unit tests *before* production code
 
 - Keep tests clean and well maintained
 
@@ -91,7 +91,8 @@ Classes
 
 - Should be organized, small, and handle a single responsibility
 
-- Aim for high cohesion (variables used in a majority of functions)
+- Aim for high cohesion (variables used in a majority of functions, no more
+  functions than are absolutely necessary)
 
 
 Systems
@@ -105,7 +106,7 @@ Emergence
 
 - Design must produce a system that acts as intended
 
-- Must be refactored to clean up
+- Final code base must be refactored to fully clean it up
 
 - Remove duplication
 
@@ -122,81 +123,3 @@ Successive Refinement
 - Maintaining tests help ensure refactoring didn't break the code
 
 - Make edits incrementally, and test frequently
-
-
-Why Code Should Change
-----------------------
-
-  COMMENTS
-    C1: Inappropriate information
-    C2: Obsolete comment
-    C3: Redundant comment
-    C4: Poorly-written comment
-    C5: Commented-out code removed
-
-  ENVIRONMENT
-    E1: Build requires more than one step
-    E2: Tests require more than one step
-
-  FUNCTIONS
-    F1: Too many arguments
-    F2: Remove output arguments
-    F3: Remove flag arguments
-    F4: Remove dead (no longer used) function
-    F5: Should only do one thing
-    F6: Should contain only one level of abstraction
-
-  GENERAL
-    G1: Multiple languages in one source file
-    G2: Obvious behavior is unimplemented
-    G3: Incorrect behavior at boundaries
-    G4: Don't override safeties
-    G5: Remove duplication
-    G6: Code at wrong level of abstraction
-    G7: Base classes shouldn't depend on their derivatives
-    G8: Too much information (restrict what is known or can be done)
-    G9: Remove dead (not executed) code
-    G10: Fix vertical separation
-    G11: Fix inconsistencies
-    G12: Remove clutter
-    G13: Avoid artificial coupling
-    G14: Avoid feature envy (methods of one class manipulating an object
-         from another class)
-    G15: Don't use selector arguments
-    G16: Avoid obscured intent
-    G17: Fix misplaced responsibility
-    G19: Use explanatory variables
-    G20: Function names should say what they do
-    G21: Understand the algorithm used
-    G22: Make logical dependencies physical
-    G23: Prefer polymorphism to If/Else or Switch/Case
-    G24: Follow standard conventions
-    G25: Replace magic numbers with named constants
-    G26: Be precise
-    G27: Prefer structure over convention
-    G28: Encapsulate Conditionals
-    G29: Avoid negative conditionals
-    G31: Avoid hidden temporal couplings
-    G32: Don't be arbitrary
-    G33: Encapsulate boundary conditions
-    G35: Keep configurable data at high levels
-    G36: Avoid transitive navigation
-
-  NAMES
-    N1: Choose descriptive names
-    N2: Choose names at the appropriate level of abstraction
-    N3: Use standard nomenclature where possible
-    N4: Use unambiguous names
-    N5: Length of name should reflect length of scope
-    N6: Avoid encodings
-    N7: Names should describe side-effects
-
-  TESTS
-    T1: Have sufficient tests
-    T2: Use a coverage tool
-    T3: Don't skip trivial tests
-    T5: Test boundary conditions
-    T6: Exhaustively test near bugs
-    T7: Patterns of failure should be revealing
-    T8: Test coverage patterns can be revealing
-    T9: Tests should be fast
