@@ -11,18 +11,20 @@ MEANINGFUL NAMES
 
 - Don't be cute or use puns.
 
+
 FUNCTIONS
 ---------
 
 - Should be small, do one thing, and contain one level of abstraction.
 
-- SHould have few (or no) arguments.
+- Should have few (or no) arguments.
 
 - Have no side effects.
 
 - Use exceptions instead of error codes.
 
 - Don't repeat in multiple places.
+
 
 COMMENTS
 --------
@@ -31,75 +33,85 @@ COMMENTS
 
 - When used, comments should be informative and well-written.
 
+
 FORMATTING
 ----------
 
-  Follow the "newspaper" metaphor (main points at top, details at bottom)
-  
-  Related items should be vertically close and ordered
-  
-  If on a team, set and follow team rules
+- Follow the "newspaper" metaphor (main points at top, details at bottom)
+
+- Related items should be vertically close and ordered
+
+- If on a team, set and follow team rules
+
 
 OBJECTS AND DATA STRUCTURES
 ---------------------------
 
-  Express data in abstract terms (hide implementation)
+- Express data in abstract terms (hide implementation)
   
-  Law of Demeter: a method f of a class C should only call the methods of
-    C, an object created by f, an object passed as an argument to f, and an
-    object held in an instance variable of C
+- **Law of Demeter:** a method *f* of a class *C* should only call the methods
+  of *C*, an object created by *f*, an object passed as an argument to *f*, and
+  an object held in an instance variable of *C*
+
 
 ERROR HANDLING
 --------------
 
-  Use exceptions instead of return codes
+- Use exceptions instead of return codes
   
-  Don't return or pass null
+- Don't return or pass null
+
 
 UNIT TESTS
 ----------
 
-  Write unit tests before production code
+- Write unit tests before production code
   
-  Keep tests clean and well maintained
+- Keep tests clean and well maintained
   
-  Use a single concept and one assert per test
+- Use a single concept and one assert per test
   
-  Tests should be Fast, Independent, Repeatable, Self-Validating, and Timely
+- Tests should be Fast, Independent, Repeatable, Self-Validating, and Timely
+  (FIRST principle)
+
 
 CLASSES
 -------
 
-  Should be organized, small, and handle a single responsibility
+- Should be organized, small, and handle a single responsibility
   
-  Aim for high cohesion (variables used in a majority of functions)
+- Aim for high cohesion (variables used in a majority of functions)
+
 
 SYSTEMS
 -------
 
-  Separate constructing a system from using it
+- Separate constructing a system from using it
+
 
 EMERGENCE
 ---------
 
-  Design must produce a system that acts as intended
+- Design must produce a system that acts as intended
   
-  Must be refactored to clean up
+- Must be refactored to clean up
   
-  Remove duplication
+- Remove duplication
   
-  Be expressive
+- Be expressive
   
-  Minimize the number of classes and methods
+- Minimize the number of classes and methods
+
 
 SUCCESSIVE REFINEMENT
 ---------------------
 
-  Write code and clean it up
+- Write code and clean it up
   
-  Maintaining tests help ensure refactoring didn't break the code
+- Maintaining tests help ensure refactoring didn't break the code
   
-  Make edits incrementally, and test frequently
+- Make edits incrementally, and test frequently
+
 
 WHY CODE SHOULD CHANGE
 ----------------------
