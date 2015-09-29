@@ -2,12 +2,10 @@
 	"always_show_minimap_viewport": true,
 	"auto_complete": false,
 	"caret_style": "solid",
-	"wide_caret": true,
 	"color_scheme": "Packages/Python 3/Gloom.tmTheme",
 	"draw_indent_guides": false,
 	"draw_minimap_border": false,
 	"draw_white_space": "none",
-
 	"file_exclude_patterns":
 	[
 		".*",
@@ -22,11 +20,9 @@
 		"*.aux",
 		"*.log"
 	],
-
 	"font_face": "Monospace",
 	"font_size": 10,
 	"highlight_line": true,
-
 	"ignored_packages":
 	[
 		"Vintage"
@@ -39,5 +35,6 @@
 	"sublimelinter": false,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
+	"wide_caret": true,
 	"word_wrap": true
 }

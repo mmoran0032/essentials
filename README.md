@@ -6,6 +6,7 @@ from scratch, this will help you out tremendously. Honestly, I'm surprised you
 made it as far as you did without making one of these. Now it's finally time to
 keep this stuff organized.
 
+
 CONFIG FILES
 ============
 
@@ -18,6 +19,27 @@ may be there, plus possibly the `.git*` files), then link these over using
 
 If everything goes right, you should have everything in place at the next launch
 of the Terminal.
+
+
+PAIRING LOGITECH MOUSE/KEYBOARD
+===============================
+
+The Logitech wireless mouse and keyboard I currently have, and all future ones,
+have a pairing software included that only works with Windows. Thankfully,
+someone has already developed a way to get this to work in Linux, creating the
+`ltunify` utility. Download and install it using:
+```
+  git clone https://git.lekensteyn.nl/ltunify.git
+  cd ltunify
+  make install-home
+```
+Once everything is set, an executable names `ltunify` will be in `~/bin`. Change
+to this directory and run
+```
+  sudo ./ltunify pair
+```
+and follow the prompts to pair your devices.
+
 
 APT-GET INSTALLATION
 ====================
@@ -39,6 +61,7 @@ Previously, I installed them I got to them, but since they are all collected
 here (and for 99% of them essential to my current stack), there's no reason to
 not just install them all right away.
 
+
 OPT DIRECTORY CONTENTS
 ======================
 
@@ -49,6 +72,7 @@ website and installing it that way. Most of these are related to Python
 development.
 
 Any additional installation notes will be given after.
+
 
 Non-Python Development
 ----------------------
@@ -80,6 +104,7 @@ Since I also use `vim`, this is for larger projects and not one-off quick edits.
   point that file to the one in this directory:
 
   `ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings`
+
 
 Python Development
 ------------------
@@ -118,11 +143,12 @@ list since, if they compile and can be imported, the order is fine.
 
 I recently switched from dealing with global installs to using local installs.
 For all of the packages above, just compile and install them using
-```
+```bash
     python3 setup.py install --user
 ```
 from within the directory in question. Note the `python3` part, since I've
 completely switched over (except for one case, below).
+
 
 ROOT
 ----
