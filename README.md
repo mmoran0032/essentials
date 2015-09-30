@@ -94,6 +94,18 @@ you'll have to grab this from there.
 presentation tool using Markdown to generate slides. My personal fork of the
 project.
 
+[Mednafen](http://mednafen.fobby.net/releases/), a multi-system emulator.
+Requires `libsndfile1-dev` and `libsdl1.2-dev` to compile from source. Using the
+USB SNES controller, you can check input with
+```
+  jstest /dev/input/js0
+```
+to make sure everything is registering. After installing, you need to edit the
+config file (`~/.mednafen/mednafen.cfg`) so that `sounddevice` is
+`sexyal-literal-default`. The sound seems to be staticy for the first minute or
+two, but calms down after. You will probably have to reconfigure the controller
+buttons as well.
+
 [RFTG](http://keldon.net/rftg/), the computer version of the card game. Includes
 the *Alien Artifacts* expansion. Requires `libgtk2.0-dev` to compile.
 
