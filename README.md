@@ -48,7 +48,7 @@ For compiling sources and general command line development, you need a few
 packages that aren't included in the base install. Most of these are in support
 of other primary packages. I've broken them down into those subsets for ease.
 
-- build-essential vim git texlive-full
+- build-essential vim git texlive-full cmake
 - **GIT** libssl-dev libcurl4-openssl-dev libexpat1-dev asciidoc xmlto docbook2x
 - **PYTHON** libpython3-dev python3-setuptools python3-psutil
 - **MATPLOTLIB** libpng12-dev libfreetype6-dev python3-dateutil
