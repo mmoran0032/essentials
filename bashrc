@@ -22,7 +22,7 @@ fi
 # Adjusting bash_history to be more helpful
 export HISTIGNORE="&:[ ]*:exit:hide"
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M: "
-export HISTSIZE=5000
+export HISTSIZE=2500
 
 export PATH=/home/mikemoran/bin:${PATH}:/usr/local/bin:/home/mikemoran/.local/bin
 
