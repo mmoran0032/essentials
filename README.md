@@ -13,7 +13,7 @@ CONFIG FILES
 Most of these files replace the hidden configuration files of the same name in
 the home directory. First, remove those old files (only `.bashrc` and `.vimrc`
 may be there, plus possibly the `.git*` files), then link these over using
-```
+```bash
   ln -s ~/bin/essentials/FILENAME ~/.FILENAME
 ```
 
@@ -28,14 +28,14 @@ The Logitech wireless mouse and keyboard I currently have, and all future ones,
 have a pairing software included that only works with Windows. Thankfully,
 someone has already developed a way to get this to work in Linux, creating the
 `ltunify` utility. Download and install it using:
-```
+```bash
   git clone https://git.lekensteyn.nl/ltunify.git
   cd ltunify
   make install-home
 ```
 Once everything is set, an executable names `ltunify` will be in `~/bin`. Change
 to this directory and run
-```
+```bash
   sudo ./ltunify pair
 ```
 and follow the prompts to pair your devices.
@@ -48,7 +48,7 @@ For compiling sources and general command line development, you need a few
 packages that aren't included in the base install. Most of these are in support
 of other primary packages. I've broken them down into those subsets for ease.
 
-- build-essential vim git texlive-full cmake
+- build-essential vim git texlive-full cmake rsync unzip
 - **GIT** libssl-dev libcurl4-openssl-dev libexpat1-dev asciidoc xmlto docbook2x
 - **PYTHON** libpython3-dev python3-setuptools python3-psutil python3-pip
 - **MATPLOTLIB** libpng12-dev libfreetype6-dev python3-dateutil
@@ -56,7 +56,7 @@ of other primary packages. I've broken them down into those subsets for ease.
 - **SCIPY** gfortran liblapack-dev
 - **ROOT** libxpm-dev
 - libgtk2.0-dev
-- **iPYTHON** nodejs-legacy npm
+- **iPYTHON** ipython3 ipython3-notebook ipython3-qtconsole nodejs-legacy npm
 
 Previously, I installed them as I got to them, but since they are all collected
 here (and for 99% of them essential to my current stack), there's no reason to
@@ -98,7 +98,8 @@ project.
 [Mednafen](http://mednafen.fobby.net/releases/), a multi-system emulator.
 Requires `libsndfile1-dev` and `libsdl1.2-dev` to compile from source. Using the
 USB SNES controller, you can check input with
-```
+```bash
+  sudo chmod 666 /dev/input/js0
   jstest /dev/input/js0
 ```
 to make sure everything is registering. After installing, you need to edit the
@@ -116,7 +117,9 @@ Since I also use `vim`, this is for larger projects and not one-off quick edits.
 - Most settings are changed via the user preferences file. After installation,
   point that file to the one in this directory:
 
-  `ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings`
+```bash
+  ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+```
 
 
 Python Development
@@ -151,11 +154,7 @@ to this order, and you should be fine.
 
 - requests: `git@github.com:kennethreitz/requests.git`
 
-- ipython: `git@github.com:ipython/ipython.git`, followed by `sudo apt-get install ipython3-notebook`
-
 - requests-oauthlib: `git@github.com:requests/requests-oauthlib.git`
-
-- jupyter: `git@github.com:jupyter/notebook.git`
 
 Any additional packages that I need will just get tacked onto the end of this
 list since, if they compile and can be imported, the order is fine.
@@ -167,6 +166,14 @@ For all of the packages above, just compile and install them using
 ```
 from within the directory in question. Note the `python3` part, since I've
 completely switched over (except for one case, below).
+
+
+JUPYTER AND IPYTHON
+-------------------
+
+OK, so iPython/Jupyter *did* work yesterday, but is no longer working today, so
+I'm seeing if I can get it working from source. I think this is futher proof
+that eventually switching over to 
 
 
 ROOT
@@ -187,7 +194,7 @@ Just like with the Python stuff above, this is a "local" install. I put that in
 quotes only because it's a little different, since I'm sourcing the compiled
 location in my `.bashrc` to make it work. This follows the "fixed location
 install" on the ROOT website. Run the following:
-```
+```bash
     ./configure linuxx8664gcc
     make -j 9
     . bin/thisroot.sh
