@@ -50,14 +50,15 @@ of other primary packages. I've broken them down into those subsets for ease.
 
 - build-essential vim git texlive-full cmake
 - **GIT** libssl-dev libcurl4-openssl-dev libexpat1-dev asciidoc xmlto docbook2x
-- **PYTHON** libpython3-dev python3-setuptools python3-psutil
+- **PYTHON** libpython3-dev python3-setuptools python3-psutil python3-pip
 - **MATPLOTLIB** libpng12-dev libfreetype6-dev python3-dateutil
   python3-pyparsing python3-cairo-dev libffi-dev python3-tk tk-dev
 - **SCIPY** gfortran liblapack-dev
 - **ROOT** libxpm-dev
 - libgtk2.0-dev
+- **iPYTHON** nodejs-legacy npm
 
-Previously, I installed them I got to them, but since they are all collected
+Previously, I installed them as I got to them, but since they are all collected
 here (and for 99% of them essential to my current stack), there's no reason to
 not just install them all right away.
 
@@ -149,6 +150,12 @@ to this order, and you should be fine.
 - statsmodels: `git@github.com:statsmodels/statsmodels.git`
 
 - requests: `git@github.com:kennethreitz/requests.git`
+
+- ipython: `git@github.com:ipython/ipython.git`, followed by `sudo apt-get install ipython3-notebook`
+
+- requests-oauthlib: `git@github.com:requests/requests-oauthlib.git`
+
+- jupyter: `git@github.com:jupyter/notebook.git`
 
 Any additional packages that I need will just get tacked onto the end of this
 list since, if they compile and can be imported, the order is fine.
