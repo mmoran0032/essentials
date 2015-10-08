@@ -56,7 +56,7 @@ of other primary packages. I've broken them down into those subsets for ease.
 - **SCIPY** gfortran liblapack-dev
 - **ROOT** libxpm-dev
 - libgtk2.0-dev
-- **iPYTHON** ipython3 ipython3-notebook ipython3-qtconsole nodejs-legacy npm
+- **iPYTHON** nodejs-legacy npm
 
 Previously, I installed them as I got to them, but since they are all collected
 here (and for 99% of them essential to my current stack), there's no reason to
@@ -173,7 +173,31 @@ JUPYTER AND IPYTHON
 
 OK, so iPython/Jupyter *did* work yesterday, but is no longer working today, so
 I'm seeing if I can get it working from source. I think this is futher proof
-that eventually switching over to 
+that eventually switching over to Anaconda, but for now everything is fine.
+Here's how to get it working, or at least, how I just got it working.
+
+*Note: iPython was working, in the Terminal, but not in the webserver format, so
+all of this is really just to get that. I also think that this is possibly the
+worst way to do it, but for now I don't care too much.*
+
+1. Install the dependencies above. Honestly, I don't know if they are really
+   needed, but I did install them and things work.
+2. Download the 3.0.0 tarball from
+   [GitHub](https://github.com/ipython/ipython/releases), extract, and move to
+   `/opt`
+3. Run the standard `python3 setup.py install --user`
+4. Using `pip3` (yes, I told you it was awful), install `jsonschema` and
+   `tornado`. One or both of these may have to be upgraded, depending on what
+   else you did, but in general you're going to run
+   ```bash
+   sudo pip3 install [--upgrade] jsonschema
+   sudo pip3 install [--upgrade] tornado
+   ```
+5. Test it out! Everything should work.
+
+But, remember how awful this is, and don't do this again. Plus, everything is
+migrating over to Jupyter anyway, so by the time you have to redo this stuff,
+you'll just be using Jupyter. So, maybe Anaconda will be your next thing?
 
 
 ROOT
