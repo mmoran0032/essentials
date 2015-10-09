@@ -11,7 +11,6 @@ alias hide="set +o history"
 alias show="set -o history"
 
 # Programming Help
-alias sublime="/opt/sublimeText2/sublime_text > /dev/null &"
 alias ti="~/bin/python/timeit.py"
 alias rs="Rscript"
 
