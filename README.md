@@ -18,7 +18,8 @@ may be there, plus possibly the `.git*` files), then link these over using
 ```
 
 If everything goes right, you should have everything in place at the next launch
-of the Terminal.
+of the Terminal. Note that you'll get a warning at every Terminal launch until
+you either install ROOT or remove the ROOT sourcing line from your bashrc.
 
 
 PAIRING LOGITECH MOUSE/KEYBOARD
@@ -56,7 +57,7 @@ of other primary packages. I've broken them down into those subsets for ease.
 - **SCIPY** gfortran liblapack-dev
 - **ROOT** libxpm-dev
 - libgtk2.0-dev
-- **iPYTHON** nodejs-legacy npm
+- **IPYTHON** nodejs-legacy npm
 
 Previously, I installed them as I got to them, but since they are all collected
 here (and for 99% of them essential to my current stack), there's no reason to
@@ -173,12 +174,12 @@ completely switched over (except for one case, below).
 JUPYTER AND IPYTHON
 -------------------
 
-OK, so iPython/Jupyter *did* work yesterday, but is no longer working today, so
+OK, so IPython/Jupyter *did* work yesterday, but is no longer working today, so
 I'm seeing if I can get it working from source. I think this is futher proof
 that eventually switching over to Anaconda, but for now everything is fine.
 Here's how to get it working, or at least, how I just got it working.
 
-*Note: iPython was working, in the Terminal, but not in the webserver format, so
+*Note: IPython was working, in the Terminal, but not in the webserver format, so
 all of this is really just to get that. I also think that this is possibly the
 worst way to do it, but for now I don't care too much.*
 
