@@ -156,6 +156,8 @@ to this order, and you should be fine.
 
 - requests-oauthlib: `git@github.com:requests/requests-oauthlib.git`
 
+- simplejson: `git@github.com:simplejson/simplejson.git`
+
 Any additional packages that I need will just get tacked onto the end of this
 list since, if they compile and can be imported, the order is fine.
 
