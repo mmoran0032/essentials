@@ -64,6 +64,23 @@ here (and for 99% of them essential to my current stack), there's no reason to
 not just install them all right away.
 
 
+MINICONDA
+=========
+
+I've downloaded `conda` (3.16.0, and specifically the Miniconda distribution) so
+that, in the future, I can use that for my scientific python work. For now, I do
+not know how it will interact with my current python installs (including python
+itself), but it is something to think about.
+
+In terms of usage, I left the install directory (`/home/mikemoran/.miniconda3`)
+*off* of my path, just to avoid any conflicts, but the `conda` executable (as
+well as its own python interpreters and other executables) is contained in the
+`bin` subdirectory in the install directory.
+
+When figuring these things out, it may be better to work from a clean install
+so as to avoid any dependency issues and read more of the documentation.
+
+
 OPT DIRECTORY CONTENTS
 ======================
 
