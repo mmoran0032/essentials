@@ -58,6 +58,7 @@ of other primary packages. I've broken them down into those subsets for ease.
 - **ROOT** libxpm-dev
 - libgtk2.0-dev
 - **IPYTHON** nodejs-legacy npm
+- **ANDROID** openjdk-7-jdk qemu-kvm libvirt-bin bridge-utils
 
 Previously, I installed them as I got to them, but since they are all collected
 here (and for 99% of them essential to my current stack), there's no reason to
@@ -95,6 +96,10 @@ Any additional installation notes will be given after.
 
 Non-Python Development
 ----------------------
+
+[android-studio](https://developer.android.com/sdk/installing/index.html), for
+android application development. There are some additional install steps,
+detailed on the website.
 
 **git** (`git@github.com:git/git.git`), the simple version tracking software.
 Since the version installed via `apt-get` is a little old, grab this one with it
