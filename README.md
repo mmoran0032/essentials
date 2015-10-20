@@ -55,7 +55,7 @@ of other primary packages. I've broken them down into those subsets for ease.
 - **MATPLOTLIB** libpng12-dev libfreetype6-dev python3-dateutil
   python3-pyparsing python3-cairo-dev libffi-dev python3-tk tk-dev
 - **SCIPY** gfortran liblapack-dev
-- **ROOT** libxpm-dev
+- **ROOT** libxpm-dev freeglut3-dev
 - libgtk2.0-dev
 - **IPYTHON** nodejs-legacy npm
 - **ANDROID** openjdk-7-jdk qemu-kvm libvirt-bin bridge-utils
