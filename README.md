@@ -52,7 +52,7 @@ of other primary packages. I've broken them down into those subsets for ease.
 - build-essential vim git texlive-full cmake rsync unzip mercurial
 - **GIT** libssl-dev libcurl4-openssl-dev libexpat1-dev asciidoc xmlto docbook2x
 - **PYTHON** libpython3-dev python3-setuptools python3-psutil python3-pip
-  
+
   Some utilities can also be cross-compiled for python2, so just run the above
   without the `3` to get this functionality.
 - **MATPLOTLIB** libpng12-dev libfreetype6-dev python3-dateutil
@@ -62,6 +62,7 @@ of other primary packages. I've broken them down into those subsets for ease.
 - libgtk2.0-dev
 - **IPYTHON** nodejs-legacy npm
 - **ANDROID** openjdk-7-jdk qemu-kvm libvirt-bin bridge-utils
+- **PYGLET** libavbin-dev libavbin0
 
 Previously, I installed them as I got to them, but since they are all collected
 here (and for 99% of them essential to my current stack), there's no reason to
@@ -83,6 +84,28 @@ well as its own python interpreters and other executables) is contained in the
 
 When figuring these things out, it may be better to work from a clean install
 so as to avoid any dependency issues and read more of the documentation.
+
+
+PYGLET
+======
+
+As a fun little side project thing of mine, I'm distracting myself with `pyglet`
+instead of either pygame or SDL. So far, I've liked the syntax of it, since it
+feels cleaner than what I remember from those two. So far I'm still at pretty
+simple stuff, but maybe as a break I'll keep adding to it.
+
+To install, I just used the source provided at
+`http://pyglet.googlecode.com/archive/tip.zip`, but it should also be available
+at the [BitBucket](https://bitbucket.org/pyglet/pyglet/wiki/Home) page. I tried
+to install that version first, but did it improperly, so went with the Google
+one.
+
+To actually install, run `python3 setup.py install --version` from the root
+directory. One thing to note is that you have to make sure that, should you also
+want to compile it for python2, you need to purge the `build` directory before
+running the above.
+
+`apt-get` sources are just for payback of compressed audio formats.
 
 
 OPT DIRECTORY CONTENTS
