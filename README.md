@@ -49,9 +49,12 @@ For compiling sources and general command line development, you need a few
 packages that aren't included in the base install. Most of these are in support
 of other primary packages. I've broken them down into those subsets for ease.
 
-- build-essential vim git texlive-full cmake rsync unzip
+- build-essential vim git texlive-full cmake rsync unzip mercurial
 - **GIT** libssl-dev libcurl4-openssl-dev libexpat1-dev asciidoc xmlto docbook2x
 - **PYTHON** libpython3-dev python3-setuptools python3-psutil python3-pip
+  
+  Some utilities can also be cross-compiled for python2, so just run the above
+  without the `3` to get this functionality.
 - **MATPLOTLIB** libpng12-dev libfreetype6-dev python3-dateutil
   python3-pyparsing python3-cairo-dev libffi-dev python3-tk tk-dev
 - **SCIPY** gfortran liblapack-dev
