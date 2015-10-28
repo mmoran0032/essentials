@@ -14,7 +14,7 @@ Most of these files replace the hidden configuration files of the same name in
 the home directory. First, remove those old files (only `.bashrc` and `.vimrc`
 may be there, plus possibly the `.git*` files), then link these over using
 ```bash
-  ln -s ~/bin/essentials/FILENAME ~/.FILENAME
+ln -s ~/bin/essentials/FILENAME ~/.FILENAME
 ```
 
 If everything goes right, you should have everything in place at the next launch
@@ -30,14 +30,14 @@ have a pairing software included that only works with Windows. Thankfully,
 someone has already developed a way to get this to work in Linux, creating the
 `ltunify` utility. Download and install it using:
 ```bash
-  git clone https://git.lekensteyn.nl/ltunify.git
-  cd ltunify
-  make install-home
+git clone https://git.lekensteyn.nl/ltunify.git
+cd ltunify
+make install-home
 ```
 Once everything is set, an executable names `ltunify` will be in `~/bin`. Change
 to this directory and run
 ```bash
-  sudo ./ltunify pair
+sudo ./ltunify pair
 ```
 and follow the prompts to pair your devices.
 
@@ -49,7 +49,7 @@ For compiling sources and general command line development, you need a few
 packages that aren't included in the base install. Most of these are in support
 of other primary packages. I've broken them down into those subsets for ease.
 
-- build-essential vim git texlive-full cmake rsync unzip mercurial
+- build-essential vim git texlive-full cmake rsync unzip mercurial cloc
 - **GIT** libssl-dev libcurl4-openssl-dev libexpat1-dev asciidoc xmlto docbook2x
 - **PYTHON** libpython3-dev python3-setuptools python3-psutil python3-pip
 
@@ -148,8 +148,8 @@ project.
 Requires `libsndfile1-dev` and `libsdl1.2-dev` to compile from source. Using the
 USB SNES controller, you can check input with
 ```bash
-  sudo chmod 666 /dev/input/js0
-  jstest /dev/input/js0
+sudo chmod 666 /dev/input/js0
+jstest /dev/input/js0
 ```
 to make sure everything is registering. After installing, you need to edit the
 config file (`~/.mednafen/mednafen.cfg`) so that `sounddevice` is
@@ -167,7 +167,15 @@ Since I also use `vim`, this is for larger projects and not one-off quick edits.
   point that file to the one in this directory:
 
 ```bash
-  ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+```
+
+[Toggl](https://support.toggl.com/toggl-on-my-desktop/), the productivity
+tracker which also has a mobile application. The primary executable is in the
+archive, so you just need to symbolic link it back (you need all of the
+libraries included).
+```bash
+ln -s /opt/toggldesktop/TogglDesktop ~/bin/toggl
 ```
 
 
@@ -213,7 +221,7 @@ list since, if they compile and can be imported, the order is fine.
 I recently switched from dealing with global installs to using local installs.
 For all of the packages above, just compile and install them using
 ```bash
-    python3 setup.py install --user
+python3 setup.py install --user
 ```
 from within the directory in question. Note the `python3` part, since I've
 completely switched over (except for one case, below).
@@ -270,9 +278,9 @@ quotes only because it's a little different, since I'm sourcing the compiled
 location in my `.bashrc` to make it work. This follows the "fixed location
 install" on the ROOT website. Run the following:
 ```bash
-    ./configure linuxx8664gcc
-    make -j 9
-    . bin/thisroot.sh
+./configure linuxx8664gcc
+make -j 9
+. bin/thisroot.sh
 ```
 
 The last line is only if you want to start working with it right now. Otherwise,
