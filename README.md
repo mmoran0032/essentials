@@ -50,6 +50,7 @@ packages that aren't included in the base install. Most of these are in support
 of other primary packages. I've broken them down into those subsets for ease.
 
 - build-essential vim git texlive-full cmake rsync unzip mercurial cloc
+  libhdf5-serial-dev
 - **GIT** libssl-dev libcurl4-openssl-dev libexpat1-dev asciidoc xmlto docbook2x
 - **PYTHON** libpython3-dev python3-setuptools python3-psutil python3-pip
 
@@ -105,7 +106,7 @@ directory. One thing to note is that you have to make sure that, should you also
 want to compile it for python2, you need to purge the `build` directory before
 running the above.
 
-`apt-get` sources are just for payback of compressed audio formats.
+`apt-get` sources are just for playback of compressed audio formats.
 
 
 OPT DIRECTORY CONTENTS
@@ -213,6 +214,8 @@ to this order, and you should be fine.
 - patsy: `git@github.com:pydata/patsy.git`
 
 - numexpr: `git@github.com:pydata/numexpr.git`
+
+- h5py: `git@github.com:h5py/h5py.git`
 
 Any additional packages that I need will just get tacked onto the end of this
 list since, if they compile and can be imported, the order is fine.
