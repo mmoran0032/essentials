@@ -171,12 +171,7 @@ ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User
 ```
 
 [Toggl](https://support.toggl.com/toggl-on-my-desktop/), the productivity
-tracker which also has a mobile application. The primary executable is in the
-archive, so you just need to symbolic link it back (you need all of the
-libraries included).
-```bash
-ln -s /opt/toggldesktop/TogglDesktop ~/bin/toggl
-```
+tracker which also has a mobile application. Install the `.deb` package.
 
 
 Python Development
@@ -214,6 +209,10 @@ to this order, and you should be fine.
 - requests-oauthlib: `git@github.com:requests/requests-oauthlib.git`
 
 - simplejson: `git@github.com:simplejson/simplejson.git`
+
+- patsy: `git@github.com:pydata/patsy.git`
+
+- numexpr: `git@github.com:pydata/numexpr.git`
 
 Any additional packages that I need will just get tacked onto the end of this
 list since, if they compile and can be imported, the order is fine.
