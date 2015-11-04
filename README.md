@@ -243,6 +243,8 @@ These don't quite fit into the actual development stack, so instead I am listing
 
 - flake8 (`git@gitlab.com:pycqa/flake8.git`), a code analyzer that checks compliance against PEP8 standards.
 
+- npyscreen (`hg clone ssh://hg@bitbucket.org/npcole/npyscreen`), a wrapper for `curses` and related libraries that provides a more-pythonic way to create terminal-based applications.
+
 
 JUPYTER AND IPYTHON
 -------------------
