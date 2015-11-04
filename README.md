@@ -237,6 +237,13 @@ same time since it is just being used for `glances`, you don't really need it.
 Your call.
 
 
+**Python Helpers**
+
+These don't quite fit into the actual development stack, so instead I am listing them here. These are just utilities that aide in development but aren't necessary for it. I'm also including descriptions of them, so that it's easier for me to guage their necessity in the future.
+
+- flake8 (`git@gitlab.com:pycqa/flake8.git`), a code analyzer that checks compliance against PEP8 standards.
+
+
 JUPYTER AND IPYTHON
 -------------------
 
