@@ -217,6 +217,8 @@ to this order, and you should be fine.
 
 - h5py: `git@github.com:h5py/h5py.git`
 
+- psutil: `git@github.com:giampaolo/psutil.git`
+
 Any additional packages that I need will just get tacked onto the end of this
 list since, if they compile and can be imported, the order is fine.
 
@@ -227,6 +229,12 @@ python3 setup.py install --user
 ```
 from within the directory in question. Note the `python3` part, since I've
 completely switched over (except for one case, below).
+
+Note that `psutil` is listed in both apt-get and here. The version is apt-get is
+1.2.1, while the current version is 3.2.3, with a few years' difference between
+them. Skip using the apt-get source and just stick with this one, but at the
+same time since it is just being used for `glances`, you don't really need it.
+Your call.
 
 
 JUPYTER AND IPYTHON
