@@ -20,7 +20,10 @@ function cleanUp {
 
 cleanUp
 for DIR in $(find . -mindepth 1 -type d); do
-  cd "$DIR" 2>/dev/null
-  cleanUp
-  cd - >/dev/null
+  if [ "${DIR##*/}" != "__pycache__" ]; then
+    cd "$DIR" 2>/dev/null
+    cleanUp
+    cd - >/dev/null
+  fi
 done
+
