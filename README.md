@@ -257,6 +257,9 @@ for me to guage their necessity in the future.
 - colorama (`git@github.com:tartley/colorama.git`), provides easy color output
   for scripts.
 
+- colorconsole (`git@github.com:lskbr/colorconsole.git`), a decent was to get
+  colorized output (instead of curses?)
+
 
 JUPYTER AND IPYTHON
 -------------------
