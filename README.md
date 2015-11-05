@@ -239,11 +239,23 @@ Your call.
 
 **Python Helpers**
 
-These don't quite fit into the actual development stack, so instead I am listing them here. These are just utilities that aide in development but aren't necessary for it. I'm also including descriptions of them, so that it's easier for me to guage their necessity in the future.
+These don't quite fit into the actual development stack, so instead I am listing
+them here. These are just utilities that aide in development but aren't
+necessary for it. I'm also including descriptions of them, so that it's easier
+for me to guage their necessity in the future.
 
-- flake8 (`git@gitlab.com:pycqa/flake8.git`), a code analyzer that checks compliance against PEP8 standards.
+- flake8 (`git@gitlab.com:pycqa/flake8.git`), a code analyzer that checks
+  compliance against PEP8 standards.
 
-- npyscreen (`hg clone ssh://hg@bitbucket.org/npcole/npyscreen`), a wrapper for `curses` and related libraries that provides a more-pythonic way to create terminal-based applications.
+- npyscreen (`hg clone ssh://hg@bitbucket.org/npcole/npyscreen`), a wrapper for
+  `curses` and related libraries that provides a more-pythonic way to create
+  terminal-based applications.
+
+- progressbar (`git@github.com:coagulant/progressbar-python3.git`), a wrapper
+  for loops that displays the progress of that loop in the terminal.
+
+- colorama (`git@github.com:tartley/colorama.git`), provides easy color output
+  for scripts.
 
 
 JUPYTER AND IPYTHON
