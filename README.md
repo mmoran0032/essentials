@@ -260,6 +260,9 @@ for me to guage their necessity in the future.
 - colorconsole (`git@github.com:lskbr/colorconsole.git`), a decent was to get
   colorized output (instead of curses?)
 
+- autopep8 (`git@github.com:hhatto/autopep8.git`), a utility that automatically
+  converts code to be compliant with PEP8 guidelines.
+
 
 JUPYTER AND IPYTHON
 -------------------
