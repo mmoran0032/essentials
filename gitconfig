@@ -9,9 +9,12 @@
 [alias]
   co = checkout
   info = log --pretty=format:'%Cred%an%Creset (%h, %cr) %Cgreen%s%Creset'
+  pushall = push all master
 
 [url "git@github.com:mmoran0032/"]
   insteadOf = github:
+[url "git@gitlab.com:mmoran0032/"]
+  insteadOf = gitlab:
 [url "https://nslgit.phys.nd.edu/"]
   insteadOf = nsl:
 [url "git@nslgit.phys.nd.edu:"]
