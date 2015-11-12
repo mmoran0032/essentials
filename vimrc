@@ -19,8 +19,8 @@ set ignorecase smartcase
 set hlsearch
 
 "For Python specifically
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 "Folding, with za
 set foldmethod=indent
 set foldlevel=99
