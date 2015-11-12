@@ -31,6 +31,13 @@ a four- or five-deep nested loop/if monstrosity falling onto my editor.
 We'll see what happens in the coming years, since it may be one of those
 that I have to change to live with.
 
+*Update 2015-11-12:* I think I'm switching over. I can't say exactly what
+caused it, but python code seems to look better with extra indentation... I
+tried it out in the `WienFilter` code first on a couple of files, and while
+it isn't perfect, I think I can get used to it. Right now, I'm leaving
+previous codes as is, but I may go on a compliance spree later, converting
+all of them over.
+
 
 Warnings
 --------
