@@ -1,6 +1,6 @@
 {
 	"always_show_minimap_viewport": true,
-	"auto_complete": false,
+	"auto_complete": true,
 	"caret_style": "solid",
 	"color_scheme": "Packages/Python 3/Gloom.tmTheme",
 	"draw_indent_guides": false,
@@ -33,6 +33,7 @@
 	"scroll_past_end": false,
 	"sublimelinter": false,
 	"tab_size": 4,
+	"tab_completion": true,
 	"translate_tabs_to_spaces": true,
 	"wide_caret": true,
 	"word_wrap": true

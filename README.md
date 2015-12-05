@@ -64,6 +64,7 @@ of other primary packages. I've broken them down into those subsets for ease.
 - **IPYTHON** nodejs-legacy npm
 - **ANDROID** openjdk-7-jdk qemu-kvm libvirt-bin bridge-utils
 - **PYGLET** libavbin-dev libavbin0
+- **SWIFT** libxml2-dev uuid-dev
 
 Previously, I installed them as I got to them, but since they are all collected
 here (and for 99% of them essential to my current stack), there's no reason to
@@ -171,8 +172,11 @@ Since I also use `vim`, this is for larger projects and not one-off quick edits.
 ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 ```
 
-[Toggl](https://support.toggl.com/toggl-on-my-desktop/), the productivity
-tracker which also has a mobile application. Install the `.deb` package.
+[Swift](http://swift.org) (GitHub: `git@github.com:apple/swift.git`), Apple's
+now-open C/C++/C#/Obj-C replacement language. There are a bunch of additional
+packages required for compilation, and many swift-specific ones, so make a
+separate directory (`/opt/SWIFT`) to put everything in. Just use the list
+provided in the swift readme (including ninja).
 
 
 Python Development
