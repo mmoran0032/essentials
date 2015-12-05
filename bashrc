@@ -27,6 +27,8 @@ export HISTSIZE=2500
 export PATH=${PATH}:/usr/local/bin:/home/mikemoran/.local/bin
 # for Miniconda...
 # export PATH=/home/mikemoran/,miniconda/bin:$PATH
+# for Swift
+export PATH=${PATH}:/opt/swift-2.2/usr/bin
 
 # sourcing
 . ~/.aliases

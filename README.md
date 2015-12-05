@@ -64,7 +64,8 @@ of other primary packages. I've broken them down into those subsets for ease.
 - **IPYTHON** nodejs-legacy npm
 - **ANDROID** openjdk-7-jdk qemu-kvm libvirt-bin bridge-utils
 - **PYGLET** libavbin-dev libavbin0
-- **SWIFT** libxml2-dev uuid-dev
+- **SWIFT** libxml2-dev uuid-dev libbsd-dev icu-devtools libicu-dev libedit-dev
+  python-sphinx swig
 
 Previously, I installed them as I got to them, but since they are all collected
 here (and for 99% of them essential to my current stack), there's no reason to
@@ -177,6 +178,21 @@ now-open C/C++/C#/Obj-C replacement language. There are a bunch of additional
 packages required for compilation, and many swift-specific ones, so make a
 separate directory (`/opt/SWIFT`) to put everything in. Just use the list
 provided in the swift readme (including ninja).
+
+- You'll need to update your path to get things working. Currently, use:
+  `/opt/SWIFT/build/Ninja-ReleaseAssert/swift-linux-x86_64/bin`
+
+On second thought, since the runtime environment isn't implemented in this
+build, maybe because I'm using Linux Mint *instead* of Ubuntu (running
+`swift --version` with my compiled version gives
+`Target: x86_64-unknown-linux-gnu` instead of what I assume would be something
+with "ubuntu" somewhere...), I'm going to try the precompiled binary.
+
+- [precompiled](https://swift.org/download/#latest-development-snapshots), and
+  use the Ubuntu 14.04 version.
+
+  This works, and has the interactive version working too, but has the same
+  signature for the target.
 
 
 Python Development
