@@ -12,7 +12,7 @@ alias show="set -o history"
 
 # Programming Help
 alias ap8="autopep8 --aggressive --recursive --in-place --verbose"
-alias ti="~/bin/python/timeit.py"
+alias ti="~/bin/essentials/timeit.py"
 alias rs="Rscript"
 
 # Research related

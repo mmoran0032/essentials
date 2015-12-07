@@ -19,4 +19,3 @@ if __name__ == "__main__":
             failed = True
     if failed:
         sys.exit("commit aborted: code not PEP8 compliant")
-
