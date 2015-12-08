@@ -7,6 +7,11 @@ import datetime
 import subprocess
 import sys
 
+bright = colorama.Style.BRIGHT
+green = colorama.Fore.GREEN
+red = colorama.Fore.RED
+reset = colorama.Style.RESET_ALL
+
 
 def main():
     if len(sys.argv) == 1:
@@ -17,15 +22,13 @@ def main():
     if not sys.stdout.isatty():
         colorama.init(strip=True)
 
-    fore = colorama.Fore
-
     start = datetime.datetime.now()
-    print("{}Start time: {}{}".format(fore.GREEN, fore.RESET, start))
-    print("Running command: {}".format(command))
+    print("{}{}Start time: {}{}".format(bright, green, reset, start))
+    print("{}{}Running command: {}{}".format(bright, red, command, reset))
     subprocess.call(command, shell=True)
     end = datetime.datetime.now()
-    print("{}End time: {}{}".format(fore.GREEN, fore.RESET, end))
-    print("{}Total time: {}{}".format(fore.GREEN, end - start, fore.RESET))
+    print("{}{}End time: {}{}".format(bright, green, reset, end))
+    print("{}{}Total time: {}{}".format(bright, green, end - start, reset))
 
 
 if __name__ == "__main__":
