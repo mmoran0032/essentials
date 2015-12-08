@@ -11,7 +11,7 @@ alias hide="set +o history"
 alias show="set -o history"
 
 # Programming Help
-alias ap8="autopep8 --aggressive --recursive --in-place --verbose"
+alias ap8="autopep8 --aggressive --recursive --in-place --verbose --ignore=W391"
 alias ti="~/bin/essentials/timeit.py"
 alias rs="Rscript"
 
