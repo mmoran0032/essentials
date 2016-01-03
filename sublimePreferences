@@ -32,8 +32,8 @@
 	],
 	"scroll_past_end": false,
 	"sublimelinter": false,
-	"tab_size": 4,
 	"tab_completion": true,
+	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
 	"wide_caret": true,
 	"word_wrap": true
