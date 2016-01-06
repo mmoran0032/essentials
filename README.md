@@ -316,6 +316,19 @@ migrating over to Jupyter anyway, so by the time you have to redo this stuff,
 you'll just be using Jupyter. So, maybe Anaconda will be your next thing?
 
 
+DJANGO
+------
+
+Not sure how far I'll go with this, but I am also going to learn some web
+development with Django and Selenium. As far as I know, Selenium is not used for
+anything else (but could be...?), so right now it is just to help get through
+and follow the 'Test Driven Development with Django' book.
+
+- django (`git@github.com:django/django.git`)
+
+- selenium (`git@github.com:SeleniumHQ/selenium.git`)
+
+
 ROOT
 ----
 
