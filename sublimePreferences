@@ -17,7 +17,8 @@
 		"*.so",
 		"*.dylib",
 		"*.aux",
-		"*.log"
+		"*.log",
+		"*.class"
 	],
 	"font_face": "Monospace",
 	"font_size": 10,
