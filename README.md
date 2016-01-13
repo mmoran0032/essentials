@@ -62,7 +62,7 @@ of other primary packages. I've broken them down into those subsets for ease.
 - **ROOT** libxpm-dev freeglut3-dev
 - libgtk2.0-dev
 - **IPYTHON** nodejs-legacy npm
-- **ANDROID** openjdk-7-jdk qemu-kvm libvirt-bin bridge-utils
+- **ANDROID** openjdk-7-jdk qemu-kvm libvirt-bin bridge-utils android-tools-adb
 - **PYGLET** libavbin-dev libavbin0
 - **SWIFT** libxml2-dev uuid-dev libbsd-dev icu-devtools libicu-dev libedit-dev
   python-sphinx swig
@@ -327,6 +327,23 @@ and follow the 'Test Driven Development with Django' book.
 - django (`git@github.com:django/django.git`)
 
 - selenium (`git@github.com:SeleniumHQ/selenium.git`)
+
+Selenium sucked to get working. After a few failed attempts, here's what you
+need to do from the selenium directory to get everything up and running. I
+installed it for both `python2` and `python3`, but that shouldn't matter. Just
+using 3 is perfectly fine. You need the `chromedriver` utility in order to
+compile for google-chrome support.
+
+```
+  sudo apt-get install ibus
+  ./go release
+  python3 setup.py install --user
+```
+
+You'll get a `SyntaxError` near the end of the install, since the package
+template has placeholder within the import statements, but you can ignore this.
+Those poor placeholders show that you *must* replace them, so don't worry about
+it.
 
 
 ROOT
