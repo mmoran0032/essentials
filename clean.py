@@ -4,9 +4,21 @@
 import os
 import subprocess
 
-
 extensions = ('aux', 'log', 'nav', 'out', 'snm', 'spl', 'syn', 'toc')
 directories = ('__pycache__', 'build', 'dist')
+
+
+def main():
+    start = '.'
+    filecount = 0
+    dircount = 0
+    for directory, subdirs, files in os.walk(start):
+        subdirs[:], files = ignore_hidden(subdirs, files)
+        filecount += clean_files(directory, files)
+        subdirs[:], number = clean_directories(directory, subdirs)
+        dircount += number
+    print('== Files deleted: {}'.format(filecount))
+    print('== Directories deleted: {}'.format(dircount))
 
 
 def ignore_hidden(subdirs, files):
@@ -36,15 +48,5 @@ def scrub_item(directory, item):
     subprocess.call(['rm', '-rf', '{}'.format(name)])
 
 
-if __name__ == "__main__":
-    start = '.'
-    filecount = 0
-    dircount = 0
-    for directory, subdirs, files in os.walk(start):
-        subdirs[:], files = ignore_hidden(subdirs, files)
-        filecount += clean_files(directory, files)
-        subdirs[:], number = clean_directories(directory, subdirs)
-        dircount += number
-    print('== Files deleted: {}'.format(filecount))
-    print('== Directories deleted: {}'.format(dircount))
-
+if __name__ == '__main__':
+    main()
