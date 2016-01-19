@@ -16,17 +16,18 @@ def ignore_hidden(subdirs, files):
 
 
 def clean_files(directory, files):
-    filtered = (f for f in files if f.split('.')[-1] in extensions)
+    filtered = [f for f in files if f.split('.')[-1] in extensions]
     for f in filtered:
         scrub_item(directory, f)
+    return len(filtered)
 
 
 def clean_directories(directory, subdirs):
-    filtered = (d for d in subdirs if d in directories)
+    filtered = [d for d in subdirs if d in directories]
     for d in filtered:
         scrub_item(directory, d)
         subdirs.remove(d)
-    return subdirs
+    return subdirs, len(filtered)
 
 
 def scrub_item(directory, item):
@@ -37,8 +38,13 @@ def scrub_item(directory, item):
 
 if __name__ == "__main__":
     start = '.'
+    filecount = 0
+    dircount = 0
     for directory, subdirs, files in os.walk(start):
         subdirs[:], files = ignore_hidden(subdirs, files)
-        clean_files(directory, files)
-        subdirs[:] = clean_directories(directory, subdirs)
+        filecount += clean_files(directory, files)
+        subdirs[:], number = clean_directories(directory, subdirs)
+        dircount += number
+    print('== Files deleted: {}'.format(filecount))
+    print('== Directories deleted: {}'.format(dircount))
 
