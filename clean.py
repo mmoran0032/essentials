@@ -31,17 +31,7 @@ def scrub_item(directory, item):
 
 if __name__ == "__main__":
     start = '.'
-    print('=== CHECK ===')
     for directory, subdirs, files in os.walk(start):
-        print(directory, subdirs, files)
-
-    for directory, subdirs, files in os.walk(start):
-        print('=======')
-        print(directory, subdirs, files)
         clean_files(directory, files)
         subdirs = clean_directories(directory, subdirs)
-
-    print('=== CHECK ===')
-    for directory, subdirs, files in os.walk(start):
-        print(directory, subdirs, files)
 
