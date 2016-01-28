@@ -345,11 +345,9 @@ template has placeholder within the import statements, but you can ignore this.
 Those poor placeholders show that you *must* replace them, so don't worry about
 it.
 
-The book I'm using uses Bootstrap to edit CSS and such. I'm guessing it is
-easier to use than my previous work of just manually changing the css, but who
-knows? I'm going to try it out to follow along, and maybe I'll like it.
-
-- bootstrap (`git@github.com:twbs/bootstrap.git`)
+Bootstrap (`git@github.com:twbs/bootstrap.git`) is just a preset CSS template. I
+have it for my testing site (following the book), but look into LESS/SCSS for
+actual customization.
 
 
 ROOT
