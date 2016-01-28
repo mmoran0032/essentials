@@ -332,7 +332,7 @@ Selenium sucked to get working. After a few failed attempts, here's what you
 need to do from the selenium directory to get everything up and running. I
 installed it for both `python2` and `python3`, but that shouldn't matter. Just
 using 3 is perfectly fine. You need the `chromedriver` utility in order to
-compile for google-chrome support.
+compile for google-chrome support. I've just been using Firefox, though.
 
 ```
   sudo apt-get install ibus
@@ -344,6 +344,12 @@ You'll get a `SyntaxError` near the end of the install, since the package
 template has placeholder within the import statements, but you can ignore this.
 Those poor placeholders show that you *must* replace them, so don't worry about
 it.
+
+The book I'm using uses Bootstrap to edit CSS and such. I'm guessing it is
+easier to use than my previous work of just manually changing the css, but who
+knows? I'm going to try it out to follow along, and maybe I'll like it.
+
+- bootstrap (`git@github.com:twbs/bootstrap.git`)
 
 
 ROOT
