@@ -37,6 +37,7 @@ def clean_files(directory, files):
 
 def clean_directories(directory, subdirs):
     filtered = [d for d in subdirs if d in directories]
+    filtered.extend(d for d in subdirs if d.split('.')[-1] == 'egg-info')
     for d in filtered:
         scrub_item(directory, d)
         subdirs.remove(d)
