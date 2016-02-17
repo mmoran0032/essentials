@@ -4,8 +4,8 @@
 import os
 import subprocess
 
-extensions = ('aux', 'fdb_latexmk', 'fls', 'gz', 'log', 'nav', 'out', 'snm',
-              'spl', 'syn', 'toc')
+extensions = ('aux', 'fdb_latexmk', 'fls', 'gz', 'lis', 'log', 'nav', 'out',
+              'snm', 'spl', 'syn', 'toc')
 directories = ('__pycache__', 'build', 'dist')
 
 

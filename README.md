@@ -239,6 +239,8 @@ to this order, and you should be fine.
 
 - psutil: `git@github.com:giampaolo/psutil.git`
 
+- beautifulsoup: http://www.crummy.com/software/BeautifulSoup/
+
 Any additional packages that I need will just get tacked onto the end of this
 list since, if they compile and can be imported, the order is fine.
 
