@@ -318,8 +318,8 @@ migrating over to Jupyter anyway, so by the time you have to redo this stuff,
 you'll just be using Jupyter. So, maybe Anaconda will be your next thing?
 
 
-DJANGO
-------
+WEB DEVELOPMENT
+---------------
 
 Not sure how far I'll go with this, but I am also going to learn some web
 development with Django and Selenium. As far as I know, Selenium is not used for
@@ -350,6 +350,11 @@ it.
 Bootstrap (`git@github.com:twbs/bootstrap.git`) is just a preset CSS template. I
 have it for my testing site (following the book), but look into LESS/SCSS for
 actual customization.
+
+In addition, I'm also installing Flask (`git@github.com:mitsuhiko/flask.git`),
+which is a microframework for websites, similar to Django but very lightweight.
+I think if I do more web stuff (online visualization?), then I may go with this
+instead. The ML book I'm going through has a section on it too.
 
 
 ROOT
