@@ -34,3 +34,6 @@ export PATH=${PATH}:/opt/swift-2.2/usr/bin
 . ~/.aliases
 eval "$(dircolors ~/.colors-ls)"
 . /opt/root/bin/thisroot.sh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

@@ -50,7 +50,7 @@ packages that aren't included in the base install. Most of these are in support
 of other primary packages. I've broken them down into those subsets for ease.
 
 - build-essential vim git texlive-full cmake rsync unzip mercurial cloc
-  libhdf5-serial-dev tree xclip
+  libhdf5-serial-dev tree xclip postgresql
 - **GIT** libssl-dev libcurl4-openssl-dev libexpat1-dev asciidoc xmlto docbook2x
 - **PYTHON** libpython3-dev python3-setuptools python3-psutil python3-pip
 
@@ -355,6 +355,10 @@ In addition, I'm also installing Flask (`git@github.com:mitsuhiko/flask.git`),
 which is a microframework for websites, similar to Django but very lightweight.
 I think if I do more web stuff (online visualization?), then I may go with this
 instead. The ML book I'm going through has a section on it too.
+
+You also need the Heroku CLI (run
+`wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh`) if you want to
+work with apps through Heroku, which seems like a decent idea...?
 
 
 ROOT
