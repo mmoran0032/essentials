@@ -61,7 +61,7 @@ of other primary packages. I've broken them down into those subsets for ease.
 - **SCIPY** gfortran liblapack-dev
 - **ROOT** libxpm-dev freeglut3-dev
 - libgtk2.0-dev
-- **IPYTHON** nodejs-legacy npm
+- **JUPYTER** nodejs-legacy npm python3-jinja2 python3-zmq
 - **ANDROID** openjdk-7-jdk qemu-kvm libvirt-bin bridge-utils android-tools-adb
 - **PYGLET** libavbin-dev libavbin0
 - **SWIFT** libxml2-dev uuid-dev libbsd-dev icu-devtools libicu-dev libedit-dev
@@ -317,6 +317,8 @@ But, remember how awful this is, and don't do this again. Plus, everything is
 migrating over to Jupyter anyway, so by the time you have to redo this stuff,
 you'll just be using Jupyter. So, maybe Anaconda will be your next thing?
 
+You dumb shit. You messed it up. (2016-04-26)
+
 
 WEB DEVELOPMENT
 ---------------
@@ -388,9 +390,6 @@ make -j 9
 The last line is only if you want to start working with it right now. Otherwise,
 you'll source that location with your next Terminal.
 
-The only idea I have right now is, if I'm working with ROOT objects and *really*
-want to change them over into Python ones, I can also compile `numpy` for
-Python 2.X, write a script that converts ROOT files to numpy arrays, write those
-arrays to a file, then use my Python 3.X code to do more processing. That isn't
-the best solution, so I think I'll just stick with the 2.X full route with the
-ROOT internals taking place of the SciPy/etc. routines.
+Like everything else about ROOT, there is supposed to be a working Jupyter
+kernel, but it did not work for me. Maybe because I'm using python 3 as a
+default, but who knows?
