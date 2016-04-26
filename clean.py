@@ -6,7 +6,7 @@ import subprocess
 
 extensions = ('aux', 'fdb_latexmk', 'fls', 'gz', 'lis', 'lof', 'log', 'lot',
               'nav', 'out', 'snm', 'spl', 'syn', 'toc')
-directories = ('__pycache__', 'build', 'dist')
+directories = ('__pycache__', 'build', 'dist')  # *.egg-info treated separately
 
 
 def main():

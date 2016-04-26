@@ -3,8 +3,8 @@
 # Making the prompt and terminal better
 function truncate {
   newPWD="${PWD/#$HOME/~}"
-  maxlen=35
-  maxshow=32
+  maxlen=30
+  maxshow=27
   if [ ${#newPWD} -gt $maxlen ]; then
     newPWD="...${newPWD: -$maxshow}"
   fi
