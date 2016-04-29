@@ -27,13 +27,10 @@ export HISTSIZE=2500
 export PATH=${PATH}:/usr/local/bin:/home/mikemoran/.local/bin
 # for Miniconda...
 # export PATH=/home/mikemoran/,miniconda/bin:$PATH
-# for Swift
-export PATH=${PATH}:/opt/swift-2.2/usr/bin
 
 # sourcing
 . ~/.aliases
 eval "$(dircolors ~/.colors-ls)"
-. /opt/root/bin/thisroot.sh
+. /opt/root6/bin/thisroot.sh
+export PYTHONPATH=${PYTHONPATH}:${ROOTSYS}/bindings/pyroot/
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"

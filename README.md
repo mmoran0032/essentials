@@ -382,7 +382,8 @@ quotes only because it's a little different, since I'm sourcing the compiled
 location in my `.bashrc` to make it work. This follows the "fixed location
 install" on the ROOT website. Run the following:
 ```bash
-./configure linuxx8664gcc
+mkdir /opt/root6 && cd /opt/root6
+cmake -Dhttp=ON ../root
 make -j 9
 . bin/thisroot.sh
 ```
@@ -390,6 +391,7 @@ make -j 9
 The last line is only if you want to start working with it right now. Otherwise,
 you'll source that location with your next Terminal.
 
-Like everything else about ROOT, there is supposed to be a working Jupyter
-kernel, but it did not work for me. Maybe because I'm using python 3 as a
-default, but who knows?
+The Jupyter kernel for ROOT is supposed to be working now, but I am still going
+through some troubleshooting to get it to work. Now, it looks to either be a
+problem with Jupyter or metakernel, so hopefully this is easier to fix.
+
