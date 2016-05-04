@@ -1,4 +1,4 @@
-# BASHRC for ARES2m (Linux Mint 17.1 64b)
+# BASHRC for ARES2m (Linux Mint 17.3 64b)
 
 # Making the prompt and terminal better
 function truncate {
@@ -24,9 +24,7 @@ export HISTIGNORE="&:[ ]*:exit:hide"
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M: "
 export HISTSIZE=2500
 
-export PATH=${PATH}:/usr/local/bin:/home/mikemoran/.local/bin
-# for Miniconda...
-# export PATH=/home/mikemoran/,miniconda/bin:$PATH
+export PATH=/opt/miniconda3/bin:${PATH}:/home/mikemoran/.local/bin
 
 # sourcing
 . ~/.aliases
