@@ -6,9 +6,51 @@ from scratch, this will help you out tremendously. Honestly, I'm surprised you
 made it as far as you did without making one of these. Now it's finally time to
 keep this stuff organized.
 
+*Updated for reinstalling on 2016-05-03*
 
-CONFIG FILES
-============
+
+Beginning Installation
+======================
+
+While you're still using System76 computers, you'll want to grab their drivers.
+This step will only matter if you get a computer with a graphics card or some
+other extra thing that you haven't used before, but it's good to have anyway.
+```
+sudo apt-add-repository ppa:system76-dev/stable
+apt update
+apt install system76-driver
+```
+
+You'll want to make sure that everything is install and upgraded before doing
+any of the specialized steps below. Simply run `apt upgrade` and allow it to
+install the huge block of files, and sit back and wait. Finally, install some
+extremely helpful command line tools.
+```
+apt install build-essential cmake git rsync tree unzip vim xclip
+```
+
+Adjust any computer settings (Terminal background and scrollback, sounds, user
+picture, etc) and download any files from the backed-up external drive that you
+want. In particular (to avoid replacing all of your keys), the .ssh directory
+should be copied over.
+
+Uninstall the few applications that you don't want, and download and install
+[Google Chrome](https://www.google.com/chrome/browser/desktop/index.html). I do
+not uninstall Firefox, since it is good to have a backup browser (and some web
+tests work better with Firefox, from my previous experience). This creates the
+`/opt/` directory if you haven't already, so for the rest of the work you'll
+want to transfer ownership over to you.
+```
+sudo chown -R mikemoran /opt/
+```
+
+From here, you can take the steps in any order, since they are (mostly)
+independent of each other. For the most part, the python portion is the most
+important part for your work and your future work.
+
+
+Config Files
+------------
 
 Most of these files replace the hidden configuration files of the same name in
 the home directory. First, remove those old files (only `.bashrc` and `.vimrc`
@@ -16,14 +58,16 @@ may be there, plus possibly the `.git*` files), then link these over using
 ```bash
 ln -s ~/bin/essentials/FILENAME ~/.FILENAME
 ```
+You have to include the `~/bin/essntials/` portion, otherwise the linking will
+not be done properly.
 
 If everything goes right, you should have everything in place at the next launch
 of the Terminal. Note that you'll get a warning at every Terminal launch until
 you either install ROOT or remove the ROOT sourcing line from your bashrc.
 
 
-PAIRING LOGITECH MOUSE/KEYBOARD
-===============================
+Pairing Logitech Mouse/Keyboard
+-------------------------------
 
 The Logitech wireless mouse and keyboard I currently have, and all future ones,
 have a pairing software included that only works with Windows. Thankfully,
@@ -39,328 +83,117 @@ to this directory and run
 ```bash
 sudo ./ltunify pair
 ```
-and follow the prompts to pair your devices.
+and follow the prompts to pair your devices. You can then remove the `ltunify`
+directory created from the clone if you desire.
 
 
-APT-GET INSTALLATION
-====================
+Git
+---
 
-For compiling sources and general command line development, you need a few
-packages that aren't included in the base install. Most of these are in support
-of other primary packages. I've broken them down into those subsets for ease.
+The version of git installed through apt is not the most up-to-date version, so
+once you have any git installed (and after making sure your ssh keys are in
+place), you'll want to grab the source and install the newer version. There are
+a few libraries necessary for compiling to progress.
+```
+git clone git@github.com:git/git.git
+apt install asciidoc docbook2x libcurl4-openssl-dev libexpat1-dev libssl-dev xmlto
+make -j 9 prefix=/usr/local all doc info
+sudo make -j 9 prefix=/usr/local install install-doc install-html install-info
+```
 
-- build-essential vim git texlive-full cmake rsync unzip mercurial cloc
-  libhdf5-serial-dev tree xclip postgresql
-- **GIT** libssl-dev libcurl4-openssl-dev libexpat1-dev asciidoc xmlto docbook2x
-- **PYTHON** libpython3-dev python3-setuptools python3-psutil python3-pip
+As with all git-based installations, this is done in the `/opt/` directory.
 
-  Some utilities can also be cross-compiled for python2, so just run the above
-  without the `3` to get this functionality.
-- **MATPLOTLIB** libpng12-dev libfreetype6-dev python3-dateutil
-  python3-pyparsing python3-cairo-dev libffi-dev python3-tk tk-dev
-- **SCIPY** gfortran liblapack-dev
+
 - **ROOT** libxpm-dev freeglut3-dev
 - libgtk2.0-dev
-- **JUPYTER** nodejs-legacy npm python3-jinja2 python3-zmq
-- **ANDROID** openjdk-7-jdk qemu-kvm libvirt-bin bridge-utils android-tools-adb
-- **PYGLET** libavbin-dev libavbin0
-- **SWIFT** libxml2-dev uuid-dev libbsd-dev icu-devtools libicu-dev libedit-dev
-  python-sphinx swig
 
 Previously, I installed them as I got to them, but since they are all collected
 here (and for 99% of them essential to my current stack), there's no reason to
 not just install them all right away.
 
 
-MINICONDA
-=========
+Sublime Text 3
+--------------
 
-I've downloaded `conda` (3.16.0, and specifically the Miniconda distribution) so
-that, in the future, I can use that for my scientific python work. For now, I do
-not know how it will interact with my current python installs (including python
-itself), but it is something to think about.
+[Sublime Text 3](https://www.sublimetext.com/) is available within the package
+manager, so you do not need to download the installer or source. Run `apt
+install sublime-text` to get it.
 
-In terms of usage, I left the install directory (`/home/mikemoran/.miniconda3`)
-*off* of my path, just to avoid any conflicts, but the `conda` executable (as
-well as its own python interpreters and other executables) is contained in the
-`bin` subdirectory in the install directory.
+There are a few additional steps before ST3 works the same as you're used to.
+You'll want to (roughly) follow the guide
+[here](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/), which is mostly installing
+Package Control and then Anaconda. You'll also want to grab the *Gloom* theme,
+which you've really liked, directly from
+[here](https://raw.githubusercontent.com/petervaro/python/master/themes/Gloom.tmTheme).
+Move that file into `~/.config/sublime-text-3/Packages` and update your settings
+file if necessary.
 
-When figuring these things out, it may be better to work from a clean install
-so as to avoid any dependency issues and read more of the documentation.
-
-
-PYGLET
-======
-
-As a fun little side project thing of mine, I'm distracting myself with `pyglet`
-instead of either pygame or SDL. So far, I've liked the syntax of it, since it
-feels cleaner than what I remember from those two. So far I'm still at pretty
-simple stuff, but maybe as a break I'll keep adding to it.
-
-To install, I just used the source provided at
-`http://pyglet.googlecode.com/archive/tip.zip`, but it should also be available
-at the [BitBucket](https://bitbucket.org/pyglet/pyglet/wiki/Home) page. I tried
-to install that version first, but did it improperly, so went with the Google
-one.
-
-To actually install, run `python3 setup.py install --version` from the root
-directory. One thing to note is that you have to make sure that, should you also
-want to compile it for python2, you need to purge the `build` directory before
-running the above.
-
-`apt-get` sources are just for playback of compressed audio formats.
-
-
-OPT DIRECTORY CONTENTS
-======================
-
-First, actually make an `/opt` directory to hold all of this stuff. When
-downloading Google Chrome, it may do this for you, but I haven't tried it out.
-Most of these can be found on GitHub, but a few will just require going to the
-website and installing it that way. Most of these are related to Python
-development.
-
-Any additional installation notes will be given after.
-
-
-Non-Python Development
-----------------------
-
-[android-studio](https://developer.android.com/sdk/installing/index.html), for
-android application development. There are some additional install steps,
-detailed on the website.
-
-**git** (`git@github.com:git/git.git`), the simple version tracking software.
-Since the version installed via `apt-get` is a little old, grab this one with it
-immediately after.
-
-**glances** (`git@github.com:nicolargo/glances`), a Terminal-based system
-monitor. I haven't been using it as much anymore, but I think I will be in the
-near future when I'm doing more computationally-intense work. Install this by
-running `sudo python setup.py install` from within the directory.
-
-[Google Chrome](https://www.google.com/chrome/browser/desktop/index.html), the
-web browser, for obvious reasons. Linux Mint comes with Firefox by default, so
-you'll have to grab this from there.
-
-**mdPresent** (`git@github.com:mmoran0032/mdPresent.git`), a lightweight
-presentation tool using Markdown to generate slides. My personal fork of the
-project.
-
-[Mednafen](http://mednafen.fobby.net/releases/), a multi-system emulator.
-Requires `libsndfile1-dev` and `libsdl1.2-dev` to compile from source. Using the
-USB SNES controller, you can check input with
-```bash
-sudo chmod 666 /dev/input/js0
-jstest /dev/input/js0
+Your settings file is the one within `~/bin/essentials`, so you'll want to make
+sure that ST3 is actually using this.
 ```
-to make sure everything is registering. After installing, you need to edit the
-config file (`~/.mednafen/mednafen.cfg`) so that `sounddevice` is
-`sexyal-literal-default`. The sound seems to be staticy for the first minute or
-two, but calms down after. You will probably have to reconfigure the controller
-buttons as well.
-
-[RFTG](http://keldon.net/rftg/), the computer version of the card game. Includes
-the *Alien Artifacts* expansion. Requires `libgtk2.0-dev` to compile.
-
-[Sublime Text 3](https://www.sublimetext.com/), the all-purpose text editor.
-Since I also use `vim`, this is for larger projects and not one-off quick edits.
-
-- Most settings are changed via the user preferences file. After installation,
-  point that file to the one in this directory:
-
-```bash
 ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 ```
 
-[Swift](http://swift.org) (GitHub: `git@github.com:apple/swift.git`), Apple's
-now-open C/C++/C#/Obj-C replacement language. There are a bunch of additional
-packages required for compilation, and many swift-specific ones, so make a
-separate directory (`/opt/SWIFT`) to put everything in. Just use the list
-provided in the swift readme (including ninja).
 
-- You'll need to update your path to get things working. Currently, use:
-  `/opt/SWIFT/build/Ninja-ReleaseAssert/swift-linux-x86_64/bin`
-
-On second thought, since the runtime environment isn't implemented in this
-build, maybe because I'm using Linux Mint *instead* of Ubuntu (running
-`swift --version` with my compiled version gives
-`Target: x86_64-unknown-linux-gnu` instead of what I assume would be something
-with "ubuntu" somewhere...), I'm going to try the precompiled binary.
-
-- [precompiled](https://swift.org/download/#latest-development-snapshots), and
-  use the Ubuntu 14.04 version.
-
-  This works, and has the interactive version working too, but has the same
-  signature for the target.
-
-
-Python Development
-------------------
-
-Since my work mostly involves using `python`, this may be the most important
-section. First, order is *very* important here, since most of the libraries
-rely on other ones (like almost everything needing `cython` and `numpy`). Keep
-to this order, and you should be fine.
-
-- cython: `git@github.com:cython/cython.git`
-
-- numpy: `git@github.com:numpy/numpy`
-
-- scipy: `git@github.com:scipy/scipy.git`
-
-- mpmath: `git@github.com:fredrik-johansson/mpmath.git`
-
-- sympy: `git@github.com:sympy/sympy.git`
-
-- matplotlib: `git@github.com:matplotlib/matplotlib.git`
-
-- pandas: `git@github.com:pydata/pandas`
-
-- pymc: `git@github.com:pymc-devs/pymc.git`
-
-- scikit-learn: `git@github.com:scikit-learn/scikit-learn`
-
-- seaborn: `git@github.com:mwaskom/seaborn.git`
-
-- statsmodels: `git@github.com:statsmodels/statsmodels.git`
-
-- requests: `git@github.com:kennethreitz/requests.git`
-
-- requests-oauthlib: `git@github.com:requests/requests-oauthlib.git`
-
-- simplejson: `git@github.com:simplejson/simplejson.git`
-
-- patsy: `git@github.com:pydata/patsy.git`
-
-- numexpr: `git@github.com:pydata/numexpr.git`
-
-- h5py: `git@github.com:h5py/h5py.git`
-
-- psutil: `git@github.com:giampaolo/psutil.git`
-
-- beautifulsoup: http://www.crummy.com/software/BeautifulSoup/
-
-Any additional packages that I need will just get tacked onto the end of this
-list since, if they compile and can be imported, the order is fine.
-
-I recently switched from dealing with global installs to using local installs.
-For all of the packages above, just compile and install them using
-```bash
-python3 setup.py install --user
-```
-from within the directory in question. Note the `python3` part, since I've
-completely switched over (except for one case, below).
-
-Note that `psutil` is listed in both apt-get and here. The version is apt-get is
-1.2.1, while the current version is 3.2.3, with a few years' difference between
-them. Skip using the apt-get source and just stick with this one, but at the
-same time since it is just being used for `glances`, you don't really need it.
-Your call.
-
-
-**Python Helpers**
-
-These don't quite fit into the actual development stack, so instead I am listing
-them here. These are just utilities that aide in development but aren't
-necessary for it. I'm also including descriptions of them, so that it's easier
-for me to guage their necessity in the future.
-
-- flake8 (`git@gitlab.com:pycqa/flake8.git`), a code analyzer that checks
-  compliance against PEP8 standards.
-
-- npyscreen (`hg clone ssh://hg@bitbucket.org/npcole/npyscreen`), a wrapper for
-  `curses` and related libraries that provides a more-pythonic way to create
-  terminal-based applications.
-
-- progressbar (`git@github.com:coagulant/progressbar-python3.git`), a wrapper
-  for loops that displays the progress of that loop in the terminal.
-
-- colorama (`git@github.com:tartley/colorama.git`), provides easy color output
-  for scripts.
-
-- colorconsole (`git@github.com:lskbr/colorconsole.git`), a decent was to get
-  colorized output (instead of curses?)
-
-- autopep8 (`git@github.com:hhatto/autopep8.git`), a utility that automatically
-  converts code to be compliant with PEP8 guidelines.
-
-
-JUPYTER AND IPYTHON
+Additional Installs
 -------------------
 
-OK, so IPython/Jupyter *did* work yesterday, but is no longer working today, so
-I'm seeing if I can get it working from source. I think this is futher proof
-that eventually switching over to Anaconda, but for now everything is fine.
-Here's how to get it working, or at least, how I just got it working.
-
-*Note: IPython was working, in the Terminal, but not in the webserver format, so
-all of this is really just to get that. I also think that this is possibly the
-worst way to do it, but for now I don't care too much.*
-
-1. Install the dependencies above. Honestly, I don't know if they are really
-   needed, but I did install them and things work.
-2. Download the 3.0.0 tarball from
-   [GitHub](https://github.com/ipython/ipython/releases), extract, and move to
-   `/opt`
-3. Run the standard `python3 setup.py install --user`
-4. Using `pip3` (yes, I told you it was awful), install `jsonschema` and
-   `tornado`. One or both of these may have to be upgraded, depending on what
-   else you did, but in general you're going to run
-   ```bash
-   sudo pip3 install [--upgrade] jsonschema
-   sudo pip3 install [--upgrade] tornado
-   ```
-5. Test it out! Everything should work.
-
-But, remember how awful this is, and don't do this again. Plus, everything is
-migrating over to Jupyter anyway, so by the time you have to redo this stuff,
-you'll just be using Jupyter. So, maybe Anaconda will be your next thing?
-
-You dumb shit. You messed it up. (2016-04-26)
-
-
-WEB DEVELOPMENT
----------------
-
-Not sure how far I'll go with this, but I am also going to learn some web
-development with Django and Selenium. As far as I know, Selenium is not used for
-anything else (but could be...?), so right now it is just to help get through
-and follow the 'Test Driven Development with Django' book.
-
-- django (`git@github.com:django/django.git`)
-
-- selenium (`git@github.com:SeleniumHQ/selenium.git`)
-
-Selenium sucked to get working. After a few failed attempts, here's what you
-need to do from the selenium directory to get everything up and running. I
-installed it for both `python2` and `python3`, but that shouldn't matter. Just
-using 3 is perfectly fine. You need the `chromedriver` utility in order to
-compile for google-chrome support. I've just been using Firefox, though.
-
+Since Linux is free, you need to install some drivers for things like DVD
+playback and mp3 decoding.
 ```
-  sudo apt-get install ibus
-  ./go release
-  python3 setup.py install --user
+apt install ubuntu-restricted-extras libdvdread4
+sudo /usr/share/doc/libdvdread4/install-css.sh
 ```
 
-You'll get a `SyntaxError` near the end of the install, since the package
-template has placeholder within the import statements, but you can ignore this.
-Those poor placeholders show that you *must* replace them, so don't worry about
-it.
+Once you have those, you can grab a few more important programs.
+```
+apt install skype audacious
 
-Bootstrap (`git@github.com:twbs/bootstrap.git`) is just a preset CSS template. I
-have it for my testing site (following the book), but look into LESS/SCSS for
-actual customization.
 
-In addition, I'm also installing Flask (`git@github.com:mitsuhiko/flask.git`),
-which is a microframework for websites, similar to Django but very lightweight.
-I think if I do more web stuff (online visualization?), then I may go with this
-instead. The ML book I'm going through has a section on it too.
+Miniconda and Python
+====================
 
-You also need the Heroku CLI (run
-`wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh`) if you want to
-work with apps through Heroku, which seems like a decent idea...?
+After only a few minutes, I've already fallen in love with Anaconda and the
+small Miniconda distribution. It is easy to use, and installation is quick and
+easy. It is awesome!
+
+To get my entire development stack up and running, including Jupyter, run
+```
+conda install beautifulsoup4 colorama cython flake8 flask h5py jupyter matplotlib mpmath numexpr numpy pandas patsy psutil pymc requests scikit-learn scipy seaborn setuptools statsmodels sympy
+```
+And that's it! The above is a mix of scientific, data science, and extra helpers
+installed with python3. There are a few utilities that you can't get through
+Anaconda, so you will need to use the standard install method for those.
+
+Since Continuum Analytics partners with different businesses and research
+organizations, there are some packages that aren't a part of their standard
+distribution that you can still install with `conda`. I'll denote those as I
+come across them.
+
+
+Additional Python Packages
+--------------------------
+
+These packages are installed via the standard `python3 setup.py install --user`.
+
+**autopep8** (`git@github.com:hhatto/autopep8.git`), a utility that
+automatically converts code to be compliant with PEP8 guidelines. Every so often
+I want to use this, since it is a quick swipe across everything. For the most
+part, my code follows PEP8 pretty closely, so I don't use this as much.
+
+**progressbar** (`git@github.com:coagulant/progressbar-python3.git`), a wrapper
+for loops that displays the progress of that loop in the terminal. Nice for when
+I write longer, non-interactive analysis scripts, but not necessary.
+
+
+OPT Directory Contents
+======================
+
+The following utilities are not necesary for day-to-day work, but are good to
+have for day-to-day life. Your `/opt/` directory will get full with a few things
+before these (conda, chrome, etc), so the directory should already be there and
+set up for your work. Any additional utilities will most likely be put here,
+including non-specific ones I have repositories on GitHub for.
 
 
 ROOT
@@ -372,6 +205,11 @@ get it to work with 3.X with a completely fresh install of everything to no
 avail. As such, it can only be imported when using `python` to start a program,
 not `python3`.
 
+My new favorite thing, Anaconda, also currently does not play well with ROOT.
+Since I'm using python3, conda says that both `python3` and `python` are the
+python3 interpreter, which is silly. I can overwrite it, but I currently do not
+know if it installs correctly, since I haven't rerun the installation.
+
 Since I will no longer (hopefully) be in the academic run-around when I
 graduate, this should not be a problem and I won't be doing any work with ROOT.
 For now though, I have to deal with it (and I know enough about it currently
@@ -379,11 +217,11 @@ that it is not too bad).
 
 Just like with the Python stuff above, this is a "local" install. I put that in
 quotes only because it's a little different, since I'm sourcing the compiled
-location in my `.bashrc` to make it work. This follows the "fixed location
-install" on the ROOT website. Run the following:
+location in my `.bashrc` to make it work. The python variables are to get around
+Anaconda's schenanigans.
 ```bash
 mkdir /opt/root6 && cd /opt/root6
-cmake -Dhttp=ON ../root
+cmake -Dhttp=ON -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIRS=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/python2.7 ../root
 make -j 9
 . bin/thisroot.sh
 ```
@@ -391,7 +229,46 @@ make -j 9
 The last line is only if you want to start working with it right now. Otherwise,
 you'll source that location with your next Terminal.
 
-The Jupyter kernel for ROOT is supposed to be working now, but I am still going
-through some troubleshooting to get it to work. Now, it looks to either be a
-problem with Jupyter or metakernel, so hopefully this is easier to fix.
+The Jupyter kernel for ROOT doesn't work when you use a C++ kernel. My C++ is
+already pretty shaky, so I probably won't get much use out of it. To use it, you
+need to install metakernel with `conda install -c ioos metakernel=0.12.4`, then
+copy over the kernel to Jupyter's directory.
+```
+cp -r $ROOTSYS/etc/notebook/kernels/root ~/.local/share/jupyter/kernels
+```
 
+
+Games
+-----
+
+[Mednafen](http://mednafen.fobby.net/releases/), a multi-system emulator.
+```bash
+apt install libsndfile1-dev libsdl1.2-dev
+./configure && make -j 9 && sudo make install
+```
+Your two SNES controllers can be used for the input. You'll want to check that
+the input can actually be read with
+```
+sudo chmod 666 /dev/input/js0
+jstest /dev/input/js0
+```
+to make sure everything is registering. After installing, you need to edit the
+config file (`~/.mednafen/mednafen.cfg`) so that `sounddevice` is
+`sexyal-literal-default`. The sound seems to be staticy for the first minute or
+two, but calms down after. You will probably have to reconfigure the controller
+buttons as well, following the guide on the website **Put that guide here when
+you do this step next!**
+
+[RFTG](http://keldon.net/rftg/), the computer version of the card game. Includes
+the *Alien Artifacts* expansion, but not Xeno Invasion. Since the last update
+was a while ago, I have no idea if it will be updated to include it, but who
+knows? Install with
+```
+apt install libgtk2.0-dev
+./configure && make -j 9 && sudo make install
+```
+
+[Steam](http://store.steampowered.com/about/), the all-in-one gaming source. It
+is available through apt, but if I remember correctly it didn't work quite right
+when I used that version. So, download it from the website, start it up, and
+redownload all of your old games.
