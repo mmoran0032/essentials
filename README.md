@@ -104,14 +104,6 @@ sudo make -j 9 prefix=/usr/local install install-doc install-html install-info
 As with all git-based installations, this is done in the `/opt/` directory.
 
 
-- **ROOT** libxpm-dev freeglut3-dev
-- libgtk2.0-dev
-
-Previously, I installed them as I got to them, but since they are all collected
-here (and for 99% of them essential to my current stack), there's no reason to
-not just install them all right away.
-
-
 Sublime Text 3
 --------------
 
@@ -148,6 +140,7 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 Once you have those, you can grab a few more important programs.
 ```
 apt install skype audacious
+```
 
 
 Miniconda and Python
@@ -180,6 +173,9 @@ These packages are installed via the standard `python3 setup.py install --user`.
 automatically converts code to be compliant with PEP8 guidelines. Every so often
 I want to use this, since it is a quick swipe across everything. For the most
 part, my code follows PEP8 pretty closely, so I don't use this as much.
+
+**flask-script** (`git@github.com:smurfix/flask-script.git`), adding in basic
+command line parsing to running flask applications.
 
 **progressbar** (`git@github.com:coagulant/progressbar-python3.git`), a wrapper
 for loops that displays the progress of that loop in the terminal. Nice for when
@@ -218,8 +214,9 @@ that it is not too bad).
 Just like with the Python stuff above, this is a "local" install. I put that in
 quotes only because it's a little different, since I'm sourcing the compiled
 location in my `.bashrc` to make it work. The python variables are to get around
-Anaconda's schenanigans.
+Anaconda's schenanigans. *THIS CURRENTLY DOES NOT WORK*
 ```bash
+apt install libxpm-dev freeglut3-dev
 mkdir /opt/root6 && cd /opt/root6
 cmake -Dhttp=ON -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIRS=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/python2.7 ../root
 make -j 9
@@ -272,3 +269,13 @@ apt install libgtk2.0-dev
 is available through apt, but if I remember correctly it didn't work quite right
 when I used that version. So, download it from the website, start it up, and
 redownload all of your old games.
+
+
+APT Installs
+============
+
+During regular usage, you'll add in some additional software through the
+regular `apt` channel. Log that here.
+
+- soundconverter: converts between audio file formats
+
