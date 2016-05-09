@@ -139,8 +139,11 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 
 Once you have those, you can grab a few more important programs.
 ```
-apt install skype audacious
+apt install skype audacious luckybackup
 ```
+
+For `luckybackup`, you'll need to set up the actual backup location and make
+sure that there aren't weird file duplicates from copying things over.
 
 
 Miniconda and Python
