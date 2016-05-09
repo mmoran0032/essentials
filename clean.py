@@ -6,7 +6,6 @@ import subprocess
 
 extensions = ('aux', 'fdb_latexmk', 'fls', 'gz', 'lis', 'lof', 'log', 'lot',
               'nav', 'out', 'snm', 'spl', 'syn', 'toc')
-special_files = ('.DS_Store',)
 directories = ('__pycache__', 'build', 'dist')
 special_dirs = ('egg-info',)
 
@@ -27,7 +26,6 @@ def main():
 def ignore_hidden(subdirs, files):
     subdirs = [d for d in subdirs if not d.startswith('.')]
     files = [f for f in files if not f.startswith('.')]
-    files.extend(f for f in files if f in special_files)
     return subdirs, files
 
 
