@@ -139,7 +139,7 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 
 Once you have those, you can grab a few more important programs.
 ```
-apt install skype audacious luckybackup
+apt install skype audacious luckybackup texlive-full
 ```
 
 For `luckybackup`, you'll need to set up the actual backup location and make
@@ -155,7 +155,9 @@ easy. It is awesome!
 
 To get my entire development stack up and running, including Jupyter, run
 ```
-conda install beautifulsoup4 colorama cython flake8 flask h5py jupyter matplotlib mpmath numexpr numpy pandas patsy psutil pymc requests scikit-learn scipy seaborn setuptools statsmodels sympy
+conda install beautifulsoup4 colorama cython flake8 flask h5py jupyter
+              matplotlib mpmath numexpr numpy pandas patsy psutil pymc requests
+              scikit-learn scipy seaborn setuptools statsmodels sympy
 ```
 And that's it! The above is a mix of scientific, data science, and extra helpers
 installed with python3. There are a few utilities that you can't get through
@@ -247,7 +249,7 @@ apt install libsndfile1-dev libsdl1.2-dev
 ./configure && make -j 9 && sudo make install
 ```
 Your two SNES controllers can be used for the input. You'll want to check that
-the input can actually be read with
+the input can actually be read (for all required controllers) with
 ```
 sudo chmod 666 /dev/input/js0
 jstest /dev/input/js0
@@ -256,8 +258,11 @@ to make sure everything is registering. After installing, you need to edit the
 config file (`~/.mednafen/mednafen.cfg`) so that `sounddevice` is
 `sexyal-literal-default`. The sound seems to be staticy for the first minute or
 two, but calms down after. You will probably have to reconfigure the controller
-buttons as well, following the guide on the website **Put that guide here when
-you do this step next!**
+buttons as well:
+
+1. Plug in all controllers tha you wish to use
+1. Starting with the first controller, hit `alt+shift+1` and follow the prompts for button presses
+1. Additional controllers are handled with `alt-shift+X`, up to your maximum port number or four
 
 [RFTG](http://keldon.net/rftg/), the computer version of the card game. Includes
 the *Alien Artifacts* expansion, but not Xeno Invasion. Since the last update
