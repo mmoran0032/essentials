@@ -139,7 +139,7 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 
 Once you have those, you can grab a few more important programs.
 ```
-apt install skype audacious luckybackup texlive-full
+apt install skype audacious luckybackup texlive-full pavucontrol
 ```
 
 For `luckybackup`, you'll need to set up the actual backup location and make
@@ -211,33 +211,36 @@ Since I'm using python3, conda says that both `python3` and `python` are the
 python3 interpreter, which is silly. I can overwrite it, but I currently do not
 know if it installs correctly, since I haven't rerun the installation.
 
-Since I will no longer (hopefully) be in the academic run-around when I
-graduate, this should not be a problem and I won't be doing any work with ROOT.
-For now though, I have to deal with it (and I know enough about it currently
-that it is not too bad).
+According to [this site](https://nlesc.gitbooks.io/cern-root-conda-recipes/content/index.html),
+I *can* use Conda to install bnaries for ROOT, rootpy, and root-numpy! Plus, it
+claims to work with Python3, so I'm doing it! Just in case, I'm copying the
+steps below for getting it set up.
 
-Just like with the Python stuff above, this is a "local" install. I put that in
-quotes only because it's a little different, since I'm sourcing the compiled
-location in my `.bashrc` to make it work. The python variables are to get around
-Anaconda's schenanigans. *THIS CURRENTLY DOES NOT WORK*
+**BUT,** like everything else, I can't use it with 3.5, only 3.4... But, they
+have a development branch that works with 3.5!
+
 ```bash
-apt install libxpm-dev freeglut3-dev
-mkdir /opt/root6 && cd /opt/root6
-cmake -Dhttp=ON -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIRS=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/python2.7 ../root
-make -j 9
-. bin/thisroot.sh
+conda install -c NLeSC fftw
+conda install -c NLeSC gsl
+conda install -c https://conda.anaconda.org/nlesc/label/dev root
 ```
 
-The last line is only if you want to start working with it right now. Otherwise,
-you'll source that location with your next Terminal.
+And ROOT is automatically sourced! Running `root` will bring up the regular C++
+interpreter, but you can't import it in python. To set that up, run
 
-The Jupyter kernel for ROOT doesn't work when you use a C++ kernel. My C++ is
-already pretty shaky, so I probably won't get much use out of it. To use it, you
-need to install metakernel with `conda install -c ioos metakernel=0.12.4`, then
-copy over the kernel to Jupyter's directory.
+```bash
+cd /opt/miniconda3/lib/python3.5
+ln -s ../ROOT.py ROOT.py
+ln -s ../cppyy.py cppyy.py
+ln -s ../libPyROOT.so libPyROOT.so
+ln -s ../_pythonization.py _pythonization.py
 ```
-cp -r $ROOTSYS/etc/notebook/kernels/root ~/.local/share/jupyter/kernels
-```
+
+We can `import ROOT` just fine! For some reason though, when I try to just
+import parts of ROOT, I get an error, so just prepend everything with `ROOT.`
+and you're set.
+
+The Jupyter kernel for ROOT doesn't work when you use a C++ kernel.
 
 
 Games
