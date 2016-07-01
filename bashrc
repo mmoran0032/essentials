@@ -29,6 +29,4 @@ export PATH=/opt/miniconda3/bin:${PATH}:/home/mikemoran/.local/bin
 # sourcing
 . ~/.aliases
 eval "$(dircolors ~/.colors-ls)"
-#. /opt/root6/bin/thisroot.sh
-#export PYTHONPATH=${PYTHONPATH}:${ROOTSYS}/bindings/pyroot/
 

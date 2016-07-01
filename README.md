@@ -238,7 +238,12 @@ ln -s ../_pythonization.py _pythonization.py
 
 We can `import ROOT` just fine! For some reason though, when I try to just
 import parts of ROOT, I get an error, so just prepend everything with `ROOT.`
-and you're set.
+and you're set. To include `root-numpy` and `rootpy` functionality, run
+
+```bash
+conda install -c NLeSC root-numpy
+conda install -c https://conda.anaconda.org/nlesc/label/dev rootpy
+```
 
 The Jupyter kernel for ROOT doesn't work when you use a C++ kernel.
 
