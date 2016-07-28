@@ -126,6 +126,11 @@ sure that ST3 is actually using this.
 ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 ```
 
+**Additional Sublime Packages:**
+
+- OmniMarkupPreviewer: allows you to directly view Markdown/ReStructuredText in
+  a browser window for a "live" preview
+
 
 Additional Installs
 -------------------
@@ -271,6 +276,8 @@ buttons as well:
 1. Plug in all controllers tha you wish to use
 1. Starting with the first controller, hit `alt+shift+1` and follow the prompts for button presses
 1. Additional controllers are handled with `alt-shift+X`, up to your maximum port number or four
+
+You can also switch between fullscreen and windowed by pressing `Alt+Enter`.
 
 [RFTG](http://keldon.net/rftg/), the computer version of the card game. Includes
 the *Alien Artifacts* expansion, but not Xeno Invasion. Since the last update
