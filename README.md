@@ -202,6 +202,25 @@ set up for your work. Any additional utilities will most likely be put here,
 including non-specific ones I have repositories on GitHub for.
 
 
+ATOM
+----
+
+This text editor is similar to Sublime, but free. I'm going to install it and
+see what I think of using it instead. I'm following the steps outlined on the
+[GitHub page](https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md).
+For the `npm` version update, you need to run `npm install -g npm` twice to have
+it actually upgrade the version installed with `apt`. You'll also need
+`g++-multilib` to have some of the dependencies compile.
+
+On second thought...I'm just going to install the `.deb` package, which is
+working much better.
+
+**Atom packages:**
+
+- linter and linter-flake8: provides highlighting to follow style guides
+- minimap and minimap-cursorline: shows Sublime-style minimap on right side
+
+
 ROOT
 ----
 
@@ -301,4 +320,6 @@ During regular usage, you'll add in some additional software through the
 regular `apt` channel. Log that here.
 
 - soundconverter: converts between audio file formats
-
+- npm: for NODE.js enabled applications
+- tree: better views of directory structure
+- xclip: copy info from the terminal to the clipboard
