@@ -221,6 +221,7 @@ working much better.
 - linter and linter-flake8: provides highlighting to follow style guides
 - minimap and minimap-cursorline: shows Sublime-style minimap on right side
 - project-manager: manages projects
+- script: run scripts with ctrl+shift+B
 
 
 ROOT
