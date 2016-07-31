@@ -217,6 +217,7 @@ working much better.
 
 **Atom packages:**
 
+- git-plus: `git` stuff without the command line
 - linter and linter-flake8: provides highlighting to follow style guides
 - minimap and minimap-cursorline: shows Sublime-style minimap on right side
 - project-manager: manages projects
