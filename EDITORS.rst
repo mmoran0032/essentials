@@ -40,28 +40,3 @@ to install vim packages.
 
 You need *pathogen*, *vim-airline*, and *vim-bufferline*, and you're using the
 *distinguished* color scheme.
-
-
-Sublime Text 3
---------------
-
-`Sublime Text 3 <https://www.sublimetext.com/>`__ is available within
-the package manager, so you do not need to download the installer or
-source. Run ``apt install sublime-text`` to get it.
-
-There are a few additional steps before ST3 works the same as you're
-used to. You'll want to (roughly) follow the guide
-`here <https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/>`__,
-which is mostly installing Package Control and then Anaconda. You'll
-also want to grab the *Gloom* theme, which you've really liked, directly
-from
-`here <https://raw.githubusercontent.com/petervaro/python/master/themes/Gloom.tmTheme>`__.
-Move that file into ``~/.config/sublime-text-3/Packages`` and update
-your settings file if necessary.
-
-Your settings file is the one within ``~/bin/essentials``, so you'll
-want to make sure that ST3 is actually using this.
-
-::
-
-    ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
