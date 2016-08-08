@@ -4,8 +4,9 @@
 import os
 import subprocess
 
-extensions = ('aux', 'bbl', 'blg', 'fdb_latexmk', 'fls', 'gz', 'lis', 'lof',
-              'log', 'lot', 'nav', 'out', 'snm', 'spl', 'syn', 'toc')
+extensions = ('aux', 'bbl', 'blg', 'fdb_latexmk', 'fls',
+              'lis', 'lof', 'log', 'lot', 'nav', 'out',
+              'snm', 'spl', 'syn', 'toc')
 directories = ('__pycache__', 'build', 'dist')
 special_dirs = ('egg-info',)
 

@@ -92,8 +92,10 @@ EXEC 01;32
 
 # Personally important files
 .md 01;30
+.rst 01;30
 .csv 01;36
 .tex 01;35
+.py 01;34
 
  # archives or compressed (bright red)
 .tar 01;31
