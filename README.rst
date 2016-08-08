@@ -8,6 +8,7 @@ it's finally time to keep this stuff organized.
 
 *Updated for reinstalling on 2016-05-03*
 
+
 Beginning Installation
 ======================
 
@@ -52,6 +53,7 @@ From here, you can take the steps in any order, since they are (mostly)
 independent of each other. For the most part, the python portion is the
 most important part for your work and your future work.
 
+
 Config Files
 ------------
 
@@ -71,6 +73,7 @@ If everything goes right, you should have everything in place at the
 next launch of the Terminal. Note that you'll get a warning at every
 Terminal launch until you either install ROOT or remove the ROOT
 sourcing line from your bashrc.
+
 
 Pairing Logitech Mouse/Keyboard
 -------------------------------
@@ -97,6 +100,7 @@ Once everything is set, an executable names ``ltunify`` will be in
 and follow the prompts to pair your devices. You can then remove the
 ``ltunify`` directory created from the clone if you desire.
 
+
 Git
 ---
 
@@ -115,6 +119,7 @@ progress.
 
 As with all git-based installations, this is done in the ``/opt/``
 directory.
+
 
 Sublime Text 3
 --------------
@@ -145,6 +150,7 @@ want to make sure that ST3 is actually using this.
 -  OmniMarkupPreviewer: allows you to directly view
    Markdown/ReStructuredText in a browser window for a "live" preview
 
+
 Additional Installs
 -------------------
 
@@ -166,51 +172,12 @@ For ``luckybackup``, you'll need to set up the actual backup location
 and make sure that there aren't weird file duplicates from copying
 things over.
 
+
 Miniconda and Python
 ====================
 
-After only a few minutes, I've already fallen in love with Anaconda and
-the small Miniconda distribution. It is easy to use, and installation is
-quick and easy. It is awesome!
+Follow the steps outlined in ``PYTHON.rst``.
 
-To get my entire development stack up and running, including Jupyter,
-run
-
-::
-
-    conda install beautifulsoup4 colorama cython flake8 flask h5py jupyter
-                  matplotlib mpmath numexpr numpy pandas patsy psutil pymc requests
-                  scikit-learn scipy seaborn setuptools statsmodels sympy
-
-And that's it! The above is a mix of scientific, data science, and extra
-helpers installed with python3. There are a few utilities that you can't
-get through Anaconda, so you will need to use the standard install
-method for those.
-
-Since Continuum Analytics partners with different businesses and
-research organizations, there are some packages that aren't a part of
-their standard distribution that you can still install with ``conda``.
-I'll denote those as I come across them.
-
-Additional Python Packages
---------------------------
-
-These packages are installed via the standard
-``python3 setup.py install --user``.
-
-**autopep8** (``git@github.com:hhatto/autopep8.git``), a utility that
-automatically converts code to be compliant with PEP8 guidelines. Every
-so often I want to use this, since it is a quick swipe across
-everything. For the most part, my code follows PEP8 pretty closely, so I
-don't use this as much.
-
-**flask-script** (``git@github.com:smurfix/flask-script.git``), adding
-in basic command line parsing to running flask applications.
-
-**progressbar** (``git@github.com:coagulant/progressbar-python3.git``),
-a wrapper for loops that displays the progress of that loop in the
-terminal. Nice for when I write longer, non-interactive analysis
-scripts, but not necessary.
 
 OPT Directory Contents
 ======================
@@ -221,6 +188,7 @@ with a few things before these (conda, chrome, etc), so the directory
 should already be there and set up for your work. Any additional
 utilities will most likely be put here, including non-specific ones I
 have repositories on GitHub for.
+
 
 ATOM
 ----
@@ -246,7 +214,9 @@ which is working much better.
 -  minimap and minimap-cursorline: shows Sublime-style minimap on right
    side
 -  project-manager: manages projects
+-  rst-preview: show preview with ctrl-shift-r
 -  script: run scripts with ctrl+shift+B
+
 
 ROOT
 ----
@@ -302,6 +272,7 @@ functionality, run
 
 The Jupyter kernel for ROOT doesn't work when you use a C++ kernel.
 
+
 Games
 -----
 
@@ -351,6 +322,7 @@ updated to include it, but who knows? Install with
 source. It is available through apt, but if I remember correctly it
 didn't work quite right when I used that version. So, download it from
 the website, start it up, and redownload all of your old games.
+
 
 APT Installs
 ============
