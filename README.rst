@@ -54,15 +54,7 @@ Config Files
 Most of these files replace the hidden configuration files of the same
 name in the home directory. First, remove those old files (only
 ``.bashrc`` and ``.vimrc`` may be there, plus possibly the ``.git*``
-files), then link these over using::
-
-    ln -s ~/bin/essentials/FILENAME ~/.FILENAME
-
-You have to include the ``~/bin/essntials/`` portion, otherwise the
-linking will not be done properly.
-
-If everything goes right, you should have everything in place at the
-next launch of the Terminal.
+files), then link these over by running ``setup.py`` in the config directory.
 
 
 Pairing Logitech Mouse/Keyboard
