@@ -121,36 +121,6 @@ As with all git-based installations, this is done in the ``/opt/``
 directory.
 
 
-Sublime Text 3
---------------
-
-`Sublime Text 3 <https://www.sublimetext.com/>`__ is available within
-the package manager, so you do not need to download the installer or
-source. Run ``apt install sublime-text`` to get it.
-
-There are a few additional steps before ST3 works the same as you're
-used to. You'll want to (roughly) follow the guide
-`here <https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/>`__,
-which is mostly installing Package Control and then Anaconda. You'll
-also want to grab the *Gloom* theme, which you've really liked, directly
-from
-`here <https://raw.githubusercontent.com/petervaro/python/master/themes/Gloom.tmTheme>`__.
-Move that file into ``~/.config/sublime-text-3/Packages`` and update
-your settings file if necessary.
-
-Your settings file is the one within ``~/bin/essentials``, so you'll
-want to make sure that ST3 is actually using this.
-
-::
-
-    ln -s ~/bin/essentials/sublimePreferences ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-
-**Additional Sublime Packages:**
-
--  OmniMarkupPreviewer: allows you to directly view
-   Markdown/ReStructuredText in a browser window for a "live" preview
-
-
 Additional Installs
 -------------------
 
@@ -188,34 +158,6 @@ with a few things before these (conda, chrome, etc), so the directory
 should already be there and set up for your work. Any additional
 utilities will most likely be put here, including non-specific ones I
 have repositories on GitHub for.
-
-
-ATOM
-----
-
-This text editor is similar to Sublime, but free. I'm going to install
-it and see what I think of using it instead. I'm following the steps
-outlined on the `GitHub
-page <https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md>`__.
-For the ``npm`` version update, you need to run ``npm install -g npm``
-twice to have it actually upgrade the version installed with ``apt``.
-You'll also need ``g++-multilib`` to have some of the dependencies
-compile.
-
-On second thought...I'm just going to install the ``.deb`` package,
-which is working much better.
-
-**Atom packages:**
-
--  git-plus: ``git`` stuff without the command line
--  language-restructuredtext: syntax highlighting for rst files
--  linter and linter-flake8: provides highlighting to follow style
-   guides
--  minimap and minimap-cursorline: shows Sublime-style minimap on right
-   side
--  project-manager: manages projects
--  rst-preview: show preview with ctrl-shift-r
--  script: run scripts with ctrl+shift+B
 
 
 ROOT
