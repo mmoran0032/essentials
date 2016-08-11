@@ -112,7 +112,7 @@ sure that there aren't weird file duplicates from copying things over.
 OPT Directory Contents
 ----------------------
 
-The following utilities are not necesary for day-to-day work, but are good to
+The following utilities are not necessary for day-to-day work, but are good to
 have for day-to-day life. Your ``/opt/`` directory will get full with a few
 things before these (conda, chrome, etc), so the directory should already be
 there and set up for your work. Any additional utilities will most likely be
@@ -135,15 +135,13 @@ not know if it installs correctly, since I haven't rerun the installation.
 
 According to `this
 site <https://nlesc.gitbooks.io/cern-root-conda-recipes/content/index.html>`__,
-I *can* use Conda to install bnaries for ROOT, rootpy, and root-numpy! Plus, it
+I *can* use Conda to install binaries for ROOT, rootpy, and root-numpy! Plus, it
 claims to work with Python3, so I'm doing it! Just in case, I'm copying the
 steps below for getting it set up.
 
 **BUT,** like everything else, I can't use it with 3.5, only 3.4... But, they
 have a development branch that works with 3.5::
 
-    conda install -c NLeSC fftw
-    conda install -c NLeSC gsl
     conda install -c https://conda.anaconda.org/nlesc/label/dev root
 
 And ROOT is automatically sourced! Running ``root`` will bring up the regular
@@ -195,9 +193,9 @@ controller buttons as well:
 You can also switch between fullscreen and windowed by pressing ``Alt+Enter``.
 
 `RFTG <http://keldon.net/rftg/>`__, the computer version of the card game.
-Includes the *Alien Artifacts* expansion, but not Xeno Invasion. Since the last
-update was a while ago, I have no idea if it will be updated to include it, but
-who knows? Install with::
+Includes the *Alien Artifacts* expansion, but not *Xeno Invasion*. Since the
+last update was a while ago, I have no idea if it will be updated to include
+it, but who knows? Install with::
 
     apt install libgtk2.0-dev
     ./configure && make -j 9 && sudo make install
@@ -205,4 +203,9 @@ who knows? Install with::
 `Steam <http://store.steampowered.com/about/>`__, the all-in-one gaming source.
 It is available through apt, but if I remember correctly it didn't work quite
 right when I used that version. So, download it from the website, start it up,
-and redownload all of your old games.
+and re-download all of your old games. You can also copy some save data over
+from your external, so keep track the next time you do that.
+
+
+Organization will set you free
+------------------------------
