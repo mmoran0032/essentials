@@ -23,7 +23,8 @@ grab everything and get going::
     conda install beautifulsoup4 colorama cython flake8 flask h5py jupyter
                   matplotlib mpmath networkx numexpr numpy pandas patsy psutil
                   pymc requests scikit-learn scipy seaborn setuptools
-                  statsmodels sympy
+                  sqlalchemy statsmodels sympy
+                  coverage nose
 
 That's it! It's a mix of scientific, machine learning, and helper packages that
 you've been using frequently, and some you haven't been using frequently. Go
