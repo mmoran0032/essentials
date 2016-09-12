@@ -128,39 +128,19 @@ tried to get it to work with 3.X with a completely fresh install of everything
 to no avail. As such, it can only be imported when using ``python`` to start a
 program, not ``python3``.
 
-My new favorite thing, Anaconda, also currently does not play well with ROOT.
-Since I'm using python3, conda says that both ``python3`` and ``python`` are
-the python3 interpreter, which is silly. I can overwrite it, but I currently do
-not know if it installs correctly, since I haven't rerun the installation.
-
 According to `this
 site <https://nlesc.gitbooks.io/cern-root-conda-recipes/content/index.html>`__,
 I *can* use Conda to install binaries for ROOT, rootpy, and root-numpy! Plus, it
 claims to work with Python3, so I'm doing it! Just in case, I'm copying the
 steps below for getting it set up.
 
-**BUT,** like everything else, I can't use it with 3.5, only 3.4... But, they
-have a development branch that works with 3.5::
+You need to add their channel to make sure the packages are downloaded from the
+correct place, and to keep it simple I'm going to use Anaconda's environment
+manager to keep things sane::
 
-    conda install -c https://conda.anaconda.org/nlesc/label/dev root
-
-And ROOT is automatically sourced! Running ``root`` will bring up the regular
-C++ interpreter, but you can't import it in python. To set that up, run::
-
-    cd /opt/miniconda3/lib/python3.5
-    ln -s ../ROOT.py ROOT.py
-    ln -s ../cppyy.py cppyy.py
-    ln -s ../libPyROOT.so libPyROOT.so
-    ln -s ../_pythonization.py _pythonization.py
-
-We can ``import ROOT`` just fine! For some reason though, when I try to just
-import parts of ROOT, I get an error, so just prepend everything with ``ROOT.``
-and you're set. To include ``root-numpy`` and ``rootpy`` functionality, run::
-
-    conda install -c NLeSC root-numpy
-    conda install -c https://conda.anaconda.org/nlesc/label/dev rootpy
-
-The Jupyter kernel for ROOT doesn't work when you use a C++ kernel.
+    conda config --add channels https://conda.anaconda.org/NLeSC
+    conda create --name=cern root=6 python=3
+    source activate cern
 
 
 Games

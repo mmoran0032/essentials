@@ -22,9 +22,9 @@ grab everything and get going::
 
     conda install beautifulsoup4 colorama cython flake8 flask h5py jupyter
                   matplotlib mpmath networkx numexpr numpy pandas patsy psutil
-                  pymc requests scikit-learn scipy seaborn setuptools
-                  sqlalchemy statsmodels sympy
-                  coverage nose
+                  pymc requests scikit-learn scikit-image scipy seaborn
+                  setuptools sqlalchemy statsmodels sympy
+                  coverage nose pytest
 
 That's it! It's a mix of scientific, machine learning, and helper packages that
 you've been using frequently, and some you haven't been using frequently. Go
@@ -34,6 +34,11 @@ packages that you could take out of the mix.
 You can also check which packages are installed with ``conda list``. This does
 include packages that you didn't explicitly call for, so will be longer than
 the above.
+
+Some packages require you to install them with ``conda install -c [URL]
+package``, listed below:
+
+-  **OpenCV**: ``https://conda.binstar.org/menpo opencv3``
 
 
 Additional Installs

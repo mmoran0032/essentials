@@ -16,6 +16,7 @@ The main ideas for writing code can be organized into the following:
 
 These are my personal guidelines.
 
+
 Naming
 ------
 
@@ -25,6 +26,7 @@ Naming
 -  Use pronounceable and searchable names
 -  Use nouns for class names and verbs for method names
 
+
 Functions
 ---------
 
@@ -33,11 +35,13 @@ Functions
 -  Have no side effects
 -  Don't repeat yourself in multiple places
 
+
 Comments
 --------
 
 -  Explain yourself in code, not comments
 -  When used, comments should be informative and well-written
+
 
 Formatting
 ----------
@@ -47,6 +51,7 @@ Formatting
 -  Related items should be vertically close and ordered properly
 -  If on a team, set and follow team rules
 
+
 Objects and Data Structures
 ---------------------------
 
@@ -55,11 +60,13 @@ Objects and Data Structures
    of *C*, an object created by *f*, an object passed as an argument to *f*,
    and an object held in an instance variable of *C*
 
+
 Error Handling
 --------------
 
 -  Use exceptions instead of error/return codes
 -  Don't return or pass null
+
 
 Unit Tests
 ----------
@@ -70,6 +77,7 @@ Unit Tests
 -  Tests should be Fast, Independent, Repeatable, Self-Validating, and
    Timely (FIRST principle)
 
+
 Classes
 -------
 
@@ -77,10 +85,12 @@ Classes
 -  Aim for high cohesion (variables used in a majority of functions, no more
    functions than are absolutely necessary)
 
+
 Systems
 -------
 
 -  Separate constructing a system from using it
+
 
 Emergence
 ---------
@@ -96,8 +106,8 @@ CLEAN CODER
 Since I want to be a software professional, I have to act like one with my
 code. That means treating my work and estimates in a way that make it more
 likely that what I'm doing will be trusted and taken seriously. This
-description is based on snippets from Robert C. Martin's *Clean Coder* in the
-same way that CLEAN-CODE.md is.
+description is based on snippets from Robert C. Martin's *Clean Coder*.
+
 
 Estimates
 ---------

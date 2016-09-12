@@ -49,7 +49,7 @@ def clean_directories(directory, subdirs):
 def scrub_item(directory, item):
     name = '{}/{}'.format(directory, item)
     print('Deleting: {}'.format(name))
-    subprocess.call(['rm', '-rf', '{}'.format(name)])
+    subprocess.run('rm -rf {}'.format(name), shell=True)
 
 
 if __name__ == '__main__':
