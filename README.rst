@@ -108,6 +108,16 @@ Once you have those, you can grab a few more important programs::
 For ``luckybackup``, you'll need to set up the actual backup location and make
 sure that there aren't weird file duplicates from copying things over.
 
+Julia, a high-level, high-performance computing language, is a newer language
+that I may add into my repertoire for programming and data science. Since it is
+still young, any initial work with it would be to learn the language and get
+used to how it runs. Install it with::
+
+    sudo add-apt-repository ppa:staticfloat/juliareleases
+    sudo add-apt-repository ppa:staticfloat/julia-deps
+    apt update
+    apt install julia
+
 
 OPT Directory Contents
 ----------------------

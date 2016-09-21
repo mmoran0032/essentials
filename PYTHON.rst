@@ -55,6 +55,8 @@ installed package.
    the most part, my code follows PEP8 pretty closely.
 -  **flask-script** (``git@github.com:smurfix/flask-script.git``), adding in
    basic command line parsing to running flask applications.
+-  **nfty** (``git@github.com:dschep/ntfy.git``), sends push notifications to
+   your phone when commands finish
 -  **progressbar** (``git@github.com:coagulant/progressbar-python3.git``), a
    wrapper for loops that displays the progress of that loop in the terminal.
    Nice for when I write longer, non-interactive analysis scripts.
