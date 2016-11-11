@@ -113,9 +113,6 @@ that I may add into my repertoire for programming and data science. Since it is
 still young, any initial work with it would be to learn the language and get
 used to how it runs. Install it with::
 
-    sudo add-apt-repository ppa:staticfloat/juliareleases
-    sudo add-apt-repository ppa:staticfloat/julia-deps
-    apt update
     apt install julia
 
 

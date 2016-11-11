@@ -25,6 +25,7 @@ export HISTTIMEFORMAT="%Y-%m-%d %H:%M: "
 export HISTSIZE=2500
 
 export PATH=/opt/miniconda3/bin:${PATH}:/home/mikemoran/.local/bin
+export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:${LIbRARY_PATH}
 
 # sourcing
 . ~/.aliases

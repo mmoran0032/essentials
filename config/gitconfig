@@ -19,3 +19,5 @@
 
 [core]
   excludesfile = /home/mikemoran/.gitignore
+[http]
+	sslVerify = false
