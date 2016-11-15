@@ -8,7 +8,7 @@ extensions = ('aux', 'bbl', 'blg', 'fdb_latexmk', 'fls',
               'lis', 'lof', 'log', 'lot', 'nav', 'out',
               'snm', 'spl', 'syn', 'toc')
 directories = ('__pycache__', 'build', 'dist')
-special_dirs = ('egg-info',)
+special_dirs = ('egg-info', 'ipynb_checkpoints')
 
 
 def main():
@@ -25,9 +25,10 @@ def main():
 
 
 def ignore_hidden(subdirs, files):
-    subdirs = [d for d in subdirs if not d.startswith('.')]
+    subdirs_new = [d for d in subdirs if not d.startswith('.')]
+    subdirs_new.extend(d for d in subdirs if d.split('.')[-1] in special_dirs)
     files = [f for f in files if not f.startswith('.')]
-    return subdirs, files
+    return subdirs_new, files
 
 
 def clean_files(directory, files):
