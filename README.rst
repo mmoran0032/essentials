@@ -126,30 +126,6 @@ there and set up for your work. Any additional utilities will most likely be
 put here, including non-specific ones I have repositories on GitHub for.
 
 
-ROOT
-^^^^
-
-ROOT (``git@github.com:root-mirror/root``), the data analysis framework
-developed at CERN, is annoying. It only works with Python 2.X right now, and I
-tried to get it to work with 3.X with a completely fresh install of everything
-to no avail. As such, it can only be imported when using ``python`` to start a
-program, not ``python3``.
-
-According to `this
-site <https://nlesc.gitbooks.io/cern-root-conda-recipes/content/index.html>`__,
-I *can* use Conda to install binaries for ROOT, rootpy, and root-numpy! Plus, it
-claims to work with Python3, so I'm doing it! Just in case, I'm copying the
-steps below for getting it set up.
-
-You need to add their channel to make sure the packages are downloaded from the
-correct place, and to keep it simple I'm going to use Anaconda's environment
-manager to keep things sane::
-
-    conda config --add channels https://conda.anaconda.org/NLeSC
-    conda create --name=cern root=6 python=3
-    source activate cern
-
-
 Games
 ^^^^^
 
@@ -196,3 +172,4 @@ from your external, so keep track the next time you do that.
 
 Organization will set you free
 ------------------------------
+

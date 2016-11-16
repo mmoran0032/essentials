@@ -42,3 +42,4 @@ to install vim packages.
 
 You need *pathogen*, *vim-airline*, and *vim-bufferline*, and you're using the
 *distinguished* color scheme.
+

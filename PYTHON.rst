@@ -22,7 +22,7 @@ grab everything and get going::
 
     conda install beautifulsoup4 colorama cython flake8 flask h5py jupyter
                   matplotlib mpmath networkx numexpr numpy pandas patsy psutil
-                  pymc requests scikit-learn scikit-image scipy seaborn
+                  requests scikit-learn scikit-image scipy seaborn
                   setuptools sqlalchemy statsmodels sympy
                   coverage nose pytest
 
@@ -40,6 +40,8 @@ package``, listed below:
 
 -  **OpenCV**: ``https://conda.binstar.org/menpo opencv3``
 
+-  **pymc3**: ``conda-forge pymc3``
+
 
 Additional Installs
 -------------------
@@ -53,10 +55,7 @@ installed package.
    automatically converts code to be compliant with PEP8 guidelines. Every so
    often I want to use this, since it is a quick swipe across everything. For
    the most part, my code follows PEP8 pretty closely.
--  **flask-script** (``git@github.com:smurfix/flask-script.git``), adding in
-   basic command line parsing to running flask applications.
--  **nfty** (``git@github.com:dschep/ntfy.git``), sends push notifications to
-   your phone when commands finish
 -  **progressbar** (``git@github.com:coagulant/progressbar-python3.git``), a
    wrapper for loops that displays the progress of that loop in the terminal.
    Nice for when I write longer, non-interactive analysis scripts.
+
