@@ -1,6 +1,5 @@
 # General tweaks
 alias bc="bc -l"
-alias clip="xclip -selection c"
 alias date="date --iso-8601=seconds"
 alias df="df -H"
 alias go="xdg-open"
@@ -14,4 +13,3 @@ alias ap8="autopep8 --aggressive --recursive --in-place --verbose --ignore=W391"
 alias clean="~/bin/essentials/clean.py"
 alias f8="python3 -m flake8 --ignore=W391"
 alias jn="jupyter notebook"
-alias ti="~/bin/essentials/timeit.py"
