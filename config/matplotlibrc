@@ -70,15 +70,11 @@ backend      : qt4agg
 #toolbar      : toolbar2   # None | toolbar2  ("classic" is deprecated)
 #timezone     : UTC        # a pytz timezone string, e.g., US/Central or Europe/Paris
 
-# Where your matplotlib data lives if you installed to a non-default
-# location.  This is where the matplotlib fonts, bitmaps, etc reside
-#datapath : /home/jdhunter/mpldata
-
 
 ### LINES
 # See http://matplotlib.org/api/artist_api.html#module-matplotlib.lines for more
 # information on line properties.
-#lines.linewidth   : 1.0     # line width in points
+lines.linewidth   : 2.0     # line width in points
 #lines.linestyle   : -       # solid line
 #lines.color       : blue    # has no affect on plot(); see axes.prop_cycle
 #lines.marker      : None    # the default marker
@@ -240,7 +236,7 @@ backend      : qt4agg
 #axes.facecolor      : white   # axes background color
 #axes.edgecolor      : black   # axes edge color
 #axes.linewidth      : 1.0     # edge linewidth
-#axes.grid           : False   # display grid or not
+axes.grid           : True    # display grid or not
 #axes.titlesize      : large   # fontsize of the axes title
 #axes.labelsize      : medium  # fontsize of the x any y labels
 #axes.labelpad       : 5.0     # space between label and axis
@@ -267,11 +263,8 @@ backend      : qt4agg
 #axes.unicode_minus  : True    # use unicode for the minus symbol
                                # rather than hyphen.  See
                                # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
-#axes.prop_cycle    : cycler('color', 'bgrcmyk')
-                                            # color cycle for plot lines
-                                            # as list of string colorspecs:
-                                            # single letter, long name, or
-                                            # web-style hex
+axes.prop_cycle    : cycler('color', ['#1b9e77', '#d95f02', '#7570b3', '#e7298a', '#66a61e', '#e6ab02', '#a6761d', '#666666'])
+
 #axes.xmargin        : 0  # x margin.  See `axes.Axes.margins`
 #axes.ymargin        : 0  # y margin See `axes.Axes.margins`
 
@@ -331,9 +324,9 @@ backend      : qt4agg
 # See http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure
 #figure.titlesize : medium     # size of the figure title
 #figure.titleweight : normal   # weight of the figure title
-figure.figsize   : 8, 5.5    # figure size in inches
+figure.figsize   : 10, 8    # figure size in inches
 #figure.dpi       : 150      # figure dots per inch
-#figure.facecolor : #eeeee    # figure facecolor; 0.75 is scalar gray
+figure.facecolor : #fefefe    # figure facecolor; 0.75 is scalar gray
 #figure.edgecolor : white   # figure edgecolor
 #figure.autolayout : False  # When True, automatically adjust subplot
                             # parameters to make the plot fit the figure
@@ -400,7 +393,7 @@ figure.figsize   : 8, 5.5    # figure size in inches
 # the default savefig params can be different from the display params
 # e.g., you may want a higher resolution, or to make the figure
 # background white
-#savefig.dpi         : 100      # figure dots per inch
+savefig.dpi         : 150      # figure dots per inch
 #savefig.facecolor   : white    # figure facecolor when saving
 #savefig.edgecolor   : white    # figure edgecolor when saving
 #savefig.format      : png      # png, ps, pdf, svg
@@ -411,7 +404,7 @@ figure.figsize   : 8, 5.5    # figure size in inches
                                 # use ffmpeg_file instead
 #savefig.pad_inches  : 0.1      # Padding to be used when bbox is set to 'tight'
 #savefig.jpeg_quality: 95       # when a jpeg is saved, the default quality parameter.
-#savefig.directory   : ~        # default directory in savefig dialog box,
+savefig.directory   :          # default directory in savefig dialog box,
                                 # leave empty to always use current working directory
 #savefig.transparent : False    # setting that controls whether figures are saved with a
                                 # transparent background by default

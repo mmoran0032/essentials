@@ -25,7 +25,7 @@ any of the specialized steps below. Simply run ``apt upgrade`` and allow it to
 install the huge block of files, and sit back and wait. Finally, install some
 extremely helpful command line tools::
 
-    apt install build-essential cmake git rsync tree unzip vim xclip
+    apt install build-essential cmake git rsync tree unzip vim
 
 Adjust any computer settings (Terminal background and scrollback, sounds, user
 picture, etc) and download any files from the backed-up external drive that you
@@ -172,4 +172,3 @@ from your external, so keep track the next time you do that.
 
 Organization will set you free
 ------------------------------
-

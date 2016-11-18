@@ -1,4 +1,4 @@
-# BASHRC for ARES2m (Linux Mint 17.3 64b)
+# BASHRC for ARES2m (Linux Mint 18.0 64b)
 
 # Making the prompt and terminal better
 function truncate {
@@ -30,4 +30,3 @@ export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:${LIbRARY_PATH}
 # sourcing
 . ~/.aliases
 eval "$(dircolors ~/.colors-ls)"
-

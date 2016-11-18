@@ -15,10 +15,3 @@ alias clean="~/bin/essentials/clean.py"
 alias f8="python3 -m flake8 --ignore=W391"
 alias jn="jupyter notebook"
 alias ti="~/bin/essentials/timeit.py"
-
-# Research related
-alias nslwin="rdesktop isnap-srv2.phys.nd.edu -u mmoran9 -d adnd"
-alias pdf="pdflatex -file-line-error -halt-on-error"
-alias qpdf="pdflatex -file-line-error -halt-on-error $1 > /dev/null"
-alias vpn="/opt/cisco/vpn/bin/vpn"
-

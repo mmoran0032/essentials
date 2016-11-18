@@ -22,7 +22,6 @@ Atom packages
 
 -  *git-plus*: ``git`` stuff without the command line
 -  *language-restructuredtext*: syntax highlighting for ``.rst`` files
--  *latex* and *language-latex*: LaTeX support
 -  *linter* and *linter-flake8*: provides highlighting to follow style guides
 -  *minimap* and *minimap-cursorline*: shows minimap of the current file
 -  *pdf-view*: view PDF files in Atom
@@ -42,4 +41,3 @@ to install vim packages.
 
 You need *pathogen*, *vim-airline*, and *vim-bufferline*, and you're using the
 *distinguished* color scheme.
-
