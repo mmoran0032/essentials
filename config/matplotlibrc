@@ -263,7 +263,7 @@ axes.grid           : True    # display grid or not
 #axes.unicode_minus  : True    # use unicode for the minus symbol
                                # rather than hyphen.  See
                                # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
-axes.prop_cycle    : cycler('color', ['#1b9e77', '#d95f02', '#7570b3', '#e7298a', '#66a61e', '#e6ab02', '#a6761d', '#666666'])
+axes.prop_cycle    : cycler('color', ['1B9E77', 'D95F02', '7570B3', 'E7298A', '66A61E', 'E6AB02', 'A6761D', '666666'])
 
 #axes.xmargin        : 0  # x margin.  See `axes.Axes.margins`
 #axes.ymargin        : 0  # y margin See `axes.Axes.margins`
@@ -326,7 +326,7 @@ axes.prop_cycle    : cycler('color', ['#1b9e77', '#d95f02', '#7570b3', '#e7298a'
 #figure.titleweight : normal   # weight of the figure title
 figure.figsize   : 10, 8    # figure size in inches
 #figure.dpi       : 150      # figure dots per inch
-figure.facecolor : #fefefe    # figure facecolor; 0.75 is scalar gray
+figure.facecolor : FEFEFE    # figure facecolor; 0.75 is scalar gray
 #figure.edgecolor : white   # figure edgecolor
 #figure.autolayout : False  # When True, automatically adjust subplot
                             # parameters to make the plot fit the figure

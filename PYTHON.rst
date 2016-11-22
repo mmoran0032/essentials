@@ -31,6 +31,9 @@ you've been using frequently, and some you haven't been using frequently. Go
 through the list again every time you reinstall, as there are probably some
 packages that you could take out of the mix.
 
+*Currently, I am using QT as my backend, meaning that I am limited to PyQt4*
+*and not the most current version. Downgrade by installing* ``"pyqt<5"``.
+
 You can also check which packages are installed with ``conda list``. This does
 include packages that you didn't explicitly call for, so will be longer than
 the above.
