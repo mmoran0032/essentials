@@ -21,9 +21,9 @@ uncluttered. Obviously use the Python 3.X version of miniconda.
 grab everything and get going::
 
     conda install beautifulsoup4 colorama cython flake8 flask h5py jupyter
-                  matplotlib mpmath networkx numexpr numpy pandas patsy psutil
-                  requests scikit-learn scikit-image scipy seaborn
-                  setuptools sqlalchemy statsmodels sympy
+                  matplotlib mpmath networkx numexpr numpy pandas patsy
+                  plotly psutil requests scikit-learn scikit-image scipy
+                  seaborn setuptools sqlalchemy statsmodels sympy
                   coverage nose pytest
 
 That's it! It's a mix of scientific, machine learning, and helper packages that
@@ -61,4 +61,3 @@ installed package.
 -  **progressbar** (``git@github.com:coagulant/progressbar-python3.git``), a
    wrapper for loops that displays the progress of that loop in the terminal.
    Nice for when I write longer, non-interactive analysis scripts.
-

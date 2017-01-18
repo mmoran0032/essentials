@@ -108,12 +108,21 @@ Once you have those, you can grab a few more important programs::
 For ``luckybackup``, you'll need to set up the actual backup location and make
 sure that there aren't weird file duplicates from copying things over.
 
+Additional ``apt`` installs:
+
+-   ffmpeg
+
 Julia, a high-level, high-performance computing language, is a newer language
 that I may add into my repertoire for programming and data science. Since it is
 still young, any initial work with it would be to learn the language and get
 used to how it runs. Install it with::
 
     apt install julia
+
+Apache Spark is a distributed computing framework with Python bindings, using
+Java and Scala on the backend. To get it to work, follow the guide
+`here <https://www.tutorialspoint.com/apache_spark/apache_spark_installation.htm>`__,
+with minor modifications.
 
 
 OPT Directory Contents
