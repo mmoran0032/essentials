@@ -9,13 +9,22 @@ home = '/home/mikemoran/'
 
 
 def main():
+    files, atom, mpl = get_config_files()
+    link_config_files(files, atom, mpl)
+
+
+def get_config_files():
     files = os.listdir()
     atom = 'init.coffee'
     mpl = 'matplotlibrc'
-    files.remove('setup.py')
+    files.remove('setup.py')  # this file
     files.remove(atom)
     files.remove(mpl)
-    for f in files:
+    return files, atom, mpl
+
+
+def link_config_files(standard, atom, mpl):
+    for f in standard:
         subprocess.run('ln -s {1}{0} {2}.{0}'.format(f, config, home),
                        shell=True)
     # special handling for Atom

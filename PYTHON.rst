@@ -20,7 +20,9 @@ uncluttered. Obviously use the Python 3.X version of miniconda.
 *Almost* everything you need can be installed with conda, so run the below to
 grab everything and get going::
 
-    conda install beautifulsoup4 colorama cython flake8 flask h5py jupyter
+    conda install beautifulsoup4 colorama cython flake8 flask h5py
+                  html5lib jupyter
+                  lxml
                   matplotlib mpmath networkx numexpr numpy pandas patsy
                   plotly psutil requests scikit-learn scikit-image scipy
                   seaborn setuptools sqlalchemy statsmodels sympy
