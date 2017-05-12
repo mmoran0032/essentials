@@ -8,11 +8,10 @@ extensions = ('aux', 'bbl', 'blg', 'fdb_latexmk', 'fls',
               'lis', 'lof', 'log', 'lot', 'nav', 'out',
               'snm', 'spl', 'syn', 'toc')
 directories = ('__pycache__', 'build', 'dist')
-special_dirs = ('egg-info', 'ipynb_checkpoints')
+special_dirs = ('egg-info', 'ipynb_checkpoints', 'cache')
 
 
-def main():
-    start = '.'
+def main(start='.'):
     filecount = 0
     dircount = 0
     for directory, subdirs, files in os.walk(start):

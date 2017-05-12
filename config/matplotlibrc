@@ -20,40 +20,7 @@
 # The default backend; one of GTK GTKAgg GTKCairo GTK3Agg GTK3Cairo
 # CocoaAgg MacOSX Qt4Agg Qt5Agg TkAgg WX WXAgg Agg Cairo GDK PS PDF SVG
 # Template.
-backend      : qt4agg
-
-# If you are using the Qt4Agg backend, you can choose here
-# to use the PyQt4 bindings or the newer PySide bindings to
-# the underlying Qt4 toolkit.
-#backend.qt4 : PyQt4        # PyQt4 | PySide
-
-# Note that this can be overridden by the environment variable
-# QT_API used by Enthought Tool Suite (ETS); valid values are
-# "pyqt" and "pyside".  The "pyqt" setting has the side effect of
-# forcing the use of Version 2 API for QString and QVariant.
-
-# The port to use for the web server in the WebAgg backend.
-# webagg.port : 8888
-
-# If webagg.port is unavailable, a number of other random ports will
-# be tried until one that is available is found.
-# webagg.port_retries : 50
-
-# When True, open the webbrowser to the plot that is shown
-# webagg.open_in_browser : True
-
-# When True, the figures rendered in the nbagg backend are created with
-# a transparent background.
-# nbagg.transparent : True
-
-# if you are running pyplot inside a GUI and your backend choice
-# conflicts, we will automatically try to find a compatible one for
-# you if backend_fallback is True
-#backend_fallback: True
-
-#interactive  : False
-#toolbar      : toolbar2   # None | toolbar2  ("classic" is deprecated)
-#timezone     : UTC        # a pytz timezone string, e.g., US/Central or Europe/Paris
+backend      : qt5agg
 
 
 ### LINES
@@ -74,7 +41,7 @@ markers.fillstyle: full
 
 ### PATCHES
 # Patches are graphical objects that fill 2D space, like polygons or circles.
-patch.linewidth        : 1.0     # edge width in points
+patch.linewidth        : 0.0     # edge width in points
 patch.edgecolor        : none
 patch.antialiased      : True    # render patches in anti-aliased mode
 
@@ -204,7 +171,7 @@ patch.antialiased      : True    # render patches in anti-aliased mode
 #axes.hold           : True    # whether to clear the axes by default on
 #axes.facecolor      : white   # axes background color
 #axes.edgecolor      : black   # axes edge color
-axes.linewidth      : 0.0     # edge linewidth
+axes.linewidth      : 1.0     # edge linewidth
 axes.grid           : False    # display grid or not
 #axes.titlesize      : large   # fontsize of the axes title
 #axes.labelsize      : medium  # fontsize of the x any y labels
@@ -240,63 +207,14 @@ axes.prop_cycle    : cycler('color', ['1B9E77', 'D95F02', '7570B3', 'E7298A', '6
 #polaraxes.grid      : True    # display grid on polar axes
 #axes3d.grid         : True    # display grid on 3d axes
 
-### TICKS
-# see http://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick
-xtick.major.size     : 0      # major tick size in points
-xtick.minor.size     : 0      # minor tick size in points
-#xtick.major.width    : 0.5    # major tick width in points
-#xtick.minor.width    : 0.5    # minor tick width in points
-#xtick.major.pad      : 4      # distance to major tick label in points
-#xtick.minor.pad      : 4      # distance to the minor tick label in points
-#xtick.color          : k      # color of the tick labels
-#xtick.labelsize      : medium # fontsize of the tick labels
-#xtick.direction      : in     # direction: in, out, or inout
-
-ytick.major.size     : 0      # major tick size in points
-ytick.minor.size     : 0      # minor tick size in points
-#ytick.major.width    : 0.5    # major tick width in points
-#ytick.minor.width    : 0.5    # minor tick width in points
-#ytick.major.pad      : 4      # distance to major tick label in points
-#ytick.minor.pad      : 4      # distance to the minor tick label in points
-#ytick.color          : k      # color of the tick labels
-#ytick.labelsize      : medium # fontsize of the tick labels
-#ytick.direction      : in     # direction: in, out, or inout
-
-
-### GRIDS
-#grid.color       :   black   # grid color
-#grid.linestyle   :   :       # dotted
-#grid.linewidth   :   0.5     # in points
-#grid.alpha       :   1.0     # transparency, between 0.0 and 1.0
-
-### Legend
-#legend.fancybox      : False  # if True, use a rounded box for the
-                               # legend, else a rectangle
-#legend.isaxes        : True
-#legend.numpoints     : 2      # the number of points in the legend line
-#legend.fontsize      : large
-#legend.borderpad     : 0.5    # border whitespace in fontsize units
-#legend.markerscale   : 1.0    # the relative size of legend markers vs. original
-# the following dimensions are in axes coords
-#legend.labelspacing  : 0.5    # the vertical space between the legend entries in fraction of fontsize
-#legend.handlelength  : 2.     # the length of the legend lines in fraction of fontsize
-#legend.handleheight  : 0.7     # the height of the legend handle in fraction of fontsize
-#legend.handletextpad : 0.8    # the space between the legend line and legend text in fraction of fontsize
-#legend.borderaxespad : 0.5   # the border between the axes and legend edge in fraction of fontsize
-#legend.columnspacing : 2.    # the border between the axes and legend edge in fraction of fontsize
-#legend.shadow        : False
-#legend.frameon       : True   # whether or not to draw a frame around legend
-#legend.framealpha    : None    # opacity of of legend frame
-#legend.scatterpoints : 3 # number of scatter points
-
 ### FIGURE
 # See http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure
-#figure.titlesize : medium     # size of the figure title
-#figure.titleweight : normal   # weight of the figure title
-figure.figsize   : 10, 8    # figure size in inches
-#figure.dpi       : 150      # figure dots per inch
-figure.facecolor : FEFEFE    # figure facecolor; 0.75 is scalar gray
-#figure.edgecolor : white   # figure edgecolor
+#figure.titlesize  : medium     # size of the figure title
+#figure.titleweight: normal   # weight of the figure title
+figure.figsize    : 5.75, 4.25    # figure size in inches
+figure.dpi        : 200      # figure dots per inch
+figure.facecolor  : white    # figure facecolor; 0.75 is scalar gray
+#figure.edgecolor  : white   # figure edgecolor
 #figure.autolayout : False  # When True, automatically adjust subplot
                             # parameters to make the plot fit the figure
 #figure.max_open_warning : 20  # The maximum number of figures to open through
@@ -362,10 +280,10 @@ figure.facecolor : FEFEFE    # figure facecolor; 0.75 is scalar gray
 # the default savefig params can be different from the display params
 # e.g., you may want a higher resolution, or to make the figure
 # background white
-savefig.dpi         : 150      # figure dots per inch
+savefig.dpi: 150      # figure dots per inch
 #savefig.facecolor   : white    # figure facecolor when saving
 #savefig.edgecolor   : white    # figure edgecolor when saving
-savefig.format      : png      # png, ps, pdf, svg
+savefig.format: png      # png, ps, pdf, svg
 #savefig.bbox        : standard # 'tight' or 'standard'.
                                 # 'tight' is incompatible with pipe-based animation
                                 # backends but will workd with temporary file based ones:
@@ -373,7 +291,7 @@ savefig.format      : png      # png, ps, pdf, svg
                                 # use ffmpeg_file instead
 #savefig.pad_inches  : 0.1      # Padding to be used when bbox is set to 'tight'
 #savefig.jpeg_quality: 95       # when a jpeg is saved, the default quality parameter.
-savefig.directory   :          # default directory in savefig dialog box,
+savefig.directory:          # default directory in savefig dialog box,
                                 # leave empty to always use current working directory
 #savefig.transparent : False    # setting that controls whether figures are saved with a
                                 # transparent background by default
@@ -388,85 +306,20 @@ savefig.directory   :          # default directory in savefig dialog box,
                                           # Experimental: may produce smaller files.
                                           # xpdf intended for production of publication quality files,
                                           # but requires ghostscript, xpdf and ps2eps
-#ps.distiller.res  : 6000      # dpi
-#ps.fonttype       : 3         # Output Type 3 (Type3) or Type 42 (TrueType)
+#ps.distiller.res: 6000      # dpi
+#ps.fonttype: 3         # Output Type 3 (Type3) or Type 42 (TrueType)
 
 # pdf backend params
-#pdf.compression   : 6 # integer from 0 to 9
+#pdf.compression: 6 # integer from 0 to 9
                        # 0 disables compression (good for debugging)
-#pdf.fonttype       : 3         # Output Type 3 (Type3) or Type 42 (TrueType)
+#pdf.fonttype: 3         # Output Type 3 (Type3) or Type 42 (TrueType)
 
-# svg backend params
-#svg.image_inline : True       # write raster image data directly into the svg file
-#svg.image_noscale : False     # suppress scaling of raster data embedded in SVG
-#svg.fonttype : 'path'         # How to handle SVG fonts:
-#    'none': Assume fonts are installed on the machine where the SVG will be viewed.
-#    'path': Embed characters as paths -- supported by most SVG renderers
-#    'svgfont': Embed characters as SVG fonts -- supported only by Chrome,
-#               Opera and Safari
-
-# docstring params
-#docstring.hardcopy = False  # set this when you want to generate hardcopy docstring
-
-# Set the verbose flags.  This controls how much information
-# matplotlib gives you at runtime and where it goes.  The verbosity
-# levels are: silent, helpful, debug, debug-annoying.  Any level is
-# inclusive of all the levels below it.  If your setting is "debug",
-# you'll get all the debug and helpful messages.  When submitting
-# problems to the mailing-list, please set verbose to "helpful" or "debug"
-# and paste the output into your report.
-#
-# The "fileo" gives the destination for any calls to verbose.report.
-# These objects can a filename, or a filehandle like sys.stdout.
-#
-# You can override the rc default verbosity from the command line by
-# giving the flags --verbose-LEVEL where LEVEL is one of the legal
-# levels, e.g., --verbose-helpful.
+# Set the verbose flags. This controls how much information
+# matplotlib gives you at runtime and where it goes. The verbosity
+# levels are: silent, helpful, debug, debug-annoying. Any level is
+# inclusive of all the levels below it.
 #
 # You can access the verbose instance in your code
 #   from matplotlib import verbose.
-#verbose.level  : silent      # one of silent, helpful, debug, debug-annoying
-#verbose.fileo  : sys.stdout  # a log filename, sys.stdout or sys.stderr
-
-# Event keys to interact with figures/plots via keyboard.
-# Customize these settings according to your needs.
-# Leave the field(s) empty if you don't need a key-map. (i.e., fullscreen : '')
-
-#keymap.fullscreen : f               # toggling
-#keymap.home : h, r, home            # home or reset mnemonic
-#keymap.back : left, c, backspace    # forward / backward keys to enable
-#keymap.forward : right, v           #   left handed quick navigation
-#keymap.pan : p                      # pan mnemonic
-#keymap.zoom : o                     # zoom mnemonic
-#keymap.save : s                     # saving current figure
-#keymap.quit : ctrl+w, cmd+w         # close the current figure
-#keymap.grid : g                     # switching on/off a grid in current axes
-#keymap.yscale : l                   # toggle scaling of y-axes ('log'/'linear')
-#keymap.xscale : L, k                # toggle scaling of x-axes ('log'/'linear')
-#keymap.all_axes : a                 # enable all axes
-
-# Control location of examples data files
-#examples.directory : ''   # directory to look in for custom installation
-
-###ANIMATION settings
-#animation.html : 'none'           # How to display the animation as HTML in
-                                   # the IPython notebook. 'html5' uses
-                                   # HTML5 video tag.
-#animation.writer : ffmpeg         # MovieWriter 'backend' to use
-#animation.codec : mpeg4           # Codec to use for writing movie
-#animation.bitrate: -1             # Controls size/quality tradeoff for movie.
-                                   # -1 implies let utility auto-determine
-#animation.frame_format: 'png'     # Controls frame format used by temp files
-#animation.ffmpeg_path: 'ffmpeg'   # Path to ffmpeg binary. Without full path
-                                   # $PATH is searched
-#animation.ffmpeg_args: ''         # Additional arguments to pass to ffmpeg
-#animation.avconv_path: 'avconv'   # Path to avconv binary. Without full path
-                                   # $PATH is searched
-#animation.avconv_args: ''         # Additional arguments to pass to avconv
-#animation.mencoder_path: 'mencoder'
-                                   # Path to mencoder binary. Without full path
-                                   # $PATH is searched
-#animation.mencoder_args: ''       # Additional arguments to pass to mencoder
-#animation.convert_path: 'convert' # Path to ImageMagick's convert binary.
-                                   # On Windows use the full path since convert
-                                   # is also the name of a system tool.
+#verbose.level: silent      # one of silent, helpful, debug, debug-annoying
+#verbose.fileo: sys.stdout  # a log filename, sys.stdout or sys.stderr

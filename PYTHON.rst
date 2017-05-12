@@ -20,21 +20,17 @@ uncluttered. Obviously use the Python 3.X version of miniconda.
 *Almost* everything you need can be installed with conda, so run the below to
 grab everything and get going::
 
-    conda install beautifulsoup4 colorama cython flake8 flask h5py
-                  html5lib jupyter
-                  lxml
-                  matplotlib mpmath networkx numexpr numpy pandas patsy
-                  plotly psutil requests scikit-learn scikit-image scipy
+    conda install beautifulsoup4 cython flake8 flask \
+                  h5py html5lib jupyter lxml \
+                  matplotlib mpmath numpy \
+                  pandas patsy psutil psycopg2 requests \
+                  scikit-learn scikit-image scipy \
                   seaborn setuptools sqlalchemy statsmodels sympy
-                  coverage nose pytest
 
 That's it! It's a mix of scientific, machine learning, and helper packages that
 you've been using frequently, and some you haven't been using frequently. Go
 through the list again every time you reinstall, as there are probably some
 packages that you could take out of the mix.
-
-*Currently, I am using QT as my backend, meaning that I am limited to PyQt4*
-*and not the most current version. Downgrade by installing* ``"pyqt<5"``.
 
 You can also check which packages are installed with ``conda list``. This does
 include packages that you didn't explicitly call for, so will be longer than
@@ -46,6 +42,8 @@ package``, listed below:
 -  **OpenCV**: ``https://conda.binstar.org/menpo opencv3``
 
 -  **pymc3**: ``conda-forge pymc3``
+
+-  **sqlalchemy-utils**: ``conda-forge sqlalchemy-utils``
 
 
 Additional Installs

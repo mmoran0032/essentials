@@ -177,7 +177,3 @@ It is available through apt, but if I remember correctly it didn't work quite
 right when I used that version. So, download it from the website, start it up,
 and re-download all of your old games. You can also copy some save data over
 from your external, so keep track the next time you do that.
-
-
-Organization will set you free
-------------------------------
