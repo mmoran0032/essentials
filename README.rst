@@ -103,7 +103,8 @@ playback and mp3 decoding::
 
 Once you have those, you can grab a few more important programs::
 
-    apt install skype audacious luckybackup texlive-full pavucontrol soundconverter pandoc
+    apt install skype audacious luckybackup texlive-full pavucontrol
+        soundconverter pandoc direnv
 
 For ``luckybackup``, you'll need to set up the actual backup location and make
 sure that there aren't weird file duplicates from copying things over.
