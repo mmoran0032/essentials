@@ -32,3 +32,4 @@ export PATH=${PATH}:/home/mikemoran/.local/bin
 # sourcing
 . ~/.aliases
 eval "$(dircolors ~/.colors-ls)"
+eval "$(direnv hook bash)"
