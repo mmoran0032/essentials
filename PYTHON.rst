@@ -12,7 +12,7 @@ Of course, you will end up adding to this as you go, but that's fine.
 Miniconda
 ---------
 
-Use the **miniconda** distribution of Anaconda, downlaoded from `their
+Use the **miniconda** distribution of Anaconda, downloaded from `their
 website <http://conda.pydata.org/miniconda.html>`__, and run the bash script. I
 place the directory within ``/opt/miniconda3`` to keep my home directory
 uncluttered. Obviously use the Python 3.X version of miniconda.
@@ -87,7 +87,10 @@ automatically when changing to the directory in question:
 
         source activate ENVNAME
 
-#.  Make sure that ``direnv`` is installed, and if not, install it.
+#.  Make sure that ``direnv`` is installed, and if not, install it. You will
+    also need to allow ``direnv`` to run in this directory by running::
+
+        direnv allow
 
 #.  Do any source control work that you need to do.
 
@@ -96,6 +99,6 @@ When you change into the directory, the ``.envrc`` file combined with
 you don't have to automatically do it. Additionally, it will unsource it
 when you change out of that directory.
 
-*Information provided by
-`TD Hopper <http://tdhopper.com/blog/2015/Nov/24/my-python-environment-workflow-with-conda/>`_
+*Information provided by `TD Hopper
+<http://tdhopper.com/blog/2015/Nov/24/my-python-environment-workflow-with-conda/>`_
 and adapted to use ``direnv`` instead of ``autoenv``.*
