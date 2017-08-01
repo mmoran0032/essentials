@@ -100,5 +100,5 @@ you don't have to automatically do it. Additionally, it will unsource it
 when you change out of that directory.
 
 *Information provided by*
-*`TD Hopper <http://tdhopper.com/blog/2015/Nov/24/my-python-environment-workflow-with-conda/>`_*
+*`TD Hopper <http://tdhopper.com/blog/2015/Nov/24/my-python-environment-workflow-with-conda/>`__*
 *and adapted to use ``direnv`` instead of ``autoenv``.*
