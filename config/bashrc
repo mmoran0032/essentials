@@ -28,6 +28,7 @@ export HISTSIZE=2500
 export PATH=/opt/miniconda3/bin:${PATH}
 export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:${LIbRARY_PATH}
 export PATH=${PATH}:/home/mikemoran/.local/bin
+export PATH=${PATH}:/opt/julia/bin
 
 # sourcing
 . ~/.aliases

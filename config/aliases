@@ -6,7 +6,7 @@ alias go="xdg-open"
 alias ls="ls --color=auto -Gh"
 alias ps="ps -Ac"
 alias rm="rm -i"
-alias hide="set +o history"
+alias hide="set +o history; echo hidden"
 
 # Programming Help
 alias ap8="autopep8 --aggressive --recursive --in-place --verbose --ignore=W391"

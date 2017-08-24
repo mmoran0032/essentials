@@ -28,6 +28,7 @@ Atom packages
 -  *project-manager*: manages projects
 -  *rst-preview-pandoc*: show preview with ctrl-shift-E
 -  *script*: run scripts with ctrl+shift+B
+-  *uber-juno*: Julia IDE within Atom
 
 
 Vim

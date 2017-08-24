@@ -116,9 +116,10 @@ Additional ``apt`` installs:
 Julia, a high-level, high-performance computing language, is a newer language
 that I may add into my repertoire for programming and data science. Since it is
 still young, any initial work with it would be to learn the language and get
-used to how it runs. Install it with::
-
-    apt install julia
+used to how it runs. Install by downloading the Linux binary from
+`JuliaLang.org <https://julialang.org/downloads/>`__, unpack it, and move the
+directory into ``/opt``. The ``.bashrc`` file is already set up to access this
+location for Julia.
 
 Apache Spark is a distributed computing framework with Python bindings, using
 Java and Scala on the backend. To get it to work, follow the guide
