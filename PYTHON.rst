@@ -39,11 +39,13 @@ the above.
 Some packages require you to install them with ``conda install -c [URL]
 package``, listed below:
 
--  **OpenCV**: ``https://conda.binstar.org/menpo opencv3``
+-   **LIME**: ``conda-forge lime``
 
--  **pymc3**: ``conda-forge pymc3``
+-   **OpenCV**: ``https://conda.binstar.org/menpo opencv3``
 
--  **sqlalchemy-utils**: ``conda-forge sqlalchemy-utils``
+-   **pymc3**: ``conda-forge pymc3``
+
+-   **sqlalchemy-utils**: ``conda-forge sqlalchemy-utils``
 
 
 Additional Installs
@@ -54,13 +56,13 @@ download and install them with ``python3 setup.py install --user``. When
 checking your installed packages, these will still show up, but as a pip-
 installed package.
 
--  **autopep8** (``git@github.com:hhatto/autopep8.git``), a utility that
-   automatically converts code to be compliant with PEP8 guidelines. Every so
-   often I want to use this, since it is a quick swipe across everything. For
-   the most part, my code follows PEP8 pretty closely.
--  **progressbar** (``git@github.com:coagulant/progressbar-python3.git``), a
-   wrapper for loops that displays the progress of that loop in the terminal.
-   Nice for when I write longer, non-interactive analysis scripts.
+-   **autopep8** (``git@github.com:hhatto/autopep8.git``), a utility that
+    automatically converts code to be compliant with PEP8 guidelines. Every so
+    often I want to use this, since it is a quick swipe across everything. For
+    the most part, my code follows PEP8 pretty closely.
+-   **progressbar** (``git@github.com:coagulant/progressbar-python3.git``), a
+    wrapper for loops that displays the progress of that loop in the terminal.
+    Nice for when I write longer, non-interactive analysis scripts.
 
 
 Environment Setup
