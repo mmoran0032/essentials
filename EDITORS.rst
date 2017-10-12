@@ -21,14 +21,13 @@ Atom packages
 ^^^^^^^^^^^^^
 
 -  *git-plus*: ``git`` stuff without the command line
--  *language-restructuredtext*: syntax highlighting for ``.rst`` files
+-  *hydrogen*: Jupyter Notebooks within the editor
 -  *linter* and *linter-flake8*: provides highlighting to follow style guides
 -  *minimap* and *minimap-cursorline*: shows minimap of the current file
 -  *pdf-view*: view PDF files in Atom
 -  *project-manager*: manages projects
 -  *rst-preview-pandoc*: show preview with ctrl-shift-E
 -  *script*: run scripts with ctrl+shift+B
--  *uber-juno*: Julia IDE within Atom
 
 
 Vim

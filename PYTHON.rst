@@ -36,16 +36,18 @@ You can also check which packages are installed with ``conda list``. This does
 include packages that you didn't explicitly call for, so will be longer than
 the above.
 
-Some packages require you to install them with ``conda install -c [URL]
+Some packages require you to install them with ``conda install -c conda-forge
 package``, listed below:
 
--   **LIME**: ``conda-forge lime``
-
--   **OpenCV**: ``https://conda.binstar.org/menpo opencv3``
-
--   **pymc3**: ``conda-forge pymc3``
-
--   **sqlalchemy-utils**: ``conda-forge sqlalchemy-utils``
+=                   =
+Package             Description
+=                   =
+geopandas           Working with geospatial data
+geoplot             Plotting geospatial data
+lime                Locally-Interpretable Model Evaluation
+pymc3               Bayesian models
+sqlalchemy-utils    Additional database help
+=                   =
 
 
 Additional Installs
