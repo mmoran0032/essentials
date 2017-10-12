@@ -39,15 +39,15 @@ the above.
 Some packages require you to install them with ``conda install -c conda-forge
 package``, listed below:
 
-=======             ===========
-Package             Description
-=======             ===========
-geopandas           Working with geospatial data
-geoplot             Plotting geospatial data
-lime                Locally-Interpretable Model Evaluation
-pymc3               Bayesian models
-sqlalchemy-utils    Additional database help
-=======             ===========
+.. csv-table
+    :header: "Package", "Description"
+    :widths: 20, 80
+
+    "geopandas", "Working with geospatial data"
+    "geoplot", "Plotting geospatial data"
+    "lime", "Locally-Interpretable Model Evaluation"
+    "pymc3", "Bayesian models"
+    "sqlalchemy-utils", "Additional database help"
 
 
 Additional Installs
