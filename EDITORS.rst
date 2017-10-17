@@ -11,18 +11,21 @@ Atom
 Install the ``.deb`` package from `here <https://atom.io/>`__ with
 ``sudo dpkg -i atom-amd64.deb``. Atom comes out-of-the-box set up for your
 Python work, so there isn't too much you need to do initially. You'll need to
-have your Python environment already set up before.
+have your Python environment already set up before. If using Mac OS, you'll
+be installed the pre-compiled binary, which should automatically update.
 
 You are using 4 spaces per tab, the *one-dark-ui* and
-*base16-tomorrow-dark-theme* themes, and even tab sizing. There may be a few
-other settings to change, but mostly the defaults are fine.
+*base16-tomorrow-dark-theme* themes, and even tab sizing. Additionally, in
+the *autocomplete-plus* package, adjust the confirming keymap.
 
 Atom packages
 ^^^^^^^^^^^^^
 
 -  *git-plus*: ``git`` stuff without the command line
 -  *hydrogen*: Jupyter Notebooks within the editor
--  *linter* and *linter-flake8*: provides highlighting to follow style guides
+-  *language-restructuredtxt*: rst highlights and snippets
+-  *linter* and *linter-flake8*: provides highlighting to follow style guides.
+   LF8 requires that ``flake8`` be installed and available on your path.
 -  *minimap* and *minimap-cursorline*: shows minimap of the current file
 -  *pdf-view*: view PDF files in Atom
 -  *project-manager*: manages projects

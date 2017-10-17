@@ -54,6 +54,10 @@ the home directory. First, remove those old files (only ``.bashrc`` and
 ``.vimrc`` may be there, plus possibly the ``.git*`` files), then link these
 over by running ``setup.py`` in the config directory.
 
+*NOTE: For Mac OS, most of these files will not work, or have slightly*
+*different argument options. Look out for this, and eventually just have two*
+*separate config directories to use.*
+
 
 Pairing Logitech Mouse/Keyboard
 -------------------------------

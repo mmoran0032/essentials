@@ -2,10 +2,11 @@
 
 
 import os
+from pathlib import Path
 import subprocess
 
-config = '/home/mikemoran/bin/essentials/config/'
-home = '/home/mikemoran/'
+root = Path.home()
+config = Path('.')
 
 
 def main():
@@ -23,15 +24,16 @@ def get_config_files():
     return files, atom, mpl
 
 
+# adjust the below to use pathlib
 def link_config_files(standard, atom, mpl):
     for f in standard:
-        subprocess.run('ln -s {1}{0} {2}.{0}'.format(f, config, home),
+        subprocess.run('ln -s {1}/{0} {2}/.{0}'.format(f, config, root),
                        shell=True)
     # special handling for Atom
-    subprocess.run('ln -s {1}{0} {2}.atom/{0}'.format(atom, config, home),
+    subprocess.run('ln -s {1}/{0} {2}/.atom/{0}'.format(atom, config, root),
                    shell=True)
     # special handling for matplotlib
-    subprocess.run('ln -s {1}{0} {2}.config/{3}/{0}'.format(mpl, config, home,
+    subprocess.run('ln -s {1}/{0} {2}/.config/{3}/{0}'.format(mpl, config, root,
                    mpl[:-2]), shell=True)
 
 
