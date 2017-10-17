@@ -6,7 +6,9 @@ from pathlib import Path
 import subprocess
 
 root = Path.home()
-config = Path('.')
+config = Path('config').resolve()
+config_mac = Path('config_mac').resolve()
+config_linux = Path('config_linux').resolve()
 
 
 def main():

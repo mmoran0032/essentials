@@ -1,0 +1,33 @@
+# BASHRC for Gartner Laptop (Mac OSX 10.12.6 64b)
+
+# Making the prompt and terminal better
+function truncate {
+  newPWD="${PWD/#$HOME/~}"
+  maxlen=30
+  maxshow=27
+  if [ ${#newPWD} -gt $maxlen ]; then
+    newPWD="...${newPWD: -$maxshow}"
+  fi
+}
+
+PROMPT_COMMAND=truncate
+export PS1="\[\033[1;32m\][\[\033[1;30m\]\u@\h\[\033[m\] \[\033[1;31m\]\${newPWD}\[\033[1;32m\]]\[\033[m\] "
+export LSCOLORS="BxHxxxxxCxxxxxxxxxxxxx"
+
+# making sure vim works well
+export EDITOR=/usr/bin/vim
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+  export TERM=xterm-256color
+fi
+
+# Adjusting bash_history to be more helpful
+export HISTIGNORE="&:[ ]*:exit:hide"
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M: "
+export HISTSIZE=2500
+
+# sourcing
+. ~/.aliases
+eval "$(direnv hook bash)"
+
+# path corrections
+export PATH="/Users/michamor/anaconda3/bin:/Users/michamor/bin:$PATH"
