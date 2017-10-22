@@ -5,11 +5,12 @@ set number
 set cursorline
 set mouse=a
 
-set syntax=on
+syntax on
 filetype on
 
 "Sets filetypes for other extensions
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.py set filetype=python
 au BufRead,BufNewFile *.py3 set filetype=python
 
 "Removes trailing whitespace from entire file

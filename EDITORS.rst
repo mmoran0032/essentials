@@ -44,3 +44,8 @@ to install vim packages.
 
 You need *pathogen*, *vim-airline*, and *vim-bufferline*, and you're using the
 *distinguished* color scheme.
+
+*Mac OS Update 2017-10-18: Installing the packages kind of worked, but Vim*
+*itself wasn't working (delete key not working, and errors on exit), so I am*
+*going to try installing from backup instead of going the actual package*
+*manager route for the above.*
