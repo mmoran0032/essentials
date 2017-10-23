@@ -3,8 +3,6 @@
 # To have a dialogue window showing your path
 # alert(process.env.PATH)
 process.env.PATH = [
-    process.env.PATH,
-    '/Users/michamor/.local/bin'
+    '/Users/michamor/anaconda3/bin',
+    process.env.PATH
 ].join(':')
-
-# alert(process.env.PATH)

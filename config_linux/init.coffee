@@ -7,5 +7,3 @@ process.env.PATH = [
     process.env.PATH,
     '/home/mikemoran/.local/bin'
 ].join(':')
-
-# alert(process.env.PATH)
