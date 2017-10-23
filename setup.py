@@ -2,7 +2,6 @@
 
 
 import argparse
-import os
 from pathlib import Path
 
 root = Path.home()
@@ -30,11 +29,13 @@ def get_config_files(use_mac_files):
 # adjust the below to use pathlib: Path.symlink_to(target)
 def link_config_files(filepaths):
     for f in filepaths:
-        os.symlink(f'{config}/{f}', f'{root}/.{f}')
-    # special handling for non-root install locations
-    os.symlink(f'{root}/.init.coffee', f'{root}/.atom/init.coffee')
-    os.symlink(f'{root}/.matplotlibrc',
-               f'{root}/.config/matplotlib/matplotlibrc')
+        # special handling for non-root install locations
+        if f.name == 'init.coffee':
+            f.symlink_to(root / '.atom' / f.name)
+        elif f.name == 'matplotlibrc':
+            mpl_path = root / '.config' / 'matplotlib' / f.name
+            f.symlink_to(mpl_path)
+        f.symlink_to(root / f'.{f.name}')
 
 
 if __name__ == '__main__':
