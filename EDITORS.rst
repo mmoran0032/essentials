@@ -39,13 +39,11 @@ Vim
 Useful for short edits to files. Get it with ``apt install vim``, and use the
 config file in this directory to control the behavior. Since the ``.vim``
 directory is within my backup, just copy over the autoload, bundle, and colors
-directories to complete installation. If that doesn't work, then look up how
-to install vim packages.
+directories to complete installation.
 
 You need *pathogen*, *vim-airline*, and *vim-bufferline*, and you're using the
-*distinguished* color scheme.
-
-*Mac OS Update 2017-10-18: Installing the packages kind of worked, but Vim*
-*itself wasn't working (delete key not working, and errors on exit), so I am*
-*going to try installing from backup instead of going the actual package*
-*manager route for the above.*
+*distinguished* color scheme. Install these from your external backup, since
+installing them the regular Vim way didn't work and I didn't bother to try to
+figure out the better way. Additionally since the packages you're using are
+older and your colorscheme (may be) is customized, the "proper" method most
+likely would still result in a different setup than you want.

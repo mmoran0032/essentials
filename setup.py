@@ -26,7 +26,6 @@ def get_config_files(use_mac_files):
     return files
 
 
-# adjust the below to use pathlib: Path.symlink_to(target)
 def link_config_files(filepaths):
     for f in filepaths:
         # special handling for non-root install locations
