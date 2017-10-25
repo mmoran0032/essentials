@@ -4,6 +4,7 @@ set nocompatible
 set number
 set cursorline
 set mouse=a
+set backspace=indent,eol,start
 
 syntax on
 filetype on
@@ -22,10 +23,6 @@ set hlsearch
 "For Python specifically
 set tabstop=4
 set shiftwidth=4
-"Folding, with za
-set foldmethod=indent
-set foldlevel=99
-
 
 set expandtab
 autocmd FileType make setlocal noexpandtab
