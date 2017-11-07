@@ -30,4 +30,5 @@ export HISTSIZE=2500
 eval "$(direnv hook bash)"
 
 # path corrections
-export PATH="/Users/michamor/anaconda3/bin:/Users/michamor/bin:$PATH"
+export PATH="/opt/anaconda3/bin:/Users/michamor/bin:$PATH"
+
