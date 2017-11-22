@@ -6,5 +6,4 @@ alias ps="ps -Ac"
 alias rm="rm -i"
 
 # Programming Help
-alias atom="open /Applications/Atom.app"
 alias jn="jupyter notebook"

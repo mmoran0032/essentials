@@ -32,8 +32,7 @@ def link_config_files(filepaths):
         if f.name == 'init.coffee':
             f.symlink_to(root / '.atom' / f.name)
         elif f.name == 'matplotlibrc':
-            mpl_path = root / '.config' / 'matplotlib' / f.name
-            f.symlink_to(mpl_path)
+            f.symlink_to(root / '.config' / 'matplotlib' / f.name)
         f.symlink_to(root / f'.{f.name}')
 
 
