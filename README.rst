@@ -25,7 +25,7 @@ any of the specialized steps below. Simply run ``apt upgrade`` and allow it to
 install the huge block of files, and sit back and wait. Finally, install some
 extremely helpful command line tools::
 
-    apt install build-essential cmake git rsync tree unzip vim
+    apt install build-essential cmake git rsync tree unzip vim direnv
 
 Adjust any computer settings (Terminal background and scrollback, sounds, user
 picture, etc) and download any files from the backed-up external drive that you
@@ -50,12 +50,13 @@ Config Files
 ------------
 
 Most of these files replace the hidden configuration files of the same name in
-the home directory. First, remove those old files (only ``.bashrc`` and
-``.vimrc`` may be there, plus possibly the ``.git*`` files), then link these
-over by running ``setup.py`` in the config directory, potentially with a single
-argument to specify whether or not you're using Linux (default) or Mac::
+the home directory. To link those files to your current versions, run::
 
     setup.py [--mac]
+
+where the argument specifies whether or not you're using Linux (default) or on
+a Mac. The program will delete any configuration files that exist, then link
+yours in place.
 
 
 Pairing Logitech Mouse/Keyboard

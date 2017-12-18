@@ -28,6 +28,7 @@ Atom packages
    LF8 requires that ``flake8`` be installed and available on your path.
 -  *minimap* and *minimap-cursorline*: shows minimap of the current file
 -  *pdf-view*: view PDF files in Atom
+-  *platformio-ide-terminal*: terminal for Atom
 -  *project-manager*: manages projects
 -  *rst-preview-pandoc*: show preview with ctrl-shift-E
 -  *script*: run scripts with ctrl+shift+B
