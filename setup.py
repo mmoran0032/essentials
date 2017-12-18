@@ -30,11 +30,11 @@ def link_config_files(filepaths):
     for f in filepaths:
         # special handling for non-root install locations
         if f.name == 'init.coffee':
-            f.symlink_to(root / '.atom' / f.name)
+            (root / '.atom' / f.name).symlink_to(f)
         elif f.name == 'matplotlibrc':
             mpl_path = root / '.config' / 'matplotlib' / f.name
-            f.symlink_to(mpl_path)
-        f.symlink_to(root / f'.{f.name}')
+            mpl_path.symlink_to(f)
+        (root / f'.{f.name}').symlink_to(f)
 
 
 if __name__ == '__main__':
