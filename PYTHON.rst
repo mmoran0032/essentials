@@ -15,7 +15,9 @@ Miniconda
 Use the **miniconda** distribution of Anaconda, downloaded from `their
 website <http://conda.pydata.org/miniconda.html>`__, and run the bash script. I
 place the directory within ``/opt/miniconda3`` to keep my home directory
-uncluttered. Obviously use the Python 3.X version of miniconda.
+uncluttered. Obviously use the Python 3.X version of miniconda. With Mac OS,
+use the binary installer for the full Anaconda distribution, even though you
+don't really need it.
 
 *Almost* everything you need can be installed with conda, so run the below to
 grab everything and get going::

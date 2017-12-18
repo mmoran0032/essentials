@@ -2,6 +2,7 @@
 
 
 import os
+from pathlib import Path
 import subprocess
 
 extensions = ('aux', 'bbl', 'blg', 'fdb_latexmk', 'fls',
@@ -47,9 +48,13 @@ def clean_directories(directory, subdirs):
 
 
 def scrub_item(directory, item):
-    name = '{}/{}'.format(directory, item)
-    print('Deleting: {}'.format(name))
-    subprocess.run('rm -rf {}'.format(name), shell=True)
+    name = Path(directory) / item
+    print(f'Deleting: {name}')
+    # subprocess.run('rm -rf {}'.format(name), shell=True)
+    if name.is_file():
+        name.unlink()
+    else:
+        subprocess.run('rm -rf {}'.format(str(name)), shell=True)
 
 
 if __name__ == '__main__':

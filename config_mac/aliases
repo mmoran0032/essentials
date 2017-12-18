@@ -1,0 +1,10 @@
+# General tweaks
+alias bc="bc -l"
+alias df="df -H"
+alias ls="ls -Gh"
+alias ps="ps -Ac"
+alias rm="rm -i"
+
+# Programming Help
+alias atom="open /Applications/Atom.app"
+alias jn="jupyter notebook"

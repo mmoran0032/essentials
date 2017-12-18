@@ -4,12 +4,14 @@ set nocompatible
 set number
 set cursorline
 set mouse=a
+set backspace=indent,eol,start
 
-set syntax=on
+syntax on
 filetype on
 
 "Sets filetypes for other extensions
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.py set filetype=python
 au BufRead,BufNewFile *.py3 set filetype=python
 
 "Removes trailing whitespace from entire file
@@ -21,10 +23,6 @@ set hlsearch
 "For Python specifically
 set tabstop=4
 set shiftwidth=4
-"Folding, with za
-set foldmethod=indent
-set foldlevel=99
-
 
 set expandtab
 autocmd FileType make setlocal noexpandtab

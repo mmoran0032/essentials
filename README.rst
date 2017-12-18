@@ -52,7 +52,10 @@ Config Files
 Most of these files replace the hidden configuration files of the same name in
 the home directory. First, remove those old files (only ``.bashrc`` and
 ``.vimrc`` may be there, plus possibly the ``.git*`` files), then link these
-over by running ``setup.py`` in the config directory.
+over by running ``setup.py`` in the config directory, potentially with a single
+argument to specify whether or not you're using Linux (default) or Mac::
+
+    setup.py [--mac]
 
 
 Pairing Logitech Mouse/Keyboard
@@ -84,12 +87,15 @@ once you have any git installed (and after making sure your ssh keys are in
 place), you'll want to grab the source and install the newer version. There are
 a few libraries necessary for compiling to progress::
 
-    apt install asciidoc docbook2x libcurl4-openssl-dev libexpat1-dev libssl-dev xmlto
+    apt install asciidoc docbook2x libcurl4-openssl-dev libexpat1-dev \
+        libssl-dev xmlto
     git clone git@github.com:git/git.git
     make -j 9 prefix=/usr/local all doc info
     sudo make -j 9 prefix=/usr/local install install-doc install-html install-info
 
 As with all git-based installations, this is done in the ``/opt/`` directory.
+
+On your Mac, you installed Homebrew and installed Git through that.
 
 
 Additional Installs
