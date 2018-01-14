@@ -16,7 +16,8 @@ be installed the pre-compiled binary, which should automatically update.
 
 You are using 4 spaces per tab, the *one-dark-ui* and
 *base16-tomorrow-dark-theme* themes, and even tab sizing. Additionally, in
-the *autocomplete-plus* package, adjust the confirming keymap.
+the *autocomplete-plus* package, adjust the confirming keymap, and in the
+*spell-check* package, add ``text.restructuredtext`` to the scope grammars.
 
 Atom packages
 ^^^^^^^^^^^^^
