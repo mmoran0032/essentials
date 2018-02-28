@@ -16,7 +16,8 @@ be installed the pre-compiled binary, which should automatically update.
 
 You are using 4 spaces per tab, the *one-dark-ui* and
 *base16-tomorrow-dark-theme* themes, and even tab sizing. Additionally, in
-the *autocomplete-plus* package, adjust the confirming keymap.
+the *autocomplete-plus* package, adjust the confirming keymap, and in the
+*spell-check* package, add ``text.restructuredtext`` to the scope grammars.
 
 Atom packages
 ^^^^^^^^^^^^^
@@ -28,6 +29,7 @@ Atom packages
    LF8 requires that ``flake8`` be installed and available on your path.
 -  *minimap* and *minimap-cursorline*: shows minimap of the current file
 -  *pdf-view*: view PDF files in Atom
+-  *platformio-ide-terminal*: terminal for Atom
 -  *project-manager*: manages projects
 -  *rst-preview-pandoc*: show preview with ctrl-shift-E
 -  *script*: run scripts with ctrl+shift+B

@@ -2,6 +2,7 @@
 
 
 import argparse
+from itertools import chain
 from pathlib import Path
 
 root = Path.home()
@@ -19,21 +20,28 @@ def main():
 
 
 def get_config_files(use_mac_files):
-    files = list(config_linux.iterdir())
+    files = config_linux.iterdir()
     if use_mac_files:
-        files = list(config_mac.iterdir())
-    files.extend(config.iterdir())
-    return files
+        files = config_mac.iterdir()
+    return chain(files, config.iterdir())
 
 
 def link_config_files(filepaths):
     for f in filepaths:
         # special handling for non-root install locations
         if f.name == 'init.coffee':
-            f.symlink_to(root / '.atom' / f.name)
+            remove_and_link(f, root / '.atom' / f.name)
         elif f.name == 'matplotlibrc':
-            f.symlink_to(root / '.config' / 'matplotlib' / f.name)
-        f.symlink_to(root / f'.{f.name}')
+            mpl_path = root / '.config' / 'matplotlib' / f.name
+            remove_and_link(f, mpl_path)
+        else:
+            remove_and_link(f, root / f'.{f.name}')
+
+
+def remove_and_link(orig, target):
+    if target.exists():
+        target.unlink()
+    target.symlink_to(orig)
 
 
 if __name__ == '__main__':
