@@ -1,0 +1,21 @@
+[user]
+    email = mmoran0032@gmail.com
+    name = Mike Moran
+    editor = vim
+
+[push]
+    default = simple
+
+[alias]
+    co = checkout
+    info = log --pretty=format:'%Cred%an%Creset (%h, %cr) %Cgreen%s%Creset'
+
+[url "git@github.com:mmoran0032/"]
+    insteadOf = github:
+[url "git@gitlab.com:mmoran0032/"]
+    insteadOf = gitlab:
+
+[core]
+    excludesfile = /home/mikemoran/.gitignore
+[http]
+    sslVerify = false

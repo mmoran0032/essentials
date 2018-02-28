@@ -97,6 +97,18 @@ As with all git-based installations, this is done in the ``/opt/`` directory.
 
 On your Mac, you installed Homebrew and installed Git through that.
 
+You will also need to adjust the config for any git repositories that you clone
+that you want to use a different email or username for. For example, if you
+clone one of your personal directories, you should explicitly edit the
+configuration for that repository to represent that. Run ``git config -e`` from
+within the repository, and add the following::
+
+    [user]
+        email: email.to.use@domain.com
+        name: Firstname Lastname
+
+This edit will override the defaults present in ``.gitconfig``.
+
 
 Additional Installs
 -------------------

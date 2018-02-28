@@ -63,6 +63,9 @@ installed package.
 -   **progressbar** (``git@github.com:coagulant/progressbar-python3.git``), a
     wrapper for loops that displays the progress of that loop in the terminal.
     Nice for when I write longer, non-interactive analysis scripts.
+    -   Package ``tqdm`` looks to be a little better than progressbar (used by
+        ``pymc3``, which is a good sign). Install with
+        ``conda install -c conda-forge tqdm``.
 
 
 Environment Setup
@@ -79,6 +82,11 @@ automatically when changing to the directory in question:
         dependencies:
         - python=3
         - numpy
+
+    If there are dependencies that require ``pip``, include the following::
+
+        - pip:
+          - packagename
 
 #.  Create the environment with ``conda env create``, which uses the file
     we just created to set up the environment.

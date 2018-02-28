@@ -4,6 +4,7 @@ alias df="df -H"
 alias ls="ls -Gh"
 alias ps="ps -Ac"
 alias rm="rm -i"
+alias gl="glances --enable-process-extended --process-short-name"
 
 # Programming Help
 alias jn="jupyter notebook"
