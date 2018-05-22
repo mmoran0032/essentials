@@ -6,7 +6,12 @@ from scratch, this will help you out tremendously. Honestly, I'm surprised you
 made it as far as you did without making one of these. Now it's finally time to
 keep this stuff organized.
 
-*Updated for reinstalling on 2016-05-03*
+*Updated for reinstalling Linux on 2017-12-17*
+
+Install history:
+-   2017-12-17 - Linux
+-   2017-10-16 - Mac
+-   2016-05-03 - Linux
 
 
 Beginning Installation
@@ -59,27 +64,6 @@ a Mac. The program will delete any configuration files that exist, then link
 yours in place.
 
 
-Pairing Logitech Mouse/Keyboard
--------------------------------
-
-The Logitech wireless mouse and keyboard I currently have, and all future ones,
-have a pairing software included that only works with Windows. Thankfully,
-someone has already developed a way to get this to work in Linux, creating the
-``ltunify`` utility. Download and install it using::
-
-    git clone https://git.lekensteyn.nl/ltunify.git
-    cd ltunify
-    make install-home
-
-Once everything is set, an executable names ``ltunify`` will be in ``~/bin``.
-Change to this directory and run::
-
-    sudo ./ltunify pair
-
-and follow the prompts to pair your devices. You can then remove the
-``ltunify`` directory created from the clone if you desire.
-
-
 Git
 ---
 
@@ -97,18 +81,6 @@ a few libraries necessary for compiling to progress::
 As with all git-based installations, this is done in the ``/opt/`` directory.
 
 On your Mac, you installed Homebrew and installed Git through that.
-
-You will also need to adjust the config for any git repositories that you clone
-that you want to use a different email or username for. For example, if you
-clone one of your personal directories, you should explicitly edit the
-configuration for that repository to represent that. Run ``git config -e`` from
-within the repository, and add the following::
-
-    [user]
-        email: email.to.use@domain.com
-        name: Firstname Lastname
-
-This edit will override the defaults present in ``.gitconfig``.
 
 
 Additional Installs
