@@ -8,3 +8,5 @@ alias gl="glances --enable-process-extended --process-short-name"
 
 # Programming Help
 alias jn="jupyter notebook"
+alias jl="jupyter lab"
+
