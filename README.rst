@@ -162,3 +162,32 @@ It is available through apt, but if I remember correctly it didn't work quite
 right when I used that version. So, download it from the website, start it up,
 and re-download all of your old games. You can also copy some save data over
 from your external, so keep track the next time you do that.
+
+
+Docker
+------
+
+Use `Docker`_ for your encapsulated projects. Since most of these are
+python-based, you'll end up doing similar work to building out
+environments. All of your docker files are in ``docker``. To build an
+image, run::
+
+    docker build -t mmoran0032/image:0.0.0 - < file
+
+Replace the image name, version, and file name with the required values.
+To run an image, run::
+
+    docker run -it --rm mmoran0032/image:0.0.0
+
+Any additional arguments to the container can be passed in. For example,
+if you are running a Jupyter server in the docker image, you can connect
+to it by running::
+
+    docker run -it --rm --expose 8888 -p 8888:8888 mmoran0032/jupyter:0.0.0
+
+This command allows you to connect to the Jupyter server based on the
+address used in the docker image. Copy-paste the provided address, then
+replace the host with ``localhost``.
+
+
+.. _`Docker`: https://www.docker.com/
