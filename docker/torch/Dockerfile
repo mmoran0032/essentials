@@ -1,7 +1,7 @@
 FROM mmoran0032/base:latest
 
 RUN conda install -c pytorch -y \
-    pytorch-cpu=0.4.0 torchvision=0.2.1 \
+    pytorch-cpu=0.4.0 torchvision=0.2.1
 RUN mkdir -p /torch
 RUN mkdir -p /torch/data
 
