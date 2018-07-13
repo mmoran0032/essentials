@@ -1,12 +1,10 @@
 FROM mmoran0032/base:latest
 
-RUN conda install -c pytorch \
+RUN conda install -c pytorch -y \
     pytorch-cpu=0.4.0 torchvision=0.2.1 \
-    -y
 RUN mkdir -p /torch
 RUN mkdir -p /torch/data
 
-EXPOSE 8787
 EXPOSE 8888
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
