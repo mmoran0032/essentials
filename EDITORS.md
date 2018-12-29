@@ -13,8 +13,9 @@ install by clicking on the `.deb` package link.
 
 ### Code Packages
 
-- `ms-python.python`
-- `stkb.rewrap`
+- `ms-python.python`: Python functionality, including embedded "notebook" interface
+- `stkb.rewrap`: quickly rewrap text to a column number
+- `shurelia.base16-tomorrow-dark-vscode`: current color scheme
 
 
 ## Atom
