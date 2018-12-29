@@ -13,6 +13,10 @@ Install history:
 -   2017-10-16 - Mac
 -   2016-05-03 - Linux
 
+NOTE: ``conda_autoenv`` currently works, but breaks the short path name in
+``PS1``, so I have to combine those together (probably by putting the
+autoenv code within Xrc directly).
+
 
 Beginning Installation
 ----------------------
