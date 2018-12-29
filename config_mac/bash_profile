@@ -27,8 +27,8 @@ export HISTSIZE=2500
 
 # sourcing
 . ~/.aliases
+. /opt/anaconda3/etc/profile.d/conda.sh
 eval "$(direnv hook bash)"
 
-# new conda sourcing
-. /opt/anaconda3/etc/profile.d/conda.sh
+export PATH=/opt/anaconda3/bin:~/bin:${PATH}
 

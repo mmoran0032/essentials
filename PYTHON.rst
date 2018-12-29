@@ -60,12 +60,6 @@ installed package.
     automatically converts code to be compliant with PEP8 guidelines. Every so
     often I want to use this, since it is a quick swipe across everything. For
     the most part, my code follows PEP8 pretty closely.
--   **progressbar** (``git@github.com:coagulant/progressbar-python3.git``), a
-    wrapper for loops that displays the progress of that loop in the terminal.
-    Nice for when I write longer, non-interactive analysis scripts.
-    -   Package ``tqdm`` looks to be a little better than progressbar (used by
-        ``pymc3``, which is a good sign). Install with
-        ``conda install -c conda-forge tqdm``.
 
 
 Environment Setup
