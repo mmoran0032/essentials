@@ -9,6 +9,7 @@ keep this stuff organized.
 *Updated for reinstalling Linux on 2017-12-17*
 
 Install history:
+-   2019-02-19 - Linux
 -   2017-12-17 - Linux
 -   2017-10-16 - Mac
 -   2016-05-03 - Linux
