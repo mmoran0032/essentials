@@ -32,6 +32,9 @@ def link_config_files(filepaths):
         if f.name == 'matplotlibrc':
             mpl_path = root / '.config' / 'matplotlib' / f.name
             remove_and_link(f, mpl_path)
+        elif f.name == 'vscode-settings.json':
+            vscode_path = root / '.config' / 'Code' / 'User' / 'settings.json'
+            remove_and_link(f, vscode_path)
         else:
             remove_and_link(f, root / f'.{f.name}')
 

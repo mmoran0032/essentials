@@ -5,6 +5,7 @@
     "editor.renderIndentGuides": false,
     "editor.rulers": [72, 80],
     "explorer.openEditors.visible": 0,
+    "explorer.confirmDelete": false,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,

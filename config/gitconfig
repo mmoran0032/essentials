@@ -15,7 +15,5 @@
 [url "git@gitlab.com:mmoran0032/"]
     insteadOf = gitlab:
 
-[core]
-    excludesfile = /home/mikemoran/.gitignore
 [http]
     sslVerify = false
