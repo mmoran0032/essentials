@@ -14,4 +14,4 @@ alias clean="~/bin/essentials/clean.py"
 alias f8="python3 -m flake8 --ignore=W391"
 alias jn="jupyter notebook"
 alias jl="jupyter lab"
-alias vpn="/opt/cisco/anyconnect/bin/vpn"
+

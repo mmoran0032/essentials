@@ -1,0 +1,16 @@
+{
+    "editor.folding": false,
+    "editor.links": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderIndentGuides": false,
+    "editor.rulers": [72, 80],
+    "explorer.openEditors.visible": 0,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.cursorBlinking": true,
+    "workbench.colorTheme": "Base16 Tomorrow Dark",
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.startupEditor": "none"
+}

@@ -10,6 +10,10 @@
 #
 #       source /path/to/conda_auto_env.sh
 #
+# Run the command from anywhere with:
+#
+#       conda_auto_env
+#
 
 function conda_auto_env() {
   if [ -e "environment.yml" ]; then
@@ -31,5 +35,6 @@ function conda_auto_env() {
   fi
 }
 
-export PROMPT_COMMAND=conda_auto_env
+# multiple prompt commands doesn't work, so just run it manually
+# export PROMPT_COMMAND=conda_auto_env
 

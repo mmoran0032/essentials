@@ -1,5 +1,5 @@
 # BASHRC for ARES2m (Linux Mint 18.3 64b)
-# updated 2018-12-16
+# Updated for ARES-3 2019-02-16
 
 # Making the prompt and terminal better
 function truncate {
@@ -32,12 +32,11 @@ export PATH=${PATH}:/home/mike/.local/bin
 # sourcing
 . ~/.aliases
 eval "$(dircolors ~/.colors-ls)"
-eval "$(direnv hook bash)"
 
 # conda
 . /home/mike/anaconda3/etc/profile.d/conda.sh
 conda activate
 
-# conda autoenv
+# conda_auto_env
 source /home/mike/bin/essentials/conda_autoenv.sh
 
