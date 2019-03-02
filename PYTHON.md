@@ -1,107 +1,47 @@
-PYTHON INSTALLATION
-===================
 
-To get your `python3` environment up an running, follow the steps below.
-Previously, you just installed things as needed, but since you've
-figured out exactly what you need, and since those requirements aren't
-going to change any time soon, just run this as a batch operation and
-get it over with.
+# PYTHON INSTALLATION
 
-Of course, you will end up adding to this as you go, but that's fine.
+You've modernized your view of python virtual environments to follow
+some best practices (e.g. everything in a separate environment). The
+final step would be using Docker containers, but that's only necessary
+if you are setting up a production system, so can be ignored here.
 
-Miniconda
----------
 
-Use the **miniconda** distribution of Anaconda, downloaded from [their
-website](http://conda.pydata.org/miniconda.html), and run the bash
-script. I place the directory within `/opt/miniconda3` to keep my home
-directory uncluttered. Obviously use the Python 3.X version of
-miniconda. With Mac OS, use the binary installer for the full Anaconda
-distribution, even though you don't really need it.
+## Anaconda
 
-*Almost* everything you need can be installed with conda, so run the
-below to grab everything and get going:
+You've moved from the Miniconda distribution to the full Anaconda
+distribution. The `base` environment has all of the standard packages
+already installed, so there is no need to specify a separate "default"
+environment for general work.
 
-    conda install beautifulsoup4 cython flake8 flask
-                  h5py html5lib jupyter lxml
-                  matplotlib mpmath numpy
-                  pandas patsy psutil psycopg2 requests
-                  scikit-learn scikit-image scipy
-                  seaborn setuptools sqlalchemy statsmodels sympy
+Download the 3.X distribution from their website:
+https://www.anaconda.com/distribution/. You can either use the graphical
+installer or the command line utility. I personally prefer the command
+line version, but the end result is identical. You can either keep the
+installation location to be your home directory or somewhere else, such
+as `/opt/`, but this choice doesn't matter much.
 
-That's it! It's a mix of scientific, machine learning, and helper
-packages that you've been using frequently, and some you haven't been
-using frequently. Go through the list again every time you reinstall, as
-there are probably some packages that you could take out of the mix.
+Your `.bashrc` is already set up to point to the installation in your
+home directory, so if that is your choice, you do not need to add the
+sourcing commands to your profile. Launching a new terminal should show
+that `conda` is available and the `base` environment is active.
 
-You can also check which packages are installed with `conda list`. This
-does include packages that you didn't explicitly call for, so will be
-longer than the above.
 
-Some packages require you to install them with
-`conda install -c conda-forge package`, listed below:
-
--   `geopandas`: Working with geospatial data
--   `geoplot`: Plotting geospatial data
--   `lime`: Locally-Interpretable Model Evaluation
--   `pymc3`: Bayesian models
--   `sqlalchemy-utils`: Additional database help
-
-Additional Installs
--------------------
-
-There are a few packages that aren't included in Anaconda, so you'll
-have to download and install them with
-`python3 setup.py install --user`. When checking your installed
-packages, these will still show up, but as a pip-installed package.
-
--   **autopep8** (`git@github.com:hhatto/autopep8.git`), a utility that
-    automatically converts code to be compliant with PEP8 guidelines.
-    Every so often I want to use this, since it is a quick swipe across
-    everything. For the most part, my code follows PEP8 pretty closely.
-
-Environment Setup
------------------
+## Environment Setup
 
 Environments are used used to isolate Python versions and packages, and
-managed by Anaconda. Here is a quick way to get those environments to
-work automatically when changing to the directory in question:
+managed by Anaconda. Environments are specified by an `environment.yml`
+file, which includes the conda channels and packages necessary to fully
+specify the environment. Specific versions or version ranges can also be
+specified, and for a production system should be specified.
 
-1.  Create an `environment.yml` file that contains the name of the
-    environment you want to create and any dependencies you want.
-    Example:
+The environments that I use are contained in `environments/` in order
+for them to be properly versioned and monitored. With the slightly
+modified `conda_autoenv.sh` script (adapted from the original GitHub
+source: https://github.com/chdoig/conda-auto-env), you do not need to
+remember the specifics of creating new environments. Simply define a new
+`environment.yml` file in the directory, then run `autoenv`.
 
-        name: ENVNAME
-        dependencies:
-        - python=3
-        - numpy
-
-    If there are dependencies that require `pip`, include the following:
-
-        - pip:
-          - packagename
-
-2.  Create the environment with `conda env create`, which uses the file
-    we just created to set up the environment.
-3.  Create a `.envrc` file that contains the single line, where
-    `ENVNAME` needs to be replaced with the same name you used in the
-    `environment.yml` file:
-
-        source activate ENVNAME
-
-4.  Make sure that `direnv` is installed, and if not, install it. You
-    will also need to allow `direnv` to run in this directory by
-    running:
-
-        direnv allow
-
-5.  Do any source control work that you need to do.
-
-When you change into the directory, the `.envrc` file combined with
-`direnv` will automatically source your created virtual environment, so
-you don't have to automatically do it. Additionally, it will unsource it
-when you change out of that directory.
-
-Information provided by [TD
-Hopper](http://tdhopper.com/blog/2015/Nov/24/my-python-environment-workflow-with-conda/)
-and adapted to use `direnv` instead of `autoenv`.
+When you update an environment from the command line, the environment
+file does not update. You have to do that manually so that the
+environment and the specification do not get out of sync.

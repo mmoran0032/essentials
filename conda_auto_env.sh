@@ -12,10 +12,10 @@
 #
 # Run the command from anywhere with:
 #
-#       conda_auto_env
+#       autoenv
 #
 
-function conda_auto_env() {
+function autoenv() {
   if [ -e "environment.yml" ]; then
     # echo "environment.yml file found"
     ENV=$(head -n 1 environment.yml | cut -f2 -d ' ')
@@ -36,5 +36,4 @@ function conda_auto_env() {
 }
 
 # multiple prompt commands doesn't work, so just run it manually
-# export PROMPT_COMMAND=conda_auto_env
-
+# export PROMPT_COMMAND=autoenv
