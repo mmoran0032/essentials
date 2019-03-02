@@ -8,13 +8,6 @@ start from scratch, this will help you out tremendously. Honestly, I'm
 surprised you made it as far as you did without making one of these. Now
 it's finally time to keep this stuff organized.
 
-Install history:
-
-- 2019-02-19: Linux
-- 2017-12-17: Linux
-- 2017-10-16: Mac
-- 2016-05-03: Linux
-
 For Mac installs, you're mostly onlly going to care about the your
 `bash_profile`, VSCode settings, and Anaconda/`python`. Since the Mac
 installations are for your work computers, their setup will be very
@@ -25,6 +18,7 @@ one from bloating.
 Your special utility `conda_autoenv` currently works, but breaks the
 short path name in `PS1`, so I have to combine those together (probably
 by putting the autoenv code within Xrc directly).
+
 
 ## Beginning Installation
 
@@ -57,6 +51,21 @@ of these are actual tools and others are for your particular style.
 
         conda install -c conda-forge autopep8 doc8 glances
 
+### Applications
+
+The applications listed below are installed by downloading the
+application from the respective website. These applications are your
+default applications in the respective area.
+
+- Google Chrome: https://www.google.com/chrome/
+- Spotify: https://www.spotify.com/us/download/linux/
+- VSCode: https://code.visualstudio.com/
+
+Spotify does not have any additional configuration beyond signing in.
+The Chrome Extensions that you use are linked to your account and should
+also be installed automatically when you sign in to Chrome. Additional
+steps for setting up VSCode are given in `EDITORS.md`.
+
 --
 
 Adjust any computer settings (Terminal background and scrollback,
@@ -69,8 +78,7 @@ external drive that you want.
 
 
 
-Additional Installs
--------------------
+## Additional Installs
 
 Since Linux is free, you need to install some drivers for things like
 DVD playback and mp3 decoding:
@@ -81,75 +89,14 @@ DVD playback and mp3 decoding:
 Once you have those, you can grab a few more important programs:
 
     apt install skype audacious luckybackup texlive-full pavucontrol
-        soundconverter pandoc direnv
+        soundconverter
 
 For `luckybackup`, you'll need to set up the actual backup location and
 make sure that there aren't weird file duplicates from copying things
 over.
 
-Additional `apt` installs:
 
--   ffmpeg
-
-
-
-OPT Directory Contents
-----------------------
-
-The following utilities are not necessary for day-to-day work, but are
-good to have for day-to-day life. Your `/opt/` directory will get full
-with a few things before these (conda, chrome, etc), so the directory
-should already be there and set up for your work. Any additional
-utilities will most likely be put here, including non-specific ones I
-have repositories on GitHub for.
-
-### Games
-
-[Mednafen](http://mednafen.fobby.net/releases/), a multi-system
-emulator. Install it with:
-
-    apt install libsndfile1-dev libsdl1.2-dev
-    ./configure && make -j 9 && sudo make install
-
-Your two SNES controllers can be used for the input. You'll want to
-check that the input can actually be read (for all required controllers)
-with:
-
-    sudo chmod 666 /dev/input/js0
-    jstest /dev/input/js0
-
-to make sure everything is registering. After installing, you need to
-edit the config file (`~/.mednafen/mednafen.cfg`) so that `sounddevice`
-is `sexyal-literal-default`. The sound seems to be staticy for the first
-minute or two, but calms down after. You will probably have to
-reconfigure the controller buttons as well:
-
-1.  Plug in all controllers tha you wish to use
-2.  Starting with the first controller, hit `alt+shift+1` and follow the
-    prompts for button presses
-3.  Additional controllers are handled with `alt-shift+X`, up to your
-    maximum port number or four
-
-You can also switch between fullscreen and windowed by pressing
-`Alt+Enter`.
-
-[RFTG](http://keldon.net/rftg/), the computer version of the card game.
-Includes the *Alien Artifacts* expansion, but not *Xeno Invasion*. Since
-the last update was a while ago, I have no idea if it will be updated to
-include it, but who knows? Install with:
-
-    apt install libgtk2.0-dev
-    ./configure && make -j 9 && sudo make install
-
-[Steam](http://store.steampowered.com/about/), the all-in-one gaming
-source. It is available through apt, but if I remember correctly it
-didn't work quite right when I used that version. So, download it from
-the website, start it up, and re-download all of your old games. You can
-also copy some save data over from your external, so keep track the next
-time you do that.
-
-Docker
-------
+## Docker
 
 Use [Docker](https://www.docker.com/) for your encapsulated projects.
 Since most of these are python-based, you'll end up doing similar work
@@ -172,3 +119,17 @@ to it by running:
 This command allows you to connect to the Jupyter server based on the
 address used in the docker image. Copy-paste the provided address, then
 replace the host with `localhost`.
+
+
+## Install History
+
+Log of the installations you've done using this package. For
+completeness, the partial Mac installs are also listed below, even
+though they don't use the entirety of this repository and are not the
+focus of tracking installations.
+
+- 2019-02-19: `ARES-3` (Linux Mint 19 desktop)
+- 2019-01-15: *White Ops* Macbook
+- 2017-12-17: `ARES-2m` (Linux Mint 18 laptop)
+- 2017-10-16: *Gartner* Macbook
+- 2016-05-03: `ARES-2` (Ubuntu 16 laptop)
