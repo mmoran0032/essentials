@@ -1,0 +1,40 @@
+# BASHRC for ARES-3 (Linux Mint 19.1 64b)
+
+# Making the prompt and terminal better
+function truncate {
+  newPWD="${PWD/#$HOME/~}"
+  maxlen=30
+  maxshow=27
+  if [ ${#newPWD} -gt $maxlen ]; then
+    newPWD="...${newPWD: -$maxshow}"
+  fi
+}
+
+PROMPT_COMMAND=truncate
+export PS1="\[\033[1;32m\][\[\033[1;30m\]\u@\h\[\033[m\] \[\033[1;31m\]\${newPWD}\[\033[1;32m\]]\[\033[m\] "
+
+# making sure vim works well
+export EDITOR=/usr/bin/vim
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+  export TERM=xterm-256color
+fi
+
+# Adjusting bash_history to be more helpful
+export HISTIGNORE="&:[ ]*:exit:hide"
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M: "
+export HISTSIZE=2500
+
+# Path manipulations
+export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:${LIBRARY_PATH}
+export PATH=${PATH}:/home/mike/bin
+
+# sourcing
+. ~/.aliases
+eval "$(dircolors ~/.colors-ls)"
+
+# conda
+. /home/mike/anaconda3/etc/profile.d/conda.sh
+conda activate
+
+# autoenv for conda environments
+source /home/mike/bin/essentials/conda_auto_env.sh

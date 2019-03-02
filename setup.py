@@ -1,47 +1,36 @@
 #!/usr/bin/env python3
 
 
-import argparse
-from itertools import chain
 from pathlib import Path
 
 root = Path.home()
 config = Path('config').resolve()
-config_mac = Path('config_mac').resolve()
-config_linux = Path('config_linux').resolve()
 
 
 def main():
-    p = argparse.ArgumentParser()
-    p.add_argument('--mac', default=False, action='store_true')
-    args = p.parse_args()
-    files = get_config_files(args.mac)
-    link_config_files(files)
-
-
-def get_config_files(use_mac_files):
-    files = config_linux.iterdir()
-    if use_mac_files:
-        files = config_mac.iterdir()
-    return chain(files, config.iterdir())
-
-
-def link_config_files(filepaths):
+    filepaths = config.iterdir()
     for f in filepaths:
-        # special handling for non-root install locations
-        if f.name == 'matplotlibrc':
-            mpl_path = root / '.config' / 'matplotlib' / f.name
-            remove_and_link(f, mpl_path)
-        elif f.name == 'vscode-settings.json':
-            vscode_path = root / '.config' / 'Code' / 'User' / 'settings.json'
-            remove_and_link(f, vscode_path)
-        else:
-            remove_and_link(f, root / f'.{f.name}')
+        print(f'linking {f.name}...')
+        target_path = determine_target_path(f)
+        remove_and_link(f, target_path)
+    print('done')
+
+
+def determine_target_path(f):
+    # handle non-root install locations for particular files
+    if f.name == 'matplotlibrc':
+        _path = root / '.config' / 'matplotlib' / f.name
+    elif f.name == 'vscode-settings.json':
+        _path = root / '.config' / 'Code' / 'User' / 'settings.json'
+    else:
+        _path = root / f'.{f.name}'
+    return _path
 
 
 def remove_and_link(orig, target):
     if target.exists():
         target.unlink()
+    target.parent.mkdir(exist_ok=True)  # ensure folders are in place
     target.symlink_to(orig)
 
 
