@@ -10,7 +10,6 @@ config = Path('config').resolve()
 def main():
     filepaths = config.iterdir()
     for f in filepaths:
-        print(f'linking {f.name}...')
         target_path = determine_target_path(f)
         remove_and_link(f, target_path)
     print('done')
@@ -29,8 +28,10 @@ def determine_target_path(f):
 
 def remove_and_link(orig, target):
     if target.exists():
+        print(f'unlinking {target}')
         target.unlink()
     target.parent.mkdir(exist_ok=True)  # ensure folders are in place
+    print(f'linking {target.name}')
     target.symlink_to(orig)
 
 

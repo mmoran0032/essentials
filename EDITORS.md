@@ -1,36 +1,36 @@
-TEXT EDITORS
-============
+
+# TEXT EDITORS
 
 You switch between multiple editors a lot, so this will help you get
-them set up. Right now, you are using vim for small edits to single
-files and code for larger projects.
+them set up. Right now, you are using `vim` for small edits to single
+files and `code` for larger projects. Both are essential tools for your
+work.
 
-Code
-----
 
-You've recently started using Visual Studio Code from Microsoft as your
-main editor (available \[here\](<https://code.visualstudio.com/>).
-Download and install by clicking on the .deb package link.
+## VSCode
 
-**Code Packages**
+VSCode is rapidly becoming an amazing development environment for both
+data science work (through its integration with Jupyter kernels) and
+package development. You really don't even need the web view for Jupyter
+anymore, especially given that the web view has worse linting, editing,
+and refactoring functionality. Compared to previous editors (Sublime
+Text, Atom), VSCode has a cleaner interface and I've enjoyed working in
+it more.
 
--   *ms-python.python*: Python functionality, including embedded
-    "notebook" interface
--   *stkb.rewrap*: quickly rewrap text to a column number
--   *shurelia.base16-tomorrow-dark-vscode*: current color scheme
+Your main user preferences are linked over during the basic setup. You
+will need to install the following packages through the included package
+manager for your main development work:
 
-Vim
----
+-   `ms-python.python`: Python functionality, including the embedded
+    notebook interface
+-   `stkb.rewrap`: quickly rewrap text to a column number
+-   `shurelia.base16-tomorrow-dark-vscode`: current color scheme
 
-Useful for short edits to files. Get it with apt install vim, and use
-the config file in this directory to control the behavior. Since the
-.vim directory is within my backup, just copy over the autoload, bundle,
-and colors directories to complete installation.
 
-You need *pathogen*, *vim-airline*, and *vim-bufferline*, and you're
-using the *distinguished* color scheme. Install these from your external
-backup, since installing them the regular Vim way didn't work and I
-didn't bother to try to figure out the better way. Additionally since
-the packages you're using are older and your colorscheme (may be) is
-customized, the "proper" method most likely would still result in a
-different setup than you want.
+## Vim
+
+Vim is useful for short edits to files and for longer `git` commit
+messages, but past that you usually just use VSCode. The configuration
+details include your `.vimrc` file and the `.vim` directory that
+contains the additional packages you'll need. All of these are linked
+through the basic setup instructions, so there's nothing else to do.
