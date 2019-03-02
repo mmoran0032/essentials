@@ -4,9 +4,13 @@ from pathlib import Path
 
 
 class Cleaner:
-    extensions = ('aux', 'bbl', 'blg', 'fdb_latexmk', 'fls',
-                  'lis', 'lof', 'log', 'lot', 'nav', 'out',
-                  'snm', 'spl', 'syn', 'toc')
+    # these extensions are mostly LaTeX, which thankfully you shouldn't
+    # need to worry about because of online utilities and the fact that
+    # you don't write scientific papers anymore
+    extensions = (
+        'aux', 'bbl', 'blg', 'fdb_latexmk', 'fls', 'lis', 'lof', 'log', 'lot',
+        'nav', 'out', 'snm', 'spl', 'syn', 'toc'
+    )
 
     def __init__(self, directory='.'):
         self.directory = Path(directory)
