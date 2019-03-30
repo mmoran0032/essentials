@@ -27,6 +27,7 @@ export HISTSIZE=2500
 # Path manipulations
 export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:${LIBRARY_PATH}
 export PATH=${PATH}:/home/mike/bin
+export PATH=${PATH}:/home/mike/julia/bin
 
 # sourcing
 . ~/.aliases
