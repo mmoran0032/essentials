@@ -1,0 +1,11 @@
+name: altair
+channels:
+- conda-forge
+dependencies:
+- python=3.7
+- altair
+- jupyterlab
+- numpy
+- pandas
+- vega_datasets
+

@@ -51,6 +51,12 @@ of these are actual tools and others are for your particular style.
 
         conda install -c conda-forge autopep8 doc8 glances
 
+6.  Install Julia (from the
+    [Downloads page](https://julialang.org/downloads/)) and extract::
+
+        tar zxvf julia-1.1.0-linux-x86_64.tar.gz
+        mv julia-1.1.0 ~/julia
+
 ### Applications
 
 The applications listed below are installed by downloading the

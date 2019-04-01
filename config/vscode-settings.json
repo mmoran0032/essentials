@@ -3,6 +3,7 @@
     "editor.fontFamily": "'Droid Sans Mono', monospace, 'Droid Sans Fallback'",
     "editor.links": false,
     "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderFinalNewline": true,
     "editor.renderIndentGuides": false,
     "editor.rulers": [72, 80],
     "explorer.openEditors.visible": 0,
