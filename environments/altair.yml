@@ -7,5 +7,6 @@ dependencies:
 - jupyterlab
 - numpy
 - pandas
+- requests
 - vega_datasets
 

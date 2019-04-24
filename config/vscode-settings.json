@@ -6,6 +6,7 @@
     "editor.renderFinalNewline": true,
     "editor.renderIndentGuides": false,
     "editor.rulers": [72, 80],
+    "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
     "explorer.confirmDelete": false,
     "files.insertFinalNewline": true,
@@ -15,6 +16,5 @@
     "terminal.integrated.cursorBlinking": true,
     "workbench.colorTheme": "Base16 Tomorrow Dark",
     "workbench.editor.closeOnFileDelete": true,
-    "workbench.startupEditor": "none",
-    "explorer.confirmDragAndDrop": false
+    "workbench.startupEditor": "none"
 }
