@@ -40,7 +40,6 @@ manager for your main development work:
 - Material Theme `equinusocio.vsc-material-theme`
 - Material Theme Icons `equinusocio.vsc-material-theme-icons`
 
-
 ## Vim
 
 Vim is useful for short edits to files and for longer `git` commit

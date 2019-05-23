@@ -62,26 +62,18 @@ The applications listed below are installed by downloading the
 application from the respective website. These applications are your
 default applications in the respective area.
 
-- Google Chrome: https://www.google.com/chrome/
-- Spotify: https://www.spotify.com/us/download/linux/
-- VSCode: https://code.visualstudio.com/
+- Google Chrome: <https://www.google.com/chrome/>
+- Spotify: <https://www.spotify.com/us/download/linux/>
+- VSCode: <https://code.visualstudio.com/>
 
 Spotify does not have any additional configuration beyond signing in.
 The Chrome Extensions that you use are linked to your account and should
 also be installed automatically when you sign in to Chrome. Additional
 steps for setting up VSCode are given in `EDITORS.md`.
 
---
-
 Adjust any computer settings (Terminal background and scrollback,
 sounds, user picture, etc) and download any files from the backed-up
 external drive that you want.
-
-
-
-
-
-
 
 ## Additional Installs
 
@@ -99,7 +91,6 @@ Once you have those, you can grab a few more important programs:
 For `luckybackup`, you'll need to set up the actual backup location and
 make sure that there aren't weird file duplicates from copying things
 over.
-
 
 ## Docker
 
@@ -124,7 +115,6 @@ to it by running:
 This command allows you to connect to the Jupyter server based on the
 address used in the docker image. Copy-paste the provided address, then
 replace the host with `localhost`.
-
 
 ## Install History
 
