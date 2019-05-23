@@ -23,15 +23,12 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "materialTheme.accent": "Orange",
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "python.linting.flake8Enabled": true,
     "terminal.integrated.cursorBlinking": true,
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Material Theme Ocean High Contrast",
-    "workbench.iconTheme": "eq-material-theme-icons-ocean",
-    "workbench.startupEditor": "none",
-    "workbench.statusBar.feedback.visible": false,
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#FF7042",
         "list.activeSelectionForeground": "#FF7042",
@@ -53,5 +50,9 @@
         "menu.selectionForeground": "#FF7042",
         "menubar.selectionForeground": "#FF7042"
     },
-    "materialTheme.accent": "Orange"
+    "workbench.colorTheme": "Material Theme Ocean High Contrast",
+    "workbench.iconTheme": "eq-material-theme-icons-ocean",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.feedback.visible": false
 }
+
