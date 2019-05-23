@@ -31,5 +31,8 @@ function conda_auto_env() {
   fi
 }
 
-export PROMPT_COMMAND=conda_auto_env
+# I can't get this to run at the same time as my shortened PATH
+# manipulation, so for now just run `conda_auto_env` from a directory
+# that has an `environment.yml` file to boot it up
 
+# export PROMPT_COMMAND=conda_auto_env

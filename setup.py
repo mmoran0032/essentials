@@ -29,9 +29,10 @@ def get_config_files(use_mac_files):
 def link_config_files(filepaths):
     for f in filepaths:
         # special handling for non-root install locations
-        if f.name == 'init.coffee':
-            remove_and_link(f, root / '.atom' / f.name)
-        elif f.name == 'matplotlibrc':
+        # if f.name == 'init.coffee':
+        #     remove_and_link(f, root / '.atom' / f.name)
+        # elif f.name == 'matplotlibrc':
+        if f.name == 'matplotlibrc':
             mpl_path = root / '.config' / 'matplotlib' / f.name
             remove_and_link(f, mpl_path)
         else:
