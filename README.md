@@ -1,7 +1,7 @@
 
 # INSTALLATION NOTES
 
-## *Updated for reinstalling Linux in early 2019*
+Updated for reinstalling Linux in early 2019
 
 The next time you wipe your hard drive or decide to upgrade and need to
 start from scratch, this will help you out tremendously. Honestly, I'm
