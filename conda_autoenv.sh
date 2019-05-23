@@ -11,7 +11,7 @@
 #       source /path/to/conda_auto_env.sh
 #
 
-function conda_auto_env() {
+function autoenv() {
   if [ -e "environment.yml" ]; then
     # echo "environment.yml file found"
     ENV=$(head -n 1 environment.yml | cut -f2 -d ' ')

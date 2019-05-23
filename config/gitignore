@@ -1,8 +1,0 @@
-__pycache__
-*.py[cod]
-
-build/
-*.egg-info/
-*.egg
-
-.DS_Store

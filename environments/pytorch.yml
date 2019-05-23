@@ -1,0 +1,13 @@
+name: pytorch_work
+channels:
+- conda-forge
+- pytorch
+dependencies:
+- python=3.7
+- cudatoolkit=10.0
+- jupyterlab
+- numpy
+- pandas
+- pytorch
+- torchvision
+
