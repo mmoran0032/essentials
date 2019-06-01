@@ -4,12 +4,17 @@ channels:
 - pytorch
 dependencies:
 - python=3.7
+- altair
 - cudatoolkit=10.0
 - jupyterlab
+- matplotlib
 - numpy
 - pandas
 - pip:
   - gputil
 - pytorch
+- requests
+- scikit-learn
+- scipy
 - torchvision
 - umap-learn
