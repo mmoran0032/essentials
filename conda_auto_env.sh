@@ -30,6 +30,8 @@ function autoenv() {
                 source activate $ENV
             fi
         fi
+    else
+        echo "No environment.yml file present"
     fi
 }
 

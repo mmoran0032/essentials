@@ -1,0 +1,20 @@
+name: alphazero
+channels:
+- conda-forge
+- pytorch
+dependencies:
+- python=3.7
+- altair
+- cudatoolkit=10.0
+- flake8
+- jupyterlab
+- matplotlib
+- numpy
+- pandas
+- pytorch
+- requests
+- scikit-learn
+- scipy
+- torchvision
+- tqdm
+- umap-learn
