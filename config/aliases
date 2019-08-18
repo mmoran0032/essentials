@@ -14,3 +14,4 @@ alias ap8="autopep8 --aggressive --recursive --in-place --verbose --ignore=W391"
 alias clean="~/bin/essentials/clean.py"
 alias f8="python3 -m flake8 --ignore=W391"
 alias jl="jupyter lab"
+

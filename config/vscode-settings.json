@@ -25,6 +25,8 @@
     "files.trimTrailingWhitespace": true,
     "materialTheme.accent": "Orange",
     "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "python.formatting.blackArgs": ["--line-length", "80"],
+    "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
     "terminal.integrated.cursorBlinking": true,
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
@@ -39,7 +41,7 @@
         "list.highlightForeground": "#FF7042",
         "list.inactiveSelectionForeground": "#FF7042",
         "menu.selectionForeground": "#FF7042",
-        "menubar.selectionForeground": "#FF7042"
+        "menubar.selectionForeground": "#FF7042",
         "notificationLink.foreground": "#FF7042",
         "panelTitle.activeBorder": "#FF7042",
         "pickerGroup.foreground": "#FF7042",
