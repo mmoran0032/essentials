@@ -24,11 +24,16 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "materialTheme.accent": "Orange",
+    "python.dataScience.autoPreviewNotebooksInInteractivePane": true,
+    "python.dataScience.ignoreVscodeTheme": true,
     "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "python.formatting.provider": "black",
+    "python.jediEnabled": false,
     "python.linting.flake8Enabled": true,
+    "python.testing.pytestEnabled": true,
     "terminal.integrated.cursorBlinking": true,
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#FF7042",
         "breadcrumb.activeSelectionForeground": "#FF7042",
@@ -39,7 +44,7 @@
         "list.highlightForeground": "#FF7042",
         "list.inactiveSelectionForeground": "#FF7042",
         "menu.selectionForeground": "#FF7042",
-        "menubar.selectionForeground": "#FF7042"
+        "menubar.selectionForeground": "#FF7042",
         "notificationLink.foreground": "#FF7042",
         "panelTitle.activeBorder": "#FF7042",
         "pickerGroup.foreground": "#FF7042",
@@ -53,5 +58,7 @@
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-ocean",
     "workbench.startupEditor": "none",
-    "workbench.statusBar.feedback.visible": false
+    "python.dataScience.askForKernelRestart": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
