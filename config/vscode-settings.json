@@ -27,6 +27,7 @@
     "python.dataScience.autoPreviewNotebooksInInteractivePane": true,
     "python.dataScience.ignoreVscodeTheme": true,
     "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "python.formatting.blackArgs": ["--line-length", "80"],
     "python.formatting.provider": "black",
     "python.jediEnabled": false,
     "python.linting.flake8Enabled": true,

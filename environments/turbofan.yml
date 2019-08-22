@@ -1,0 +1,6 @@
+name: turbofan
+channels:
+- conda-forge
+- pytorch
+dependencies:
+- python=3.7
