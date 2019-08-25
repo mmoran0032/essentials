@@ -38,9 +38,8 @@
     "python.linting.flake8Enabled": true,
     "python.testing.pytestEnabled": true,
     "terminal.integrated.cursorBlinking": true,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#FF7042",
         "breadcrumb.activeSelectionForeground": "#FF7042",
