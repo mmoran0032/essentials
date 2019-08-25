@@ -12,6 +12,7 @@
     "editor.renderWhitespace": "none",
     "editor.rulers": [72, 80],
     "editor.smoothScrolling": true,
+    "editor.suggestSelection": "first",
     "editor.tokenColorCustomizations": {
         "keywords": {
             "fontStyle": "bold"
@@ -24,13 +25,22 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "materialTheme.accent": "Orange",
+    "python.dataScience.askForKernelRestart": false,
+    "python.dataScience.autoPreviewNotebooksInInteractivePane": true,
+    "python.dataScience.ignoreVscodeTheme": true,
     "python.dataScience.sendSelectionToInteractiveWindow": true,
-    "python.formatting.blackArgs": ["--line-length", "80"],
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "80"
+    ],
     "python.formatting.provider": "black",
+    "python.jediEnabled": false,
     "python.linting.flake8Enabled": true,
+    "python.testing.pytestEnabled": true,
     "terminal.integrated.cursorBlinking": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#FF7042",
         "breadcrumb.activeSelectionForeground": "#FF7042",
@@ -50,10 +60,9 @@
         "settings.headerForeground": "#FF7042",
         "settings.modifiedItemIndicator": "#FF7042",
         "tab.activeBorder": "#FF7042",
-        "textLink.foreground": "#FF7042",
+        "textLink.foreground": "#FF7042"
     },
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-ocean",
-    "workbench.startupEditor": "none",
-    "workbench.statusBar.feedback.visible": false
+    "workbench.startupEditor": "none"
 }
