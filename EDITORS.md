@@ -24,7 +24,10 @@ manager for your main development work:
 
 - Docker `peterjausovec.vscode-docker`
 - gitignore `codezombiech.gitignore`
+- Markdown Checkbox `pkief.markdown-checkbox`
 - markdownlint `davidanson.vscode-markdownlint`
+- Material Theme `equinusocio,vsc-material-theme`
+- Material Theme Icons `equinusocio.vsc-material-theme-icons`
 - Prettify JSON `mohsen1.prettify-json`
 - reStructuredText `lextudio.restructuredtext`
 - Rewrap `stkb.rewrap`
