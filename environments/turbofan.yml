@@ -1,6 +1,19 @@
 name: turbofan
 channels:
 - conda-forge
+- districtdatalabs
 - pytorch
 dependencies:
 - python=3.7
+- altair
+- cudatoolkit=10.0
+- jupyterlab
+- pandas
+- pytest
+- pytorch
+- scikit-learn
+- shap
+- torchvision
+- tqdm
+- umap-learn
+- yellowbrick

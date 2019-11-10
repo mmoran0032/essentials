@@ -26,7 +26,6 @@
     "files.trimTrailingWhitespace": true,
     "materialTheme.accent": "Orange",
     "python.dataScience.askForKernelRestart": false,
-    "python.dataScience.autoPreviewNotebooksInInteractivePane": true,
     "python.dataScience.ignoreVscodeTheme": true,
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "python.formatting.blackArgs": [
