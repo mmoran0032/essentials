@@ -16,6 +16,12 @@ and refactoring functionality. Compared to previous editors (Sublime
 Text, Atom), VSCode has a cleaner interface and I've enjoyed working in
 it more.
 
+Additonal support in VSCode for Jupyter Notebooks has been extremely
+nice as well. It is almost to the point where I wouldn't need to use the
+Jupyterlab web interface that much, especially since I'm not doing
+anything weird with Dask monitoring or anything more advanced than just
+code editing.
+
 Your main user preferences are linked over during the basic setup. You
 will need to install the following packages through the included package
 manager for your main development work:
