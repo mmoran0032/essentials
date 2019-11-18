@@ -21,13 +21,22 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
+    "files.associations": {
+        "*.jsonnet": "json"
+    },
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "materialTheme.accent": "Orange",
     "python.autoComplete.extraPaths": ["."],
     "python.dataScience.askForKernelRestart": false,
-    "python.dataScience.ignoreVscodeTheme": true,
+    "python.dataScience.ignoreVscodeTheme": false,
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "python.formatting.blackArgs": [
         "--line-length",
@@ -64,14 +73,5 @@
     },
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-ocean",
-    "workbench.startupEditor": "none",
-    "files.associations": {
-        "*.jsonnet": "json"
-    },
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    }
+    "workbench.startupEditor": "none"
 }

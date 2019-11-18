@@ -38,7 +38,7 @@ of these are actual tools and others are for your particular style.
 
 2. Create a new SSH key:
 
-        ssh-keygen -t rsa -b 4096 -C "mmoran0032@gmail.com"
+        ssh-keygen -t ed25519 -C "mmoran0032@gmail.com"
 
 3. Install `python` with Anaconda by following the instructions in
    `PYTHON.md` for your primary development work.
@@ -74,6 +74,11 @@ steps for setting up VSCode are given in `EDITORS.md`.
 Adjust any computer settings (Terminal background and scrollback,
 sounds, user picture, etc) and download any files from the backed-up
 external drive that you want.
+
+You have started using Firefox more, due to your increased awareness of
+what Google collects and uses. You haven't started taking very hard
+stances on technical tools yet (e.g. you still host code on Github), but
+that is a growing part of how you think about your technical life.
 
 ## Additional Installs
 

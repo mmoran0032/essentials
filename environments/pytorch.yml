@@ -7,12 +7,18 @@ dependencies:
 - python=3.7
 - altair
 - black
+- captum
 - cudatoolkit=10.0
 - flake8
 - jupyterlab
+- matplotlib
 - numpy
 - nvidia-ml-py3
 - pandas
+- pip
+- pip:
+  - hydra-core
+  - pytorch-lightning
 - pytorch
 - requests
 - scikit-learn
