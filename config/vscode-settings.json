@@ -36,7 +36,6 @@
     "materialTheme.accent": "Orange",
     "python.autoComplete.extraPaths": ["."],
     "python.dataScience.askForKernelRestart": false,
-    "python.dataScience.ignoreVscodeTheme": false,
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "python.formatting.blackArgs": [
         "--line-length",
