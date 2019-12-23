@@ -126,7 +126,7 @@ replace the host with `localhost`.
 For compiling PDFs from Markdown/RST files using `pandoc`, you need
 LaTeX installed. Run
 
-    apt install texlive-latex-base lmodern
+    apt install texlive-latex-base lmodern texlive-fonts-recommended
 
 ## Install History
 
