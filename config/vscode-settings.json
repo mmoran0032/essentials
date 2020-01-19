@@ -72,5 +72,7 @@
     },
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-ocean",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "git.ignoreMissingGitWarning": true,
+    "terminal.integrated.shell.osx": "/bin/zsh"
 }
