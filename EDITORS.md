@@ -8,6 +8,9 @@ work.
 
 ## VSCode
 
+*Note: I'm trying to move over to VSCodium, which removes the telemetry*
+*portion of VSCode. Nothing else should be different.*
+
 VSCode is rapidly becoming an amazing development environment for both
 data science work (through its integration with Jupyter kernels) and
 package development. You really don't even need the web view for Jupyter
@@ -21,6 +24,11 @@ nice as well. It is almost to the point where I wouldn't need to use the
 Jupyterlab web interface that much, especially since I'm not doing
 anything weird with Dask monitoring or anything more advanced than just
 code editing.
+
+*Note: you can also get all of your extensions with:*
+```zsh
+code --list-extensions | tee ~/vscode-extensions.txt
+```
 
 Your main user preferences are linked over during the basic setup. You
 will need to install the following packages through the included package
