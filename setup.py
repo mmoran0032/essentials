@@ -7,7 +7,7 @@ root = Path.home()
 config = Path("config").resolve()
 
 
-def main():
+def main() -> None:
     filepaths = config.iterdir()
     for f in filepaths:
         target_path = determine_target_path(f)
@@ -15,7 +15,7 @@ def main():
     print("done")
 
 
-def determine_target_path(f):
+def determine_target_path(f: Path) -> Path:
     # handle non-root install locations for particular files
     if f.name == "matplotlibrc":
         _path = root / ".config" / "matplotlib" / f.name
@@ -26,7 +26,7 @@ def determine_target_path(f):
     return _path
 
 
-def remove_and_link(orig, target):
+def remove_and_link(orig: Path, target: Path) -> None:
     if target.exists():
         print(f"unlinking {target}")
         target.unlink()
