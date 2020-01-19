@@ -19,7 +19,7 @@ def determine_target_path(f):
     # handle non-root install locations for particular files
     if f.name == 'matplotlibrc':
         _path = root / '.config' / 'matplotlib' / f.name
-    elif f.name == 'vscode-settings.json':
+    elif f.name == 'vscode-settings.json':  # update for VSCode
         _path = root / '.config' / 'Code' / 'User' / 'settings.json'
     else:
         _path = root / f'.{f.name}'

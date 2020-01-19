@@ -121,6 +121,13 @@ This command allows you to connect to the Jupyter server based on the
 address used in the docker image. Copy-paste the provided address, then
 replace the host with `localhost`.
 
+## LaTeX
+
+For compiling PDFs from Markdown/RST files using `pandoc`, you need
+LaTeX installed. Run
+
+    apt install texlive-latex-base lmodern texlive-fonts-recommended
+
 ## Install History
 
 Log of the installations you've done using this package. For
