@@ -33,6 +33,8 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "git.ignoreMissingGitWarning": true,
     "materialTheme.accent": "Orange",
     "python.autoComplete.extraPaths": ["."],
     "python.dataScience.askForKernelRestart": false,
@@ -47,6 +49,7 @@
     "python.testing.pytestEnabled": true,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.shell.osx": "/bin/zsh",
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
     "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
@@ -72,7 +75,5 @@
     },
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-ocean",
-    "workbench.startupEditor": "none",
-    "git.ignoreMissingGitWarning": true,
-    "terminal.integrated.shell.osx": "/bin/zsh"
+    "workbench.startupEditor": "none"
 }
