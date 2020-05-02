@@ -56,6 +56,20 @@ of these are actual tools and others are for your particular style.
         tar zxvf julia-1.1.0-linux-x86_64.tar.gz
         mv julia-1.1.0 ~/julia
 
+7. Install Docker by following the instructions on
+   [Linux Hint](https://linuxhint.com/install_docker_linux_mint/). There
+   is an additional setp from
+   [idroot](https://idroot.us/install-docker-linux-mint-19/) to add your
+   user to the `docker` group so that Docker commands can be run without
+   using `sudo`:
+
+       sudo usermod -aG docker $USER
+       sudo reboot
+
+   Note that the second command will reboot your computer. Otherwise,
+   you can wait until the next time you log in for the change to take
+   effect.
+
 ### Applications
 
 The applications listed below are installed by downloading the
