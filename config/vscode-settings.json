@@ -53,6 +53,7 @@
     "terminal.integrated.inheritEnv": false,
     "terminal.integrated.shell.osx": "/bin/zsh",
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+    "window.titleSeparator": " | ",
     "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#FF7042",
@@ -77,5 +78,5 @@
     },
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-ocean",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
 }
