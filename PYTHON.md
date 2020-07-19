@@ -13,11 +13,10 @@ distribution. The `base` environment has all of the standard packages
 already installed, so there is no need to specify a separate "default"
 environment for general work.
 
-Download the 3.X distribution from their
-[website](https://www.anaconda.com/distribution/). You can either use
-the graphical installer or the command line utility. I personally prefer
-the command line version, but the end result is identical. You can
-either keep the installation location to be your home directory or
+Download the 3.X distribution from their [website][3]. You can either
+use the graphical installer or the command line utility. I personally
+prefer the command line version, but the end result is identical. You
+can either keep the installation location to be your home directory or
 somewhere else, such as `/opt/`, but this choice doesn't matter much.
 
 Your `.bashrc` is already set up to point to the installation in your
@@ -39,6 +38,13 @@ engineering and resolution standpoint. There is a [Medium post][2] about
 it and two other packages as part of the ecosystem, and the project
 seems like the right step forward.
 
+## Mamba
+
+Mamba is a new drop-in replacement for `conda` with a more performant
+dependency resolution engine. I think there are things that will still
+lead to points of friction between the two, but I'd like to transition
+to using this tool more over time.
+
 ## Environment Setup
 
 Environments are used used to isolate Python versions and packages, and
@@ -49,10 +55,9 @@ specified, and for a production system should be specified.
 
 The environments that I use are contained in `environments/` in order
 for them to be properly versioned and monitored. With the slightly
-modified `conda_autoenv.sh` script (adapted from the
-[original GitHub source](https://github.com/chdoig/conda-auto-env)), you
-do not need to remember the specifics of creating new environments.
-Simply define a new `environment.yml` file in the directory, then run
+modified `conda_autoenv.sh` script (adapted from [source][4], you do not
+need to remember the specifics of creating new environments. Simply
+define a new `environment.yml` file in the directory, then run
 `autoenv`.
 
 When you update an environment from the command line, the environment
@@ -61,3 +66,5 @@ environment and the specification do not get out of sync.
 
 [1]: https://github.com/TheSnakePit/mamba
 [2]: https://medium.com/@QuantStack/open-software-packaging-for-science-61cecee7fc23
+[3]: https://www.anaconda.com/distribution/
+[4]: https://github.com/chdoig/conda-auto-env

@@ -32,43 +32,38 @@ sure that your current setup is up-to-date. You can do this either with
 These utilities are primarily command line tools and adjustments. Some
 of these are actual tools and others are for your particular style.
 
-1. Install command line basics:
+1.  Install command line basics:
+    ```
+    apt install build-essential git rsync tree unzip vim xclip
+    ```
 
-        apt install build-essential git rsync tree unzip vim xclip
+1.  Create a new SSH key:
+    ```
+    ssh-keygen -t ed25519 -C "mmoran0032@gmail.com"
+    ```
 
-2. Create a new SSH key:
+1.  Install `python` with Anaconda by following the instructions in
+    `PYTHON.md` for your primary development work.
 
-        ssh-keygen -t ed25519 -C "mmoran0032@gmail.com"
+1.  Run `python setup.py` to link your bash profile, aliases, etc. to
+    the required locations.
 
-3. Install `python` with Anaconda by following the instructions in
-   `PYTHON.md` for your primary development work.
+1.  Install python utilities:
+    ```
+    conda install -c conda-forge autopep8 doc8 glances
+    ```
 
-4. Run `python setup.py` to link your bash profile, aliases, etc. to
-   the required locations.
-
-5. Install python utilities:
-
-        conda install -c conda-forge autopep8 doc8 glances
-
-6. (Optional) Install Julia (from the
-   [Downloads page](https://julialang.org/downloads/)) and extract::
-
-        tar zxvf julia-1.1.0-linux-x86_64.tar.gz
-        mv julia-1.1.0 ~/julia
-
-7. Install Docker by following the instructions on
-   [Linux Hint](https://linuxhint.com/install_docker_linux_mint/). There
-   is an additional setp from
-   [idroot](https://idroot.us/install-docker-linux-mint-19/) to add your
-   user to the `docker` group so that Docker commands can be run without
-   using `sudo`:
-
-       sudo usermod -aG docker $USER
-       sudo reboot
-
-   Note that the second command will reboot your computer. Otherwise,
-   you can wait until the next time you log in for the change to take
-   effect.
+1.  Install Docker by following the instructions on [Linux Hint][1].
+    There is an additional setp from [idroot][2] to add your user to the
+    `docker` group so that Docker commands can be run without using
+    `sudo`:
+    ```
+    sudo usermod -aG docker $USER
+    sudo reboot
+    ```
+    Note that the second command will reboot your computer. Otherwise,
+    you can wait until the next time you log in for the change to take
+    effect.
 
 ### Applications
 
@@ -149,8 +144,12 @@ completeness, the partial Mac installs are also listed below, even
 though they don't use the entirety of this repository and are not the
 focus of tracking installations.
 
+- 2020-07-19: `ARES-4` (Windows 10 + Windows Subsystem for Linux)
 - 2019-02-19: `ARES-3` (Linux Mint 19 desktop)
 - 2019-01-15: *White Ops* Macbook
 - 2017-12-17: `ARES-2m` (Linux Mint 18 laptop)
 - 2017-10-16: *Gartner* Macbook
 - 2016-05-03: `ARES-2` (Ubuntu 16 laptop)
+
+[1]: https://linuxhint.com/install_docker_linux_mint/
+[2]: https://idroot.us/install-docker-linux-mint-19/

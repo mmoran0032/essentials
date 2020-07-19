@@ -34,24 +34,22 @@ export PATH=${PATH}:/home/mikemoran/bin
 eval "$(dircolors ~/.colors-ls)"
 source /home/mikemoran/bin/essentials/conda_auto_env.sh
 
-# added by Anaconda3 2018.12 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/mikemoran/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/home/mikemoran/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mikemoran/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/home/mikemoran/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
-
 # fix default permissions for WSL: https://www.turek.dev/post/fix-wsl-file-permissions/
 if [[ "$(umask)" = "0000" ]]; then
     umask 0022
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/mikemoran/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/mikemoran/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mikemoran/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/mikemoran/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

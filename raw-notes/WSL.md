@@ -1,0 +1,6 @@
+- Set up WSL
+- Link VSCode to WSL
+- Link essentials to relevant locations in WSL with `setup.py`
+- Copy VSCode settings manually
+- Install Anaconda (defaults, `bashrc` already set up)
+- Install Mamba (and rewire yourself to use `mamba` instead of `conda`)
