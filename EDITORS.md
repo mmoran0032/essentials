@@ -39,10 +39,7 @@ manager for your main development work:
 
 - Docker `peterjausovec.vscode-docker`
 - gitignore `codezombiech.gitignore`
-- Markdown Checkbox `pkief.markdown-checkbox`
 - markdownlint `davidanson.vscode-markdownlint`
-- Material Theme `equinusocio,vsc-material-theme`
-- Material Theme Icons `equinusocio.vsc-material-theme-icons`
 - Prettify JSON `mohsen1.prettify-json`
 - reStructuredText `lextudio.restructuredtext`
 - Rewrap `stkb.rewrap`
@@ -54,7 +51,6 @@ manager for your main development work:
 
 ### Theme Changes
 
-- Base16 Tomorrow Dark+ `shurelia.base16-tomorrow-dark-vscode`
 - Material Theme `equinusocio.vsc-material-theme`
 - Material Theme Icons `equinusocio.vsc-material-theme-icons`
 
@@ -71,6 +67,9 @@ additional tweaks to get VSCode working well with WSL:
   packages don't appear to be available for install with Codium.
 - (Optionally) link directories across the Windows-Linux divide to allow
   for them to be viewable in both places
+- Manually copy over the `settings.json` file. Since that file location
+  is within the Windows side, the setup script will not push it to the
+  correct location.
 
 ## Vim
 
