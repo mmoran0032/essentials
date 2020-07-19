@@ -26,6 +26,7 @@ anything weird with Dask monitoring or anything more advanced than just
 code editing.
 
 *Note: you can also get all of your extensions with:*
+
 ```zsh
 code --list-extensions | tee ~/vscode-extensions.txt
 ```
@@ -57,6 +58,20 @@ manager for your main development work:
 - Material Theme `equinusocio.vsc-material-theme`
 - Material Theme Icons `equinusocio.vsc-material-theme-icons`
 
+### Windows
+
+With the Windows Subsystem for Linux (WSL), I can use the Linux side of
+my machine with the usual Windows interface. After setting up and
+installing WSL (see `WINDOWS.md`), you are more or less good to go with
+regular Linux installs for coding environments. There are some
+additional tweaks to get VSCode working well with WSL:
+
+- Install the *Remote Development extension pack* (see
+  [VSCode's website][1] for additional details). Note that the contained
+  packages don't appear to be available for install with Codium.
+- (Optionally) link directories across the Windows-Linux divide to allow
+  for them to be viewable in both places
+
 ## Vim
 
 Vim is useful for short edits to files and for longer `git` commit
@@ -64,3 +79,5 @@ messages, but past that you usually just use VSCode. The configuration
 details include your `.vimrc` file and the `.vim` directory that
 contains the additional packages you'll need. All of these are linked
 through the basic setup instructions, so there's nothing else to do.
+
+[1]: https://code.visualstudio.com/docs/remote/wsl

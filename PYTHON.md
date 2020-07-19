@@ -25,6 +25,20 @@ home directory, so if that is your choice, you do not need to add the
 sourcing commands to your profile. Launching a new terminal should show
 that `conda` is available and the `base` environment is active.
 
+While the Anaconda distribution has *almost* everything already
+installed, you'll need to add a few more things into your `base`
+environment to make general usage better:
+
+- `mypy`
+- `pylint`
+- `pytest`
+- `tqdm`
+
+Additionally, `mamba` (see [GitHub page][1]) looks promising from an
+engineering and resolution standpoint. There is a [Medium post][2] about
+it and two other packages as part of the ecosystem, and the project
+seems like the right step forward.
+
 ## Environment Setup
 
 Environments are used used to isolate Python versions and packages, and
@@ -44,3 +58,6 @@ Simply define a new `environment.yml` file in the directory, then run
 When you update an environment from the command line, the environment
 file does not update. You have to do that manually so that the
 environment and the specification do not get out of sync.
+
+[1]: https://github.com/TheSnakePit/mamba
+[2]: https://medium.com/@QuantStack/open-software-packaging-for-science-61cecee7fc23
