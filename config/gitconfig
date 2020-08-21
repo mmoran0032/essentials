@@ -2,18 +2,19 @@
     email = mmoran0032@gmail.com
     name = Mike Moran
     editor = vim
-
-[push]
-    default = simple
-
 [alias]
     co = checkout
     info = log --pretty=format:'%Cred%an%Creset (%h, %cr) %Cgreen%s%Creset'
+[core]
+    ignorecase = false
+[http]
+    sslVerify = false
+[init]
+	defaultBranch = main
+[push]
+    default = simple
 
 [url "git@github.com:mmoran0032/"]
     insteadOf = github:
 [url "git@gitlab.com:mmoran0032/"]
     insteadOf = gitlab:
-
-[http]
-    sslVerify = false
