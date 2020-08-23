@@ -1,4 +1,6 @@
 
+Actively maintained on GitLab: https://gitlab.com/mmoran0032/essentials
+
 # INSTALLATION NOTES
 
 Updated for reinstalling Linux in early 2019
